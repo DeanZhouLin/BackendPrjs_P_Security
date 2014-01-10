@@ -47,11 +47,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AjaxControlToolkit">
-      <HintPath>..\..\..\..\RefDLL\AspAjax\AjaxControlToolkit.dll</HintPath>
+    <Reference Include="AjaxControlToolkit, Version=4.1.51116.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\MyGitHubPrjs\BackendPrjs\ReffDll\AspAjax\AjaxControlToolkit.dll</HintPath>
     </Reference>
     <Reference Include="CKEditor.NET">
-      <HintPath>..\..\..\..\RefDLL\CKEditor\CKEditor.NET.dll</HintPath>
+      <HintPath>..\..\..\..\MyGitHubPrjs\BackendPrjs\ReffDll\CKEditor\CKEditor.NET.dll</HintPath>
     </Reference>
     <Reference Include="CKFinder">
       <HintPath>..\..\..\..\RefDLL\CKEditor\CKFinder.dll</HintPath>
