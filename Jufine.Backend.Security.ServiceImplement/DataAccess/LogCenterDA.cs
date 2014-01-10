@@ -1,15 +1,9 @@
-﻿using System;
-using System.Linq;
-using System.Text;
-using System.Data.Objects;
-using System.Collections.Generic;
-
+﻿using System.Linq;
 using Com.BaseLibrary.Service;
 using Com.BaseLibrary.Data;
 using Com.BaseLibrary.Entity;
 
 using Jufine.Backend.Security.DataContracts;
-using Jufine.Backend.Security.DataAccess;
 using System.Data;
 
 namespace Jufine.Backend.Security.DataAccess 

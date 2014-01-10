@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Com.BaseLibrary.Contract;
+﻿using Com.BaseLibrary.Contract;
 using Com.BaseLibrary.Entity;
 using Jufine.Backend.Security.DataContracts;
 

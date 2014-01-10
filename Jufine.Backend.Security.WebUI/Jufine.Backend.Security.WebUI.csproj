@@ -69,43 +69,17 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\ReffDll\Jufine\Backend\Jufine.Backend.BaseData.Contract.dll</HintPath>
     </Reference>
-    <Reference Include="Jufine.Backend.BaseData.ServiceImplement, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\ReffDll\Jufine\Backend\Jufine.Backend.BaseData.ServiceImplement.dll</HintPath>
-    </Reference>
-    <Reference Include="Jufine.Backend.IM.Contract, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\ReffDll\Jufine\Backend\Jufine.Backend.IM.Contract.dll</HintPath>
-    </Reference>
     <Reference Include="Jufine.Backend.IM.ServiceImplement, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\ReffDll\Jufine\Backend\Jufine.Backend.IM.ServiceImplement.dll</HintPath>
     </Reference>
-    <Reference Include="Jufine.Backend.TM.Contract, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\RefDLL\Jufine\Backend\Jufine.Backend.TM.Contract.dll</HintPath>
-    </Reference>
-    <Reference Include="Jufine.Backend.TM.ServiceImplement, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\RefDLL\Jufine\Backend\Jufine.Backend.TM.ServiceImplement.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Web.DynamicData" />
-    <Reference Include="System.Web.Entity" />
-    <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
-    <Reference Include="System.Configuration" />
-    <Reference Include="System.Web.Services" />
-    <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="AuditWorkFlowResourceMgmt.aspx" />
@@ -1082,17 +1056,9 @@
       <Project>{4a972f3b-9381-4adf-9008-c0d0d62d4dfa}</Project>
       <Name>Jufine.Backend.WebModel</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Jufine.Backend.Security.Authentication\Jufine.Backend.Security.Authentication.csproj">
-      <Project>{8cee82c9-1dd6-49da-841f-afe3a87d6396}</Project>
-      <Name>Jufine.Backend.Security.Authentication</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Jufine.Backend.Security.Contract\Jufine.Backend.Security.Contract.csproj">
       <Project>{268AD959-A9FC-4BB7-9021-EDCCE77FB97C}</Project>
       <Name>Jufine.Backend.Security.Contract</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Jufine.Backend.Security.ServiceImplement\Jufine.Backend.Security.ServiceImplement.csproj">
-      <Project>{99023D2E-1974-4D15-A665-728634003B78}</Project>
-      <Name>Jufine.Backend.Security.ServiceImplement</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

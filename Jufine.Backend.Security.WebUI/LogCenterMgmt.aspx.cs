@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.ComponentModel;
 using System.Web.UI.WebControls;
 
 using Com.BaseLibrary.Entity;
@@ -12,7 +8,6 @@ using Com.BaseLibrary.Utility;
 using Jufine.Backend.WebModel;
 using Jufine.Backend.Security.DataContracts;
 using Jufine.Backend.Security.ServiceContracts;
-using Com.BaseLibrary.Data;
 using Com.BaseLibrary.Common.Cryptography;
 using System.Data;
 

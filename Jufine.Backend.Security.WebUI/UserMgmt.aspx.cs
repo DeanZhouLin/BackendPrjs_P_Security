@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.ComponentModel;
 using System.Web.UI.WebControls;
 
 using Com.BaseLibrary.Entity;
@@ -13,8 +10,6 @@ using Jufine.Backend.WebModel;
 using Jufine.Backend.Security.DataContracts;
 using Jufine.Backend.Security.ServiceContracts;
 using Com.BaseLibrary.Common.Cryptography;
-using System.Text;
-using Jufine.Backend.WebModel.UserControls;
 
 namespace Jufine.Backend.Security.WebUI
 {

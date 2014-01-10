@@ -44,18 +44,11 @@
     <Reference Include="Jufine.Backend.TM.Contract">
       <HintPath>..\..\..\ReffDll\Jufine\Backend\Jufine.Backend.TM.Contract.dll</HintPath>
     </Reference>
-    <Reference Include="Jufine.Backend.TM.ServiceImplement">
-      <HintPath>..\..\..\ReffDll\Jufine\Backend\Jufine.Backend.TM.ServiceImplement.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
     <Reference Include="System.Transactions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>

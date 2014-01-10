@@ -1,14 +1,11 @@
 ﻿
 using System;
 using System.Collections.Generic;
-
-using Com.BaseLibrary.Utility;
 using Com.BaseLibrary.Entity;
 using Com.BaseLibrary.ExceptionHandle;
 using Jufine.Backend.Security.DataContracts;
 using Jufine.Backend.Security.ServiceContracts;
 using Jufine.Backend.Security.DataAccess;
-using System.Transactions;
 
 namespace Jufine.Backend.Security.Business
 {

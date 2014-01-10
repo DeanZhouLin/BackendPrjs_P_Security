@@ -1,9 +1,4 @@
-﻿using System;
-using System.Text;
-using System.Collections.Generic;
-
-using Com.BaseLibrary.Contract;
-using Com.BaseLibrary.Utility;
+﻿using Com.BaseLibrary.Utility;
 
 namespace Jufine.Backend.Security.DataContracts
 {

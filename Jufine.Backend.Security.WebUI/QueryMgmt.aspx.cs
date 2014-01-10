@@ -1,17 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using Com.BaseLibrary.Entity;
 using Com.BaseLibrary.Data;
 using System.Data;
 using Com.BaseLibrary.Utility;
 using Com.BaseLibrary.Common.Cryptography;
 using Jufine.Backend.WebModel;
 using System.Text.RegularExpressions;
-using Com.BaseLibrary.Logging;
 using Jufine.Backend.Security.ServiceContracts;
 using Jufine.Backend.Security.DataContracts;
 

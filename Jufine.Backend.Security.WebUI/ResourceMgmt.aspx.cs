@@ -1,22 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.ComponentModel;
 using System.Web.UI.WebControls;
 
 using Com.BaseLibrary.Utility;
-
-using System.Data;
-using System.Reflection;
-using System.Collections;
-using System.Drawing;
 using System.Text;
 using Jufine.Backend.WebModel;
 using Jufine.Backend.Security.ServiceContracts;
 using Jufine.Backend.Security.DataContracts;
-using Jufine.Backend.BaseData.ServiceContracts;
 using Jufine.Backend.BaseData.DataContracts;
 
 
