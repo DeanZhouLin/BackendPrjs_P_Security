@@ -1334,4 +1334,196 @@
    在 System.Web.UI.Page.PerformPreInit()
    在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
   </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-1-130338034744299506" machine="JHDEANZHOU" module="BackendUI" logType="Error" logTime="2014/1/10 12:58:43">
+    <title>【JHDEANZHOU】“Jufine.Backend.Security.Authentication.User”的类型初始值设定项引发异常。</title>
+    <detail>System.TypeInitializationException: “Jufine.Backend.Security.Authentication.User”的类型初始值设定项引发异常。 ---&gt; System.Data.SqlClient.SqlException: 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接) ---&gt; System.ComponentModel.Win32Exception: 系统找不到指定的文件。
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 Com.BaseLibrary.Data.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 d:\BackendPrjsInGitHub\BaseLibrary\Com.BaseLibrary.Common\Data\SqlHelper.cs:行号 457
+   在 Com.BaseLibrary.Data.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText) 位置 d:\BackendPrjsInGitHub\BaseLibrary\Com.BaseLibrary.Common\Data\SqlHelper.cs:行号 435
+   在 Jufine.Backend.Security.Authentication.User.GetAllResource() 位置 d:\BackendPrjsInGitHub\Projects\Security\Jufine.Backend.Security.Authentication\UserFactory.cs:行号 201
+   在 Jufine.Backend.Security.Authentication.User..cctor() 位置 d:\BackendPrjsInGitHub\Projects\Security\Jufine.Backend.Security.Authentication\UserFactory.cs:行号 47
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Jufine.Backend.Security.Authentication.User..ctor()
+   在 Jufine.Backend.Security.Authentication.UserFactory.CreateUser() 位置 d:\BackendPrjsInGitHub\Projects\Security\Jufine.Backend.Security.Authentication\UserFactory.cs:行号 20
+   在 Jufine.Backend.WebModel.PageBase.OnPreInit(EventArgs e) 位置 d:\BackendPrjsInGitHub\Jufine.Backend.WebModel\PageBase.cs:行号 59
+   在 System.Web.UI.Page.PerformPreInit()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-1-130338034744299506" machine="JHDEANZHOU" module="BackendUI" logType="Error" logTime="2014/1/10 12:59:22">
+    <title>【JHDEANZHOU】“Jufine.Backend.Security.Authentication.User”的类型初始值设定项引发异常。</title>
+    <detail>System.TypeInitializationException: “Jufine.Backend.Security.Authentication.User”的类型初始值设定项引发异常。 ---&gt; System.Data.SqlClient.SqlException: 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接) ---&gt; System.ComponentModel.Win32Exception: 系统找不到指定的文件。
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 Com.BaseLibrary.Data.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 d:\BackendPrjsInGitHub\BaseLibrary\Com.BaseLibrary.Common\Data\SqlHelper.cs:行号 457
+   在 Com.BaseLibrary.Data.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText) 位置 d:\BackendPrjsInGitHub\BaseLibrary\Com.BaseLibrary.Common\Data\SqlHelper.cs:行号 435
+   在 Jufine.Backend.Security.Authentication.User.GetAllResource() 位置 d:\BackendPrjsInGitHub\Projects\Security\Jufine.Backend.Security.Authentication\UserFactory.cs:行号 201
+   在 Jufine.Backend.Security.Authentication.User..cctor() 位置 d:\BackendPrjsInGitHub\Projects\Security\Jufine.Backend.Security.Authentication\UserFactory.cs:行号 47
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Jufine.Backend.Security.Authentication.User..ctor()
+   在 Jufine.Backend.Security.Authentication.UserFactory.CreateUser() 位置 d:\BackendPrjsInGitHub\Projects\Security\Jufine.Backend.Security.Authentication\UserFactory.cs:行号 20
+   在 Jufine.Backend.WebModel.PageBase.OnPreInit(EventArgs e) 位置 d:\BackendPrjsInGitHub\Jufine.Backend.WebModel\PageBase.cs:行号 59
+   在 System.Web.UI.Page.PerformPreInit()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-1-130338034744299506" machine="JHDEANZHOU" module="BackendUI" logType="Error" logTime="2014/1/10 12:59:23">
+    <title>【JHDEANZHOU】“Jufine.Backend.Security.Authentication.User”的类型初始值设定项引发异常。</title>
+    <detail>System.TypeInitializationException: “Jufine.Backend.Security.Authentication.User”的类型初始值设定项引发异常。 ---&gt; System.Data.SqlClient.SqlException: 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接) ---&gt; System.ComponentModel.Win32Exception: 系统找不到指定的文件。
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 Com.BaseLibrary.Data.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 d:\BackendPrjsInGitHub\BaseLibrary\Com.BaseLibrary.Common\Data\SqlHelper.cs:行号 457
+   在 Com.BaseLibrary.Data.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText) 位置 d:\BackendPrjsInGitHub\BaseLibrary\Com.BaseLibrary.Common\Data\SqlHelper.cs:行号 435
+   在 Jufine.Backend.Security.Authentication.User.GetAllResource() 位置 d:\BackendPrjsInGitHub\Projects\Security\Jufine.Backend.Security.Authentication\UserFactory.cs:行号 201
+   在 Jufine.Backend.Security.Authentication.User..cctor() 位置 d:\BackendPrjsInGitHub\Projects\Security\Jufine.Backend.Security.Authentication\UserFactory.cs:行号 47
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Jufine.Backend.Security.Authentication.User..ctor()
+   在 Jufine.Backend.Security.Authentication.UserFactory.CreateUser() 位置 d:\BackendPrjsInGitHub\Projects\Security\Jufine.Backend.Security.Authentication\UserFactory.cs:行号 20
+   在 Jufine.Backend.WebModel.PageBase.OnPreInit(EventArgs e) 位置 d:\BackendPrjsInGitHub\Jufine.Backend.WebModel\PageBase.cs:行号 59
+   在 System.Web.UI.Page.PerformPreInit()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-1-130338034744299506" machine="JHDEANZHOU" module="BackendUI" logType="Error" logTime="2014/1/10 13:00:23">
+    <title>【JHDEANZHOU】“Jufine.Backend.Security.Authentication.User”的类型初始值设定项引发异常。</title>
+    <detail>System.TypeInitializationException: “Jufine.Backend.Security.Authentication.User”的类型初始值设定项引发异常。 ---&gt; System.Data.SqlClient.SqlException: 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接) ---&gt; System.ComponentModel.Win32Exception: 系统找不到指定的文件。
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 Com.BaseLibrary.Data.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 d:\BackendPrjsInGitHub\BaseLibrary\Com.BaseLibrary.Common\Data\SqlHelper.cs:行号 457
+   在 Com.BaseLibrary.Data.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText) 位置 d:\BackendPrjsInGitHub\BaseLibrary\Com.BaseLibrary.Common\Data\SqlHelper.cs:行号 435
+   在 Jufine.Backend.Security.Authentication.User.GetAllResource() 位置 d:\BackendPrjsInGitHub\Projects\Security\Jufine.Backend.Security.Authentication\UserFactory.cs:行号 201
+   在 Jufine.Backend.Security.Authentication.User..cctor() 位置 d:\BackendPrjsInGitHub\Projects\Security\Jufine.Backend.Security.Authentication\UserFactory.cs:行号 47
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Jufine.Backend.Security.Authentication.User..ctor()
+   在 Jufine.Backend.Security.Authentication.UserFactory.CreateUser() 位置 d:\BackendPrjsInGitHub\Projects\Security\Jufine.Backend.Security.Authentication\UserFactory.cs:行号 20
+   在 Jufine.Backend.WebModel.PageBase.OnPreInit(EventArgs e) 位置 d:\BackendPrjsInGitHub\Jufine.Backend.WebModel\PageBase.cs:行号 59
+   在 System.Web.UI.Page.PerformPreInit()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-1-130338034744299506" machine="JHDEANZHOU" module="BackendUI" logType="Error" logTime="2014/1/10 13:00:28">
+    <title>【JHDEANZHOU】“Jufine.Backend.Security.Authentication.User”的类型初始值设定项引发异常。</title>
+    <detail>System.TypeInitializationException: “Jufine.Backend.Security.Authentication.User”的类型初始值设定项引发异常。 ---&gt; System.Data.SqlClient.SqlException: 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接) ---&gt; System.ComponentModel.Win32Exception: 系统找不到指定的文件。
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 Com.BaseLibrary.Data.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 d:\BackendPrjsInGitHub\BaseLibrary\Com.BaseLibrary.Common\Data\SqlHelper.cs:行号 457
+   在 Com.BaseLibrary.Data.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText) 位置 d:\BackendPrjsInGitHub\BaseLibrary\Com.BaseLibrary.Common\Data\SqlHelper.cs:行号 435
+   在 Jufine.Backend.Security.Authentication.User.GetAllResource() 位置 d:\BackendPrjsInGitHub\Projects\Security\Jufine.Backend.Security.Authentication\UserFactory.cs:行号 201
+   在 Jufine.Backend.Security.Authentication.User..cctor() 位置 d:\BackendPrjsInGitHub\Projects\Security\Jufine.Backend.Security.Authentication\UserFactory.cs:行号 47
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Jufine.Backend.Security.Authentication.User..ctor()
+   在 Jufine.Backend.Security.Authentication.UserFactory.CreateUser() 位置 d:\BackendPrjsInGitHub\Projects\Security\Jufine.Backend.Security.Authentication\UserFactory.cs:行号 20
+   在 Jufine.Backend.WebModel.PageBase.OnPreInit(EventArgs e) 位置 d:\BackendPrjsInGitHub\Jufine.Backend.WebModel\PageBase.cs:行号 59
+   在 System.Web.UI.Page.PerformPreInit()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-1-130338034744299506" machine="JHDEANZHOU" module="BackendUI" logType="Error" logTime="2014/1/10 13:00:29">
+    <title>【JHDEANZHOU】“Jufine.Backend.Security.Authentication.User”的类型初始值设定项引发异常。</title>
+    <detail>System.TypeInitializationException: “Jufine.Backend.Security.Authentication.User”的类型初始值设定项引发异常。 ---&gt; System.Data.SqlClient.SqlException: 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接) ---&gt; System.ComponentModel.Win32Exception: 系统找不到指定的文件。
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 Com.BaseLibrary.Data.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 d:\BackendPrjsInGitHub\BaseLibrary\Com.BaseLibrary.Common\Data\SqlHelper.cs:行号 457
+   在 Com.BaseLibrary.Data.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText) 位置 d:\BackendPrjsInGitHub\BaseLibrary\Com.BaseLibrary.Common\Data\SqlHelper.cs:行号 435
+   在 Jufine.Backend.Security.Authentication.User.GetAllResource() 位置 d:\BackendPrjsInGitHub\Projects\Security\Jufine.Backend.Security.Authentication\UserFactory.cs:行号 201
+   在 Jufine.Backend.Security.Authentication.User..cctor() 位置 d:\BackendPrjsInGitHub\Projects\Security\Jufine.Backend.Security.Authentication\UserFactory.cs:行号 47
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Jufine.Backend.Security.Authentication.User..ctor()
+   在 Jufine.Backend.Security.Authentication.UserFactory.CreateUser() 位置 d:\BackendPrjsInGitHub\Projects\Security\Jufine.Backend.Security.Authentication\UserFactory.cs:行号 20
+   在 Jufine.Backend.WebModel.PageBase.OnPreInit(EventArgs e) 位置 d:\BackendPrjsInGitHub\Jufine.Backend.WebModel\PageBase.cs:行号 59
+   在 System.Web.UI.Page.PerformPreInit()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
 </logs>
