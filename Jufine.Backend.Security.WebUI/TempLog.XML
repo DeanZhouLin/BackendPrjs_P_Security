@@ -1,0 +1,1337 @@
+<logs>
+  <log application="/LM/W3SVC/1/ROOT/Security-4-130310871419737530" machine="PC-20130721DCZQ" module="UnExceptedException" logType="UnExceptedException" logTime="2013/12/10 2:25:54">
+    <title>【PC-20130721DCZQ】基础提供程序在 Open 上失败。</title>
+    <detail>System.Data.EntityException: 基础提供程序在 Open 上失败。 ---&gt; System.Data.SqlClient.SqlException: 用户 '' 登录失败。
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean&amp; dataReady)
+   在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean&amp; closeStoreConnectionOnFailure)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean&amp; closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   在 System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator()
+   在 System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   在 System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   在 Jufine.Backend.Security.DataAccess.UserDA.GetByUserName(String userName) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\DataAccess\UserDA.cs:行号 368
+   在 Jufine.Backend.Security.Business.UserBL.Login(String userName, String password) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\Business\UserBL.cs:行号 135</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-5-130310874125772306" machine="PC-20130721DCZQ" module="UnExceptedException" logType="UnExceptedException" logTime="2013/12/10 2:31:28">
+    <title>【PC-20130721DCZQ】基础提供程序在 Open 上失败。</title>
+    <detail>System.Data.EntityException: 基础提供程序在 Open 上失败。 ---&gt; System.Data.SqlClient.SqlException: 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接) ---&gt; System.ComponentModel.Win32Exception: 找不到网络路径。
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean&amp; closeStoreConnectionOnFailure)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean&amp; closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   在 System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 Jufine.Backend.BaseData.DataAccess.CodeValueDA.GetCodeListByGroupCode(String groupCode)
+   在 Jufine.Backend.BaseData.Business.CodeValueBL.GetCodeListByGroupCode(String groupCode)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-8-130310880408311647" machine="PC-20130721DCZQ" module="UnExceptedException" logType="UnExceptedException" logTime="2013/12/10 2:43:07">
+    <title>【PC-20130721DCZQ】基础提供程序在 Open 上失败。</title>
+    <detail>System.Data.EntityException: 基础提供程序在 Open 上失败。 ---&gt; System.Data.SqlClient.SqlException: 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接) ---&gt; System.ComponentModel.Win32Exception: 找不到网络路径。
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean&amp; closeStoreConnectionOnFailure)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean&amp; closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   在 System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 Jufine.Backend.BaseData.DataAccess.CodeValueDA.GetCodeListByGroupCode(String groupCode)
+   在 Jufine.Backend.BaseData.Business.CodeValueBL.GetCodeListByGroupCode(String groupCode)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-9-130310883483687548" machine="PC-20130721DCZQ" module="UnExceptedException" logType="UnExceptedException" logTime="2013/12/10 2:46:21">
+    <title>【PC-20130721DCZQ】找不到 EntityType“Jufine.Backend.Security.DataContracts.UVUserMerchant”的映射和元数据信息。</title>
+    <detail>System.InvalidOperationException: 找不到 EntityType“Jufine.Backend.Security.DataContracts.UVUserMerchant”的映射和元数据信息。
+   在 System.Data.Objects.ObjectContext.GetTypeUsage(Type entityCLRType)
+   在 System.Data.Objects.ObjectContext.GetEntitySetFromContainer(EntityContainer container, Type entityCLRType, String exceptionParameterName)
+   在 System.Data.Objects.ObjectContext.GetEntitySetForType(Type entityCLRType, String exceptionParameterName)
+   在 System.Data.Objects.ObjectContext.CreateObjectSet[TEntity]()
+   在 Jufine.Backend.Security.DataAccess.UVUserMerchantDA.GetByUserID(Int32 id) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\DataAccess\UVUserMerchantDA.cs:行号 19
+   在 Jufine.Backend.Security.Business.UVUserMerchantBL.GetByUserID(Int32 id) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\Business\UVUserMerchantBL.cs:行号 110</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-9-130310883483687548" machine="PC-20130721DCZQ" module="UnExceptedException" logType="UnExceptedException" logTime="2013/12/10 2:46:23">
+    <title>【PC-20130721DCZQ】找不到 EntityType“Jufine.Backend.Security.DataContracts.UVUserMerchant”的映射和元数据信息。</title>
+    <detail>System.InvalidOperationException: 找不到 EntityType“Jufine.Backend.Security.DataContracts.UVUserMerchant”的映射和元数据信息。
+   在 System.Data.Objects.ObjectContext.GetTypeUsage(Type entityCLRType)
+   在 System.Data.Objects.ObjectContext.GetEntitySetFromContainer(EntityContainer container, Type entityCLRType, String exceptionParameterName)
+   在 System.Data.Objects.ObjectContext.GetEntitySetForType(Type entityCLRType, String exceptionParameterName)
+   在 System.Data.Objects.ObjectContext.CreateObjectSet[TEntity]()
+   在 Jufine.Backend.Security.DataAccess.UVUserMerchantDA.GetByUserID(Int32 id) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\DataAccess\UVUserMerchantDA.cs:行号 19
+   在 Jufine.Backend.Security.Business.UVUserMerchantBL.GetByUserID(Int32 id) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\Business\UVUserMerchantBL.cs:行号 110</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-12-130310893627817759" machine="PC-20130721DCZQ" module="UnExceptedException" logType="UnExceptedException" logTime="2013/12/10 3:04:43">
+    <title>【PC-20130721DCZQ】基础提供程序在 Open 上失败。</title>
+    <detail>System.Data.EntityException: 基础提供程序在 Open 上失败。 ---&gt; System.Data.SqlClient.SqlException: 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接) ---&gt; System.ComponentModel.Win32Exception: 找不到网络路径。
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean&amp; closeStoreConnectionOnFailure)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean&amp; closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   在 System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 Jufine.Backend.BaseData.DataAccess.CodeValueDA.GetCodeListByGroupCode(String groupCode)
+   在 Jufine.Backend.BaseData.Business.CodeValueBL.GetCodeListByGroupCode(String groupCode)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-16-130310898444073233" machine="PC-20130721DCZQ" module="UnExceptedException" logType="UnExceptedException" logTime="2013/12/10 3:13:00">
+    <title>【PC-20130721DCZQ】基础提供程序在 Open 上失败。</title>
+    <detail>System.Data.EntityException: 基础提供程序在 Open 上失败。 ---&gt; System.Data.SqlClient.SqlException: 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接) ---&gt; System.ComponentModel.Win32Exception: 找不到网络路径。
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean&amp; closeStoreConnectionOnFailure)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean&amp; closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   在 System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 Jufine.Backend.BaseData.DataAccess.CodeValueDA.GetCodeListByGroupCode(String groupCode)
+   在 Jufine.Backend.BaseData.Business.CodeValueBL.GetCodeListByGroupCode(String groupCode)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-7-130310945046378733" machine="PC-20130721DCZQ" module="UnExceptedException" logType="UnExceptedException" logTime="2013/12/10 4:29:57">
+    <title>【PC-20130721DCZQ】基础提供程序在 Open 上失败。</title>
+    <detail>System.Data.EntityException: 基础提供程序在 Open 上失败。 ---&gt; System.Data.SqlClient.SqlException: 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接) ---&gt; System.ComponentModel.Win32Exception: 找不到网络路径。
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean&amp; closeStoreConnectionOnFailure)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean&amp; closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   在 System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 Jufine.Backend.BaseData.DataAccess.CodeValueDA.GetCodeListByGroupCode(String groupCode)
+   在 Jufine.Backend.BaseData.Business.CodeValueBL.GetCodeListByGroupCode(String groupCode)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-1-130311494618045285" machine="PC-20130721DCZQ" module="UnExceptedException" logType="UnExceptedException" logTime="2013/12/10 19:46:56">
+    <title>【PC-20130721DCZQ】基础提供程序在 Open 上失败。</title>
+    <detail>System.Data.EntityException: 基础提供程序在 Open 上失败。 ---&gt; System.Data.SqlClient.SqlException: 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接) ---&gt; System.ComponentModel.Win32Exception: 找不到网络路径。
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean&amp; closeStoreConnectionOnFailure)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean&amp; closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   在 System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 Jufine.Backend.BaseData.DataAccess.CodeValueDA.GetCodeListByGroupCode(String groupCode)
+   在 Jufine.Backend.BaseData.Business.CodeValueBL.GetCodeListByGroupCode(String groupCode)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-1-130311551885080772" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/10 21:20:21">
+    <title>【PC-20130721DCZQ】在位置 0 处没有任何行。</title>
+    <detail>System.IndexOutOfRangeException: 在位置 0 处没有任何行。
+   在 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   在 System.Data.DataRowCollection.get_Item(Int32 index)
+   在 Jufine.Backend.Security.Authentication.User..ctor() 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.Authentication\UserFactory.cs:行号 67
+   在 Jufine.Backend.Security.Authentication.UserFactory.CreateUser() 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.Authentication\UserFactory.cs:行号 20
+   在 Jufine.Backend.WebModel.PageBase.OnPreInit(EventArgs e) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\PageBase.cs:行号 59
+   在 System.Web.UI.Page.PerformPreInit()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-1-130311551885080772" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/10 21:25:20">
+    <title>【PC-20130721DCZQ】在位置 0 处没有任何行。</title>
+    <detail>System.IndexOutOfRangeException: 在位置 0 处没有任何行。
+   在 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   在 System.Data.DataRowCollection.get_Item(Int32 index)
+   在 Jufine.Backend.Security.Authentication.User..ctor() 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.Authentication\UserFactory.cs:行号 67
+   在 Jufine.Backend.Security.Authentication.UserFactory.CreateUser() 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.Authentication\UserFactory.cs:行号 20
+   在 Jufine.Backend.WebModel.PageBase.OnPreInit(EventArgs e) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\PageBase.cs:行号 59
+   在 System.Web.UI.Page.PerformPreInit()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-1-130311551885080772" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/10 21:29:52">
+    <title>【PC-20130721DCZQ】“rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value</title>
+    <detail>System.ArgumentOutOfRangeException: “rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value
+   在 System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   在 Jufine.Backend.Security.WebUI.ResourceMgmt.tvResource_SelectedNodeChanged(Object sender, EventArgs e) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.WebUI\ResourceMgmt.aspx.cs:行号 311
+   在 System.Web.UI.WebControls.TreeView.RaisePostBackEvent(String eventArgument)
+   在 Jufine.Backend.WebModel.PageBase.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\PageBase.cs:行号 1096
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-1-130311551885080772" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/10 21:29:53">
+    <title>【PC-20130721DCZQ】“rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value</title>
+    <detail>System.ArgumentOutOfRangeException: “rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value
+   在 System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   在 Jufine.Backend.Security.WebUI.ResourceMgmt.tvResource_SelectedNodeChanged(Object sender, EventArgs e) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.WebUI\ResourceMgmt.aspx.cs:行号 311
+   在 System.Web.UI.WebControls.TreeView.RaisePostBackEvent(String eventArgument)
+   在 Jufine.Backend.WebModel.PageBase.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\PageBase.cs:行号 1096
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-1-130311551885080772" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/10 21:29:54">
+    <title>【PC-20130721DCZQ】“rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value</title>
+    <detail>System.ArgumentOutOfRangeException: “rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value
+   在 System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   在 Jufine.Backend.Security.WebUI.ResourceMgmt.tvResource_SelectedNodeChanged(Object sender, EventArgs e) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.WebUI\ResourceMgmt.aspx.cs:行号 311
+   在 System.Web.UI.WebControls.TreeView.RaisePostBackEvent(String eventArgument)
+   在 Jufine.Backend.WebModel.PageBase.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\PageBase.cs:行号 1096
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-1-130311551885080772" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/10 21:29:56">
+    <title>【PC-20130721DCZQ】“rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value</title>
+    <detail>System.ArgumentOutOfRangeException: “rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value
+   在 System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   在 Jufine.Backend.Security.WebUI.ResourceMgmt.tvResource_SelectedNodeChanged(Object sender, EventArgs e) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.WebUI\ResourceMgmt.aspx.cs:行号 311
+   在 System.Web.UI.WebControls.TreeView.RaisePostBackEvent(String eventArgument)
+   在 Jufine.Backend.WebModel.PageBase.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\PageBase.cs:行号 1096
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-1-130311551885080772" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/10 21:30:15">
+    <title>【PC-20130721DCZQ】“rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value</title>
+    <detail>System.ArgumentOutOfRangeException: “rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value
+   在 System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   在 Jufine.Backend.Security.WebUI.ResourceMgmt.tvResource_SelectedNodeChanged(Object sender, EventArgs e) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.WebUI\ResourceMgmt.aspx.cs:行号 311
+   在 System.Web.UI.WebControls.TreeView.RaisePostBackEvent(String eventArgument)
+   在 Jufine.Backend.WebModel.PageBase.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\PageBase.cs:行号 1096
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-1-130311551885080772" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/10 21:30:16">
+    <title>【PC-20130721DCZQ】“rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value</title>
+    <detail>System.ArgumentOutOfRangeException: “rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value
+   在 System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   在 Jufine.Backend.Security.WebUI.ResourceMgmt.tvResource_SelectedNodeChanged(Object sender, EventArgs e) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.WebUI\ResourceMgmt.aspx.cs:行号 311
+   在 System.Web.UI.WebControls.TreeView.RaisePostBackEvent(String eventArgument)
+   在 Jufine.Backend.WebModel.PageBase.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\PageBase.cs:行号 1096
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-1-130311551885080772" machine="PC-20130721DCZQ" module="UnExceptedException" logType="UnExceptedException" logTime="2013/12/10 21:30:32">
+    <title>【PC-20130721DCZQ】找不到 EntityType“Jufine.Backend.Security.DataContracts.UVUserMerchant”的映射和元数据信息。</title>
+    <detail>System.InvalidOperationException: 找不到 EntityType“Jufine.Backend.Security.DataContracts.UVUserMerchant”的映射和元数据信息。
+   在 System.Data.Objects.ObjectContext.GetTypeUsage(Type entityCLRType)
+   在 System.Data.Objects.ObjectContext.GetEntitySetFromContainer(EntityContainer container, Type entityCLRType, String exceptionParameterName)
+   在 System.Data.Objects.ObjectContext.GetEntitySetForType(Type entityCLRType, String exceptionParameterName)
+   在 System.Data.Objects.ObjectContext.CreateObjectSet[TEntity]()
+   在 Jufine.Backend.Security.DataAccess.UVUserMerchantDA.GetByUserID(Int32 id) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\DataAccess\UVUserMerchantDA.cs:行号 19
+   在 Jufine.Backend.Security.Business.UVUserMerchantBL.GetByUserID(Int32 id) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\Business\UVUserMerchantBL.cs:行号 110</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-1-130311551885080772" machine="PC-20130721DCZQ" module="UnExceptedException" logType="UnExceptedException" logTime="2013/12/10 21:30:34">
+    <title>【PC-20130721DCZQ】找不到 EntityType“Jufine.Backend.Security.DataContracts.UVUserMerchant”的映射和元数据信息。</title>
+    <detail>System.InvalidOperationException: 找不到 EntityType“Jufine.Backend.Security.DataContracts.UVUserMerchant”的映射和元数据信息。
+   在 System.Data.Objects.ObjectContext.GetTypeUsage(Type entityCLRType)
+   在 System.Data.Objects.ObjectContext.GetEntitySetFromContainer(EntityContainer container, Type entityCLRType, String exceptionParameterName)
+   在 System.Data.Objects.ObjectContext.GetEntitySetForType(Type entityCLRType, String exceptionParameterName)
+   在 System.Data.Objects.ObjectContext.CreateObjectSet[TEntity]()
+   在 Jufine.Backend.Security.DataAccess.UVUserMerchantDA.GetByUserID(Int32 id) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\DataAccess\UVUserMerchantDA.cs:行号 19
+   在 Jufine.Backend.Security.Business.UVUserMerchantBL.GetByUserID(Int32 id) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\Business\UVUserMerchantBL.cs:行号 110</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-1-130315498530221219" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/15 10:58:10">
+    <title>【PC-20130721DCZQ】“Jufine.Backend.Security.Authentication.User”的类型初始值设定项引发异常。</title>
+    <detail>System.TypeInitializationException: “Jufine.Backend.Security.Authentication.User”的类型初始值设定项引发异常。 ---&gt; System.Data.SqlClient.SqlException: 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接) ---&gt; System.ComponentModel.Win32Exception: 系统找不到指定的文件。
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 Com.BaseLibrary.Data.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 f:\MyProjectInServer\TestCore\BaseLibrary\Com.BaseLibrary.Common\Data\SqlHelper.cs:行号 457
+   在 Com.BaseLibrary.Data.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText) 位置 f:\MyProjectInServer\TestCore\BaseLibrary\Com.BaseLibrary.Common\Data\SqlHelper.cs:行号 435
+   在 Jufine.Backend.Security.Authentication.User.GetAllResource() 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.Authentication\UserFactory.cs:行号 201
+   在 Jufine.Backend.Security.Authentication.User..cctor() 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.Authentication\UserFactory.cs:行号 47
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Jufine.Backend.Security.Authentication.User..ctor()
+   在 Jufine.Backend.Security.Authentication.UserFactory.CreateUser() 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.Authentication\UserFactory.cs:行号 20
+   在 Jufine.Backend.WebModel.PageBase.OnPreInit(EventArgs e) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\PageBase.cs:行号 59
+   在 System.Web.UI.Page.PerformPreInit()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-1-130315515788388330" machine="PC-20130721DCZQ" module="UnExceptedException" logType="UnExceptedException" logTime="2013/12/15 11:27:35">
+    <title>【PC-20130721DCZQ】基础提供程序在 Open 上失败。</title>
+    <detail>System.Data.EntityException: 基础提供程序在 Open 上失败。 ---&gt; System.Data.SqlClient.SqlException: 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接) ---&gt; System.ComponentModel.Win32Exception: 找不到网络路径。
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean&amp; closeStoreConnectionOnFailure)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean&amp; closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   在 System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 Jufine.Backend.BaseData.DataAccess.CodeValueDA.GetCodeListByGroupCode(String groupCode)
+   在 Jufine.Backend.BaseData.Business.CodeValueBL.GetCodeListByGroupCode(String groupCode)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-1-130315515788388330" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/15 11:29:00">
+    <title>【PC-20130721DCZQ】“rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value</title>
+    <detail>System.ArgumentOutOfRangeException: “rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value
+   在 System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   在 Jufine.Backend.Security.WebUI.ResourceMgmt.tvResource_SelectedNodeChanged(Object sender, EventArgs e) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.WebUI\ResourceMgmt.aspx.cs:行号 311
+   在 System.Web.UI.WebControls.TreeView.RaisePostBackEvent(String eventArgument)
+   在 Jufine.Backend.WebModel.PageBase.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\PageBase.cs:行号 1096
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-1-130315799486514934" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/15 19:19:22">
+    <title>【PC-20130721DCZQ】“rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value</title>
+    <detail>System.ArgumentOutOfRangeException: “rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value
+   在 System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   在 Jufine.Backend.Security.WebUI.ResourceMgmt.tvResource_SelectedNodeChanged(Object sender, EventArgs e) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.WebUI\ResourceMgmt.aspx.cs:行号 311
+   在 System.Web.UI.WebControls.TreeView.RaisePostBackEvent(String eventArgument)
+   在 Jufine.Backend.WebModel.PageBase.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\PageBase.cs:行号 1096
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-1-130315799486514934" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/15 19:19:28">
+    <title>【PC-20130721DCZQ】“rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value</title>
+    <detail>System.ArgumentOutOfRangeException: “rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value
+   在 System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   在 Jufine.Backend.Security.WebUI.ResourceMgmt.tvResource_SelectedNodeChanged(Object sender, EventArgs e) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.WebUI\ResourceMgmt.aspx.cs:行号 311
+   在 System.Web.UI.WebControls.TreeView.RaisePostBackEvent(String eventArgument)
+   在 Jufine.Backend.WebModel.PageBase.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\PageBase.cs:行号 1096
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-1-130315799486514934" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/15 19:19:30">
+    <title>【PC-20130721DCZQ】“rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value</title>
+    <detail>System.ArgumentOutOfRangeException: “rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value
+   在 System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   在 Jufine.Backend.Security.WebUI.ResourceMgmt.tvResource_SelectedNodeChanged(Object sender, EventArgs e) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.WebUI\ResourceMgmt.aspx.cs:行号 311
+   在 System.Web.UI.WebControls.TreeView.RaisePostBackEvent(String eventArgument)
+   在 Jufine.Backend.WebModel.PageBase.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\PageBase.cs:行号 1096
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-1-130315799486514934" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/15 19:19:30">
+    <title>【PC-20130721DCZQ】“rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value</title>
+    <detail>System.ArgumentOutOfRangeException: “rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value
+   在 System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   在 Jufine.Backend.Security.WebUI.ResourceMgmt.tvResource_SelectedNodeChanged(Object sender, EventArgs e) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.WebUI\ResourceMgmt.aspx.cs:行号 311
+   在 System.Web.UI.WebControls.TreeView.RaisePostBackEvent(String eventArgument)
+   在 Jufine.Backend.WebModel.PageBase.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\PageBase.cs:行号 1096
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-1-130315799486514934" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/15 19:19:35">
+    <title>【PC-20130721DCZQ】“rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value</title>
+    <detail>System.ArgumentOutOfRangeException: “rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value
+   在 System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   在 Jufine.Backend.Security.WebUI.ResourceMgmt.tvResource_SelectedNodeChanged(Object sender, EventArgs e) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.WebUI\ResourceMgmt.aspx.cs:行号 311
+   在 System.Web.UI.WebControls.TreeView.RaisePostBackEvent(String eventArgument)
+   在 Jufine.Backend.WebModel.PageBase.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\PageBase.cs:行号 1096
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-2-130315810866665842" machine="PC-20130721DCZQ" module="UnExceptedException" logType="UnExceptedException" logTime="2013/12/15 19:40:18">
+    <title>【PC-20130721DCZQ】基础提供程序在 Open 上失败。</title>
+    <detail>System.Data.EntityException: 基础提供程序在 Open 上失败。 ---&gt; System.Data.SqlClient.SqlException: 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接) ---&gt; System.ComponentModel.Win32Exception: 找不到网络路径。
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean&amp; closeStoreConnectionOnFailure)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean&amp; closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   在 System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 Jufine.Backend.BaseData.DataAccess.CodeValueDA.GetCodeListByGroupCode(String groupCode)
+   在 Jufine.Backend.BaseData.Business.CodeValueBL.GetCodeListByGroupCode(String groupCode)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-1-130316709627738596" machine="PC-20130721DCZQ" module="UnExceptedException" logType="UnExceptedException" logTime="2013/12/16 20:37:56">
+    <title>【PC-20130721DCZQ】基础提供程序在 Open 上失败。</title>
+    <detail>System.Data.EntityException: 基础提供程序在 Open 上失败。 ---&gt; System.Data.SqlClient.SqlException: 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接) ---&gt; System.ComponentModel.Win32Exception: 找不到网络路径。
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean&amp; closeStoreConnectionOnFailure)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean&amp; closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   在 System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 Jufine.Backend.BaseData.DataAccess.CodeValueDA.GetCodeListByGroupCode(String groupCode) 位置 f:\MyProjectInServer\TestCore\Projects\BaseData\Jufine.Backend.BaseData.ServiceImplement\DataAccess\CodeValueDA.cs:行号 247
+   在 Jufine.Backend.BaseData.Business.CodeValueBL.GetCodeListByGroupCode(String groupCode) 位置 f:\MyProjectInServer\TestCore\Projects\BaseData\Jufine.Backend.BaseData.ServiceImplement\Business\CodeValueBL.cs:行号 109</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-1-130316709627738596" machine="PC-20130721DCZQ" module="UnExceptedException" logType="UnExceptedException" logTime="2013/12/16 20:38:22">
+    <title>【PC-20130721DCZQ】基础提供程序在 Open 上失败。</title>
+    <detail>System.Data.EntityException: 基础提供程序在 Open 上失败。 ---&gt; System.Data.SqlClient.SqlException: 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接) ---&gt; System.ComponentModel.Win32Exception: 找不到网络路径。
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean&amp; closeStoreConnectionOnFailure)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean&amp; closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   在 System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 Jufine.Backend.BaseData.DataAccess.CodeValueDA.GetCodeListByGroupCode(String groupCode) 位置 f:\MyProjectInServer\TestCore\Projects\BaseData\Jufine.Backend.BaseData.ServiceImplement\DataAccess\CodeValueDA.cs:行号 247
+   在 Jufine.Backend.BaseData.Business.CodeValueBL.GetCodeListByGroupCode(String groupCode) 位置 f:\MyProjectInServer\TestCore\Projects\BaseData\Jufine.Backend.BaseData.ServiceImplement\Business\CodeValueBL.cs:行号 109</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-2-130316711056380310" machine="PC-20130721DCZQ" module="UnExceptedException" logType="UnExceptedException" logTime="2013/12/16 20:46:32">
+    <title>【PC-20130721DCZQ】基础提供程序在 Open 上失败。</title>
+    <detail>System.Data.EntityException: 基础提供程序在 Open 上失败。 ---&gt; System.Data.SqlClient.SqlException: 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接) ---&gt; System.ComponentModel.Win32Exception: 找不到网络路径。
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean&amp; closeStoreConnectionOnFailure)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean&amp; closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   在 System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 Jufine.Backend.BaseData.DataAccess.CodeValueDA.GetCodeListByGroupCode(String groupCode) 位置 f:\MyProjectInServer\TestCore\Projects\BaseData\Jufine.Backend.BaseData.ServiceImplement\DataAccess\CodeValueDA.cs:行号 247
+   在 Jufine.Backend.BaseData.Business.CodeValueBL.GetCodeListByGroupCode(String groupCode) 位置 f:\MyProjectInServer\TestCore\Projects\BaseData\Jufine.Backend.BaseData.ServiceImplement\Business\CodeValueBL.cs:行号 109</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-4-130316716025294516" machine="PC-20130721DCZQ" module="UnExceptedException" logType="UnExceptedException" logTime="2013/12/16 20:48:02">
+    <title>【PC-20130721DCZQ】基础提供程序在 Open 上失败。</title>
+    <detail>System.Data.EntityException: 基础提供程序在 Open 上失败。 ---&gt; System.Data.SqlClient.SqlException: 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接) ---&gt; System.ComponentModel.Win32Exception: 找不到网络路径。
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean&amp; closeStoreConnectionOnFailure)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean&amp; closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   在 System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 Jufine.Backend.BaseData.DataAccess.CodeValueDA.GetCodeListByGroupCode(String groupCode) 位置 f:\MyProjectInServer\TestCore\Projects\BaseData\Jufine.Backend.BaseData.ServiceImplement\DataAccess\CodeValueDA.cs:行号 247
+   在 Jufine.Backend.BaseData.Business.CodeValueBL.GetCodeListByGroupCode(String groupCode) 位置 f:\MyProjectInServer\TestCore\Projects\BaseData\Jufine.Backend.BaseData.ServiceImplement\Business\CodeValueBL.cs:行号 109</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-5-130316716120679971" machine="PC-20130721DCZQ" module="UnExceptedException" logType="UnExceptedException" logTime="2013/12/16 20:49:20">
+    <title>【PC-20130721DCZQ】基础提供程序在 Open 上失败。</title>
+    <detail>System.Data.EntityException: 基础提供程序在 Open 上失败。 ---&gt; System.Data.SqlClient.SqlException: 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接) ---&gt; System.ComponentModel.Win32Exception: 找不到网络路径。
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean&amp; closeStoreConnectionOnFailure)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean&amp; closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   在 System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 Jufine.Backend.BaseData.DataAccess.CodeValueDA.GetCodeListByGroupCode(String groupCode) 位置 f:\MyProjectInServer\TestCore\Projects\BaseData\Jufine.Backend.BaseData.ServiceImplement\DataAccess\CodeValueDA.cs:行号 247
+   在 Jufine.Backend.BaseData.Business.CodeValueBL.GetCodeListByGroupCode(String groupCode) 位置 f:\MyProjectInServer\TestCore\Projects\BaseData\Jufine.Backend.BaseData.ServiceImplement\Business\CodeValueBL.cs:行号 109</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-1-130316721122756074" machine="PC-20130721DCZQ" module="UnExceptedException" logType="UnExceptedException" logTime="2013/12/16 20:59:25">
+    <title>【PC-20130721DCZQ】已经为该 ObjectContext 设置了 DefaultContainerName 属性。该属性一旦设置即无法更改。</title>
+    <detail>System.InvalidOperationException: 已经为该 ObjectContext 设置了 DefaultContainerName 属性。该属性一旦设置即无法更改。
+   在 System.Data.Objects.ObjectContext..ctor(EntityConnection connection, String defaultContainerName)
+   在 Jufine.Backend.BaseData.DataAccess.BaseDataEntities..ctor() 位置 f:\MyProjectInServer\TestCore\Projects\BaseData\Jufine.Backend.BaseData.ServiceImplement\DataAccess\BaseDataEntity.cs:行号 32
+   在 Jufine.Backend.BaseData.DataAccess.CodeValueDA.GetCodeListByGroupCode(String groupCode) 位置 f:\MyProjectInServer\TestCore\Projects\BaseData\Jufine.Backend.BaseData.ServiceImplement\DataAccess\CodeValueDA.cs:行号 244
+   在 Jufine.Backend.BaseData.Business.CodeValueBL.GetCodeListByGroupCode(String groupCode) 位置 f:\MyProjectInServer\TestCore\Projects\BaseData\Jufine.Backend.BaseData.ServiceImplement\Business\CodeValueBL.cs:行号 109</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-1-130316721122756074" machine="PC-20130721DCZQ" module="UnExceptedException" logType="UnExceptedException" logTime="2013/12/16 21:01:20">
+    <title>【PC-20130721DCZQ】基础提供程序在 Open 上失败。</title>
+    <detail>System.Data.EntityException: 基础提供程序在 Open 上失败。 ---&gt; System.Data.SqlClient.SqlException: 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接) ---&gt; System.ComponentModel.Win32Exception: 找不到网络路径。
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean&amp; closeStoreConnectionOnFailure)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean&amp; closeStoreConnectionOnFailure)
+   在 System.Data.EntityClient.EntityConnection.Open()
+   在 System.Data.Objects.ObjectContext.EnsureConnection()
+   在 System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   在 System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 Jufine.Backend.BaseData.DataAccess.CodeValueDA.GetCodeListByGroupCode(String groupCode) 位置 f:\MyProjectInServer\TestCore\Projects\BaseData\Jufine.Backend.BaseData.ServiceImplement\DataAccess\CodeValueDA.cs:行号 247
+   在 Jufine.Backend.BaseData.Business.CodeValueBL.GetCodeListByGroupCode(String groupCode) 位置 f:\MyProjectInServer\TestCore\Projects\BaseData\Jufine.Backend.BaseData.ServiceImplement\Business\CodeValueBL.cs:行号 109</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-2-130316724833888338" machine="PC-20130721DCZQ" module="UnExceptedException" logType="UnExceptedException" logTime="2013/12/16 21:01:29">
+    <title>【PC-20130721DCZQ】找不到 EntityType“Jufine.Backend.Security.DataContracts.UVMerchantInfo”的映射和元数据信息。</title>
+    <detail>System.InvalidOperationException: 找不到 EntityType“Jufine.Backend.Security.DataContracts.UVMerchantInfo”的映射和元数据信息。
+   在 System.Data.Objects.ObjectContext.GetTypeUsage(Type entityCLRType)
+   在 System.Data.Objects.ObjectContext.GetEntitySetFromContainer(EntityContainer container, Type entityCLRType, String exceptionParameterName)
+   在 System.Data.Objects.ObjectContext.GetEntitySetForType(Type entityCLRType, String exceptionParameterName)
+   在 System.Data.Objects.ObjectContext.CreateObjectSet[TEntity]()
+   在 Jufine.Backend.Security.DataAccess.UVMerchantInfoDA.GetTotalUVMerchantInfo(IUser currentUser, QueryConditionInfo`1 queryCondition) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\DataAccess\UVMerchantDA.cs:行号 108
+   在 Jufine.Backend.Security.Business.MerchantBL.QueryUVMerchantInfo(QueryConditionInfo`1 queryCondition, IUser currentUser, String ctlName, Int32 currentPageID, List`1 pageControlResources) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\Business\MerchantBL.cs:行号 139</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-2-130316724833888338" machine="PC-20130721DCZQ" module="UnExceptedException" logType="UnExceptedException" logTime="2013/12/16 21:02:01">
+    <title>【PC-20130721DCZQ】找不到 EntityType“Jufine.Backend.Security.DataContracts.UVMerchantInfo”的映射和元数据信息。</title>
+    <detail>System.InvalidOperationException: 找不到 EntityType“Jufine.Backend.Security.DataContracts.UVMerchantInfo”的映射和元数据信息。
+   在 System.Data.Objects.ObjectContext.GetTypeUsage(Type entityCLRType)
+   在 System.Data.Objects.ObjectContext.GetEntitySetFromContainer(EntityContainer container, Type entityCLRType, String exceptionParameterName)
+   在 System.Data.Objects.ObjectContext.GetEntitySetForType(Type entityCLRType, String exceptionParameterName)
+   在 System.Data.Objects.ObjectContext.CreateObjectSet[TEntity]()
+   在 Jufine.Backend.Security.DataAccess.UVMerchantInfoDA.GetTotalUVMerchantInfo(IUser currentUser, QueryConditionInfo`1 queryCondition) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\DataAccess\UVMerchantDA.cs:行号 108
+   在 Jufine.Backend.Security.Business.MerchantBL.QueryUVMerchantInfo(QueryConditionInfo`1 queryCondition, IUser currentUser, String ctlName, Int32 currentPageID, List`1 pageControlResources) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\Business\MerchantBL.cs:行号 139</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-2-130316724833888338" machine="PC-20130721DCZQ" module="UnExceptedException" logType="UnExceptedException" logTime="2013/12/16 21:02:05">
+    <title>【PC-20130721DCZQ】找不到 EntityType“Jufine.Backend.Security.DataContracts.UVMerchantInfo”的映射和元数据信息。</title>
+    <detail>System.InvalidOperationException: 找不到 EntityType“Jufine.Backend.Security.DataContracts.UVMerchantInfo”的映射和元数据信息。
+   在 System.Data.Objects.ObjectContext.GetTypeUsage(Type entityCLRType)
+   在 System.Data.Objects.ObjectContext.GetEntitySetFromContainer(EntityContainer container, Type entityCLRType, String exceptionParameterName)
+   在 System.Data.Objects.ObjectContext.GetEntitySetForType(Type entityCLRType, String exceptionParameterName)
+   在 System.Data.Objects.ObjectContext.CreateObjectSet[TEntity]()
+   在 Jufine.Backend.Security.DataAccess.UVMerchantInfoDA.GetTotalUVMerchantInfo(IUser currentUser, QueryConditionInfo`1 queryCondition) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\DataAccess\UVMerchantDA.cs:行号 108
+   在 Jufine.Backend.Security.Business.MerchantBL.QueryUVMerchantInfo(QueryConditionInfo`1 queryCondition, IUser currentUser, String ctlName, Int32 currentPageID, List`1 pageControlResources) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\Business\MerchantBL.cs:行号 139</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-2-130316724833888338" machine="PC-20130721DCZQ" module="UnExceptedException" logType="UnExceptedException" logTime="2013/12/16 21:03:52">
+    <title>【PC-20130721DCZQ】找不到 EntityType“Jufine.Backend.Security.DataContracts.UVMerchantInfo”的映射和元数据信息。</title>
+    <detail>System.InvalidOperationException: 找不到 EntityType“Jufine.Backend.Security.DataContracts.UVMerchantInfo”的映射和元数据信息。
+   在 System.Data.Objects.ObjectContext.GetTypeUsage(Type entityCLRType)
+   在 System.Data.Objects.ObjectContext.GetEntitySetFromContainer(EntityContainer container, Type entityCLRType, String exceptionParameterName)
+   在 System.Data.Objects.ObjectContext.GetEntitySetForType(Type entityCLRType, String exceptionParameterName)
+   在 System.Data.Objects.ObjectContext.CreateObjectSet[TEntity]()
+   在 Jufine.Backend.Security.DataAccess.UVMerchantInfoDA.GetTotalUVMerchantInfo(IUser currentUser, QueryConditionInfo`1 queryCondition) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\DataAccess\UVMerchantDA.cs:行号 108
+   在 Jufine.Backend.Security.Business.MerchantBL.QueryUVMerchantInfo(QueryConditionInfo`1 queryCondition, IUser currentUser, String ctlName, Int32 currentPageID, List`1 pageControlResources) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\Business\MerchantBL.cs:行号 139</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-2-130316724833888338" machine="PC-20130721DCZQ" module="UnExceptedException" logType="UnExceptedException" logTime="2013/12/16 21:11:25">
+    <title>【PC-20130721DCZQ】找不到 EntityType“Jufine.Backend.Security.DataContracts.UVMerchantInfo”的映射和元数据信息。</title>
+    <detail>System.InvalidOperationException: 找不到 EntityType“Jufine.Backend.Security.DataContracts.UVMerchantInfo”的映射和元数据信息。
+   在 System.Data.Objects.ObjectContext.GetTypeUsage(Type entityCLRType)
+   在 System.Data.Objects.ObjectContext.GetEntitySetFromContainer(EntityContainer container, Type entityCLRType, String exceptionParameterName)
+   在 System.Data.Objects.ObjectContext.GetEntitySetForType(Type entityCLRType, String exceptionParameterName)
+   在 System.Data.Objects.ObjectContext.CreateObjectSet[TEntity]()
+   在 Jufine.Backend.Security.DataAccess.UVMerchantInfoDA.GetTotalUVMerchantInfo(IUser currentUser, QueryConditionInfo`1 queryCondition) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\DataAccess\UVMerchantDA.cs:行号 108
+   在 Jufine.Backend.Security.Business.MerchantBL.QueryUVMerchantInfo(QueryConditionInfo`1 queryCondition, IUser currentUser, String ctlName, Int32 currentPageID, List`1 pageControlResources) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\Business\MerchantBL.cs:行号 139</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-3-130316732585021678" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/16 21:19:08">
+    <title>【PC-20130721DCZQ】回发或回调参数无效。在配置中使用 &lt;pages enableEventValidation="true"/&gt; 或在页面中使用 &lt;%@ Page EnableEventValidation="true" %&gt; 启用了事件验证。出于安全目的，此功能验证回发或回调事件的参数是否来源于最初呈现这些事件的服务器控件。如果数据有效并且是预期的，则使用 ClientScriptManager.RegisterForEventValidation 方法来注册回发或回调数据以进行验证。</title>
+    <detail>System.ArgumentException: 回发或回调参数无效。在配置中使用 &lt;pages enableEventValidation="true"/&gt; 或在页面中使用 &lt;%@ Page EnableEventValidation="true" %&gt; 启用了事件验证。出于安全目的，此功能验证回发或回调事件的参数是否来源于最初呈现这些事件的服务器控件。如果数据有效并且是预期的，则使用 ClientScriptManager.RegisterForEventValidation 方法来注册回发或回调数据以进行验证。
+   在 System.Web.UI.ClientScriptManager.ValidateEvent(String uniqueId, String argument)
+   在 System.Web.UI.WebControls.DropDownList.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   在 System.Web.UI.Page.ProcessPostData(NameValueCollection postData, Boolean fBeforeLoad)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-3-130316732585021678" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/16 21:19:08">
+    <title>【PC-20130721DCZQ】客户端已断开连接。</title>
+    <detail>System.Web.HttpException (0x80004005): 客户端已断开连接。 ---&gt; System.Web.UI.ViewStateException: 无效的视图状态。
+	Client IP: ::1
+	Port: 2876
+	Referer: http://localhost/Security/MerchantMgmt.aspx
+	Path: /Security/MerchantMgmt.aspx
+	User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.69 Safari/537.36
+	ViewState: /wEPDwUJMjA5MzUxMjMxDxYEHhlVVk1FUkNIQU5UX1FVRVJZQ09ORElUSU9OMr5iAAEAAAD/////AQAAAAAAAAAMAgAAAE1Db20uQmFzZUxpYnJhcnkuQ29tbW9uLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49bnVsbAwDAAAAV0p1ZmluZS5CYWNrZW5kLlNlY3VyaXR5LkNvbnRyYWN0LCBWZXJzaW9uPTEuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49bnVsbAUBAAAAvAFDb20uQmFzZUxpYnJhcnkuRW50aXR5LlF1ZXJ5Q29uZGl0aW9uSW5mb2AxW1tKdWZpbmUuQmFja2VuZC5TZWN1cml0eS5EYXRhQ29udHJhY3RzLlVWTWVyY2hhbnRJbmZvLCBKdWZpbmUuQmFja2VuZC5TZWN1cml0eS5Db250cmFjdCwgVmVyc2lvbj0xLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPW51bGxdXQkAAAASbV9PcmRlckZpbGVkU3RyaW5nGjxQYWdlSW5kZXg+a19fQmFja2luZ0ZpZWxkGTxQYWdlU2l6ZT5rX19CYWNraW5nRmllbGQZPENvbmR0aW9uPmtfX0JhY2tpbmdGaWVsZB48UmV0dXJuQWxsRGF0YT5rX19CYWNraW5nRmllbGQcPE9... ---&gt; System.FormatException: Base-64 字符数组或字符串的长度无效。
+   在 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 System.Web.UI.ObjectStateFormatter.Deserialize(String inputString, Purpose purpose)
+   在 System.Web.UI.Util.DeserializeWithAssert(IStateFormatter2 formatter, String serializedState, Purpose purpose)
+   在 System.Web.UI.HiddenFieldPageStatePersister.Load()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.UI.ViewStateException.ThrowError(Exception inner, String persistedState, String errorPageMessage, Boolean macValidationError)
+   在 System.Web.UI.HiddenFieldPageStatePersister.Load()
+   在 System.Web.UI.Page.LoadPageStateFromPersistenceMedium()
+   在 System.Web.UI.Page.LoadAllState()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-3-130317573858172953" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/17 20:39:37">
+    <title>【PC-20130721DCZQ】“rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value</title>
+    <detail>System.ArgumentOutOfRangeException: “rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value
+   在 System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   在 Jufine.Backend.Security.WebUI.ResourceMgmt.tvResource_SelectedNodeChanged(Object sender, EventArgs e) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.WebUI\ResourceMgmt.aspx.cs:行号 311
+   在 System.Web.UI.WebControls.TreeView.RaisePostBackEvent(String eventArgument)
+   在 Jufine.Backend.WebModel.PageBase.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\PageBase.cs:行号 1096
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-3-130317573858172953" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/17 20:39:53">
+    <title>【PC-20130721DCZQ】“rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value</title>
+    <detail>System.ArgumentOutOfRangeException: “rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value
+   在 System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   在 Jufine.Backend.Security.WebUI.ResourceMgmt.tvResource_SelectedNodeChanged(Object sender, EventArgs e) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.WebUI\ResourceMgmt.aspx.cs:行号 311
+   在 System.Web.UI.WebControls.TreeView.RaisePostBackEvent(String eventArgument)
+   在 Jufine.Backend.WebModel.PageBase.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\PageBase.cs:行号 1096
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-3-130317573858172953" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/17 20:39:55">
+    <title>【PC-20130721DCZQ】“rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value</title>
+    <detail>System.ArgumentOutOfRangeException: “rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value
+   在 System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   在 Jufine.Backend.Security.WebUI.ResourceMgmt.tvResource_SelectedNodeChanged(Object sender, EventArgs e) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.WebUI\ResourceMgmt.aspx.cs:行号 311
+   在 System.Web.UI.WebControls.TreeView.RaisePostBackEvent(String eventArgument)
+   在 Jufine.Backend.WebModel.PageBase.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\PageBase.cs:行号 1096
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-3-130317573858172953" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/17 20:39:58">
+    <title>【PC-20130721DCZQ】“rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value</title>
+    <detail>System.ArgumentOutOfRangeException: “rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value
+   在 System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   在 Jufine.Backend.Security.WebUI.ResourceMgmt.tvResource_SelectedNodeChanged(Object sender, EventArgs e) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.WebUI\ResourceMgmt.aspx.cs:行号 311
+   在 System.Web.UI.WebControls.TreeView.RaisePostBackEvent(String eventArgument)
+   在 Jufine.Backend.WebModel.PageBase.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\PageBase.cs:行号 1096
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-3-130317573858172953" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/17 20:39:59">
+    <title>【PC-20130721DCZQ】“rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value</title>
+    <detail>System.ArgumentOutOfRangeException: “rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value
+   在 System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   在 Jufine.Backend.Security.WebUI.ResourceMgmt.tvResource_SelectedNodeChanged(Object sender, EventArgs e) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.WebUI\ResourceMgmt.aspx.cs:行号 311
+   在 System.Web.UI.WebControls.TreeView.RaisePostBackEvent(String eventArgument)
+   在 Jufine.Backend.WebModel.PageBase.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\PageBase.cs:行号 1096
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-3-130317573858172953" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/17 20:39:59">
+    <title>【PC-20130721DCZQ】“rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value</title>
+    <detail>System.ArgumentOutOfRangeException: “rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value
+   在 System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   在 Jufine.Backend.Security.WebUI.ResourceMgmt.tvResource_SelectedNodeChanged(Object sender, EventArgs e) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.WebUI\ResourceMgmt.aspx.cs:行号 311
+   在 System.Web.UI.WebControls.TreeView.RaisePostBackEvent(String eventArgument)
+   在 Jufine.Backend.WebModel.PageBase.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\PageBase.cs:行号 1096
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-3-130317573858172953" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/17 20:40:04">
+    <title>【PC-20130721DCZQ】“rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value</title>
+    <detail>System.ArgumentOutOfRangeException: “rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value
+   在 System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   在 Jufine.Backend.Security.WebUI.ResourceMgmt.tvResource_SelectedNodeChanged(Object sender, EventArgs e) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.WebUI\ResourceMgmt.aspx.cs:行号 311
+   在 System.Web.UI.WebControls.TreeView.RaisePostBackEvent(String eventArgument)
+   在 Jufine.Backend.WebModel.PageBase.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\PageBase.cs:行号 1096
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-3-130317573858172953" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/17 20:40:08">
+    <title>【PC-20130721DCZQ】“rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value</title>
+    <detail>System.ArgumentOutOfRangeException: “rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value
+   在 System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   在 Jufine.Backend.Security.WebUI.ResourceMgmt.tvResource_SelectedNodeChanged(Object sender, EventArgs e) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.WebUI\ResourceMgmt.aspx.cs:行号 311
+   在 System.Web.UI.WebControls.TreeView.RaisePostBackEvent(String eventArgument)
+   在 Jufine.Backend.WebModel.PageBase.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\PageBase.cs:行号 1096
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-3-130317573858172953" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/17 20:40:09">
+    <title>【PC-20130721DCZQ】“rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value</title>
+    <detail>System.ArgumentOutOfRangeException: “rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value
+   在 System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   在 Jufine.Backend.Security.WebUI.ResourceMgmt.tvResource_SelectedNodeChanged(Object sender, EventArgs e) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.WebUI\ResourceMgmt.aspx.cs:行号 311
+   在 System.Web.UI.WebControls.TreeView.RaisePostBackEvent(String eventArgument)
+   在 Jufine.Backend.WebModel.PageBase.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\PageBase.cs:行号 1096
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-3-130317573858172953" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/17 20:40:10">
+    <title>【PC-20130721DCZQ】“rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value</title>
+    <detail>System.ArgumentOutOfRangeException: “rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value
+   在 System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   在 Jufine.Backend.Security.WebUI.ResourceMgmt.tvResource_SelectedNodeChanged(Object sender, EventArgs e) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.WebUI\ResourceMgmt.aspx.cs:行号 311
+   在 System.Web.UI.WebControls.TreeView.RaisePostBackEvent(String eventArgument)
+   在 Jufine.Backend.WebModel.PageBase.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\PageBase.cs:行号 1096
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-3-130317573858172953" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/17 20:40:11">
+    <title>【PC-20130721DCZQ】“rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value</title>
+    <detail>System.ArgumentOutOfRangeException: “rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value
+   在 System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   在 Jufine.Backend.Security.WebUI.ResourceMgmt.tvResource_SelectedNodeChanged(Object sender, EventArgs e) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.WebUI\ResourceMgmt.aspx.cs:行号 311
+   在 System.Web.UI.WebControls.TreeView.RaisePostBackEvent(String eventArgument)
+   在 Jufine.Backend.WebModel.PageBase.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\PageBase.cs:行号 1096
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-3-130317573858172953" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/17 20:40:15">
+    <title>【PC-20130721DCZQ】“rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value</title>
+    <detail>System.ArgumentOutOfRangeException: “rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value
+   在 System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   在 Jufine.Backend.Security.WebUI.ResourceMgmt.tvResource_SelectedNodeChanged(Object sender, EventArgs e) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.WebUI\ResourceMgmt.aspx.cs:行号 311
+   在 System.Web.UI.WebControls.TreeView.RaisePostBackEvent(String eventArgument)
+   在 Jufine.Backend.WebModel.PageBase.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\PageBase.cs:行号 1096
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-3-130317573858172953" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/17 20:40:40">
+    <title>【PC-20130721DCZQ】“rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value</title>
+    <detail>System.ArgumentOutOfRangeException: “rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value
+   在 System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   在 Jufine.Backend.Security.WebUI.ResourceMgmt.tvResource_SelectedNodeChanged(Object sender, EventArgs e) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.WebUI\ResourceMgmt.aspx.cs:行号 311
+   在 System.Web.UI.WebControls.TreeView.RaisePostBackEvent(String eventArgument)
+   在 Jufine.Backend.WebModel.PageBase.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\PageBase.cs:行号 1096
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-3-130317573858172953" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/17 20:40:42">
+    <title>【PC-20130721DCZQ】“rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value</title>
+    <detail>System.ArgumentOutOfRangeException: “rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value
+   在 System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   在 Jufine.Backend.Security.WebUI.ResourceMgmt.tvResource_SelectedNodeChanged(Object sender, EventArgs e) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.WebUI\ResourceMgmt.aspx.cs:行号 311
+   在 System.Web.UI.WebControls.TreeView.RaisePostBackEvent(String eventArgument)
+   在 Jufine.Backend.WebModel.PageBase.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\PageBase.cs:行号 1096
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-3-130317573858172953" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/17 20:40:44">
+    <title>【PC-20130721DCZQ】“rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value</title>
+    <detail>System.ArgumentOutOfRangeException: “rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value
+   在 System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   在 Jufine.Backend.Security.WebUI.ResourceMgmt.tvResource_SelectedNodeChanged(Object sender, EventArgs e) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.WebUI\ResourceMgmt.aspx.cs:行号 311
+   在 System.Web.UI.WebControls.TreeView.RaisePostBackEvent(String eventArgument)
+   在 Jufine.Backend.WebModel.PageBase.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\PageBase.cs:行号 1096
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-3-130317573858172953" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/17 20:40:45">
+    <title>【PC-20130721DCZQ】“rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value</title>
+    <detail>System.ArgumentOutOfRangeException: “rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value
+   在 System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   在 Jufine.Backend.Security.WebUI.ResourceMgmt.tvResource_SelectedNodeChanged(Object sender, EventArgs e) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.WebUI\ResourceMgmt.aspx.cs:行号 311
+   在 System.Web.UI.WebControls.TreeView.RaisePostBackEvent(String eventArgument)
+   在 Jufine.Backend.WebModel.PageBase.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\PageBase.cs:行号 1096
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-3-130317573858172953" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/17 20:40:56">
+    <title>【PC-20130721DCZQ】“rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value</title>
+    <detail>System.ArgumentOutOfRangeException: “rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value
+   在 System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   在 Jufine.Backend.Security.WebUI.ResourceMgmt.tvResource_SelectedNodeChanged(Object sender, EventArgs e) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.WebUI\ResourceMgmt.aspx.cs:行号 311
+   在 System.Web.UI.WebControls.TreeView.RaisePostBackEvent(String eventArgument)
+   在 Jufine.Backend.WebModel.PageBase.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\PageBase.cs:行号 1096
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-3-130317573858172953" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/17 20:40:59">
+    <title>【PC-20130721DCZQ】“rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value</title>
+    <detail>System.ArgumentOutOfRangeException: “rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value
+   在 System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   在 Jufine.Backend.Security.WebUI.ResourceMgmt.tvResource_SelectedNodeChanged(Object sender, EventArgs e) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.WebUI\ResourceMgmt.aspx.cs:行号 311
+   在 System.Web.UI.WebControls.TreeView.RaisePostBackEvent(String eventArgument)
+   在 Jufine.Backend.WebModel.PageBase.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\PageBase.cs:行号 1096
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-3-130317573858172953" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/17 20:40:59">
+    <title>【PC-20130721DCZQ】“rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value</title>
+    <detail>System.ArgumentOutOfRangeException: “rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value
+   在 System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   在 Jufine.Backend.Security.WebUI.ResourceMgmt.tvResource_SelectedNodeChanged(Object sender, EventArgs e) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.WebUI\ResourceMgmt.aspx.cs:行号 311
+   在 System.Web.UI.WebControls.TreeView.RaisePostBackEvent(String eventArgument)
+   在 Jufine.Backend.WebModel.PageBase.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\PageBase.cs:行号 1096
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-3-130317573858172953" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/17 20:41:00">
+    <title>【PC-20130721DCZQ】“rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value</title>
+    <detail>System.ArgumentOutOfRangeException: “rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value
+   在 System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   在 Jufine.Backend.Security.WebUI.ResourceMgmt.tvResource_SelectedNodeChanged(Object sender, EventArgs e) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.WebUI\ResourceMgmt.aspx.cs:行号 311
+   在 System.Web.UI.WebControls.TreeView.RaisePostBackEvent(String eventArgument)
+   在 Jufine.Backend.WebModel.PageBase.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\PageBase.cs:行号 1096
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-3-130317573858172953" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/17 20:41:01">
+    <title>【PC-20130721DCZQ】“rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value</title>
+    <detail>System.ArgumentOutOfRangeException: “rblResourceType”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value
+   在 System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   在 Jufine.Backend.Security.WebUI.ResourceMgmt.tvResource_SelectedNodeChanged(Object sender, EventArgs e) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.WebUI\ResourceMgmt.aspx.cs:行号 311
+   在 System.Web.UI.WebControls.TreeView.RaisePostBackEvent(String eventArgument)
+   在 Jufine.Backend.WebModel.PageBase.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\PageBase.cs:行号 1096
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-3-130317573858172953" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/17 20:43:39">
+    <title>【PC-20130721DCZQ】值不能为 null。
+参数名: source</title>
+    <detail>System.ArgumentNullException: 值不能为 null。
+参数名: source
+   在 System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   在 Jufine.Backend.WebModel.MasterPage.BindMenu() 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\MasterPage.master.cs:行号 172
+   在 Jufine.Backend.WebModel.MasterPage.Page_Load(Object sender, EventArgs e) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\MasterPage.master.cs:行号 106
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-3-130317573858172953" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/17 20:43:58">
+    <title>【PC-20130721DCZQ】值不能为 null。
+参数名: source</title>
+    <detail>System.ArgumentNullException: 值不能为 null。
+参数名: source
+   在 System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   在 Jufine.Backend.WebModel.MasterPage.BindMenu() 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\MasterPage.master.cs:行号 172
+   在 Jufine.Backend.WebModel.MasterPage.Page_Load(Object sender, EventArgs e) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\MasterPage.master.cs:行号 106
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-3-130317573858172953" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/17 20:44:00">
+    <title>【PC-20130721DCZQ】值不能为 null。
+参数名: source</title>
+    <detail>System.ArgumentNullException: 值不能为 null。
+参数名: source
+   在 System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   在 Jufine.Backend.WebModel.MasterPage.BindMenu() 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\MasterPage.master.cs:行号 172
+   在 Jufine.Backend.WebModel.MasterPage.Page_Load(Object sender, EventArgs e) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\MasterPage.master.cs:行号 106
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-3-130317573858172953" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/17 20:44:04">
+    <title>【PC-20130721DCZQ】值不能为 null。
+参数名: source</title>
+    <detail>System.ArgumentNullException: 值不能为 null。
+参数名: source
+   在 System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   在 Jufine.Backend.WebModel.MasterPage.BindMenu() 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\MasterPage.master.cs:行号 172
+   在 Jufine.Backend.WebModel.MasterPage.Page_Load(Object sender, EventArgs e) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\MasterPage.master.cs:行号 106
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-3-130317573858172953" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/17 20:45:56">
+    <title>【PC-20130721DCZQ】值不能为 null。
+参数名: source</title>
+    <detail>System.ArgumentNullException: 值不能为 null。
+参数名: source
+   在 System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   在 Jufine.Backend.WebModel.MasterPage.BindMenu() 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\MasterPage.master.cs:行号 172
+   在 Jufine.Backend.WebModel.MasterPage.Page_Load(Object sender, EventArgs e) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\MasterPage.master.cs:行号 106
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-3-130317573858172953" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/17 20:47:00">
+    <title>【PC-20130721DCZQ】值不能为 null。
+参数名: source</title>
+    <detail>System.ArgumentNullException: 值不能为 null。
+参数名: source
+   在 System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   在 Jufine.Backend.WebModel.MasterPage.BindMenu() 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\MasterPage.master.cs:行号 172
+   在 Jufine.Backend.WebModel.MasterPage.Page_Load(Object sender, EventArgs e) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\MasterPage.master.cs:行号 106
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-3-130317573858172953" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/17 20:47:19">
+    <title>【PC-20130721DCZQ】值不能为 null。
+参数名: source</title>
+    <detail>System.ArgumentNullException: 值不能为 null。
+参数名: source
+   在 System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   在 Jufine.Backend.WebModel.MasterPage.BindMenu() 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\MasterPage.master.cs:行号 172
+   在 Jufine.Backend.WebModel.MasterPage.Page_Load(Object sender, EventArgs e) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\MasterPage.master.cs:行号 106
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-5-130317584654850487" machine="PC-20130721DCZQ" module="UnExceptedException" logType="UnExceptedException" logTime="2013/12/17 20:54:53">
+    <title>【PC-20130721DCZQ】在容器“SecurityEntities”中找不到 FunctionImport“UP_DeleteMerchantInfo”。</title>
+    <detail>System.InvalidOperationException: 在容器“SecurityEntities”中找不到 FunctionImport“UP_DeleteMerchantInfo”。
+   在 System.Data.Common.Utils.CommandHelper.FindFunctionImport(MetadataWorkspace workspace, String containerName, String functionImportName)
+   在 System.Data.Objects.ObjectContext.CreateEntityCommandForFunctionImport(String functionName, EdmFunction&amp; functionImport, ObjectParameter[] parameters)
+   在 System.Data.Objects.ObjectContext.ExecuteFunction(String functionName, ObjectParameter[] parameters)
+   在 Jufine.Backend.Security.DataAccess.MerchantDA.BatchDeleteMerchant(List`1 keyList, String editUser) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\DataAccess\MerchantDA.cs:行号 684
+   在 Jufine.Backend.Security.Business.MerchantBL.BatchDeleteMerchant(List`1 keyList, String editUser) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\Business\MerchantBL.cs:行号 445</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-5-130317584654850487" machine="PC-20130721DCZQ" module="UnExceptedException" logType="UnExceptedException" logTime="2013/12/17 20:56:43">
+    <title>【PC-20130721DCZQ】在容器“SecurityEntities”中找不到 FunctionImport“UP_DeleteMerchantInfo”。</title>
+    <detail>System.InvalidOperationException: 在容器“SecurityEntities”中找不到 FunctionImport“UP_DeleteMerchantInfo”。
+   在 System.Data.Common.Utils.CommandHelper.FindFunctionImport(MetadataWorkspace workspace, String containerName, String functionImportName)
+   在 System.Data.Objects.ObjectContext.CreateEntityCommandForFunctionImport(String functionName, EdmFunction&amp; functionImport, ObjectParameter[] parameters)
+   在 System.Data.Objects.ObjectContext.ExecuteFunction(String functionName, ObjectParameter[] parameters)
+   在 Jufine.Backend.Security.DataAccess.MerchantDA.BatchDeleteMerchant(List`1 keyList, String editUser) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\DataAccess\MerchantDA.cs:行号 684
+   在 Jufine.Backend.Security.Business.MerchantBL.BatchDeleteMerchant(List`1 keyList, String editUser) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\Business\MerchantBL.cs:行号 445</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-5-130317584654850487" machine="PC-20130721DCZQ" module="UnExceptedException" logType="UnExceptedException" logTime="2013/12/17 20:58:46">
+    <title>【PC-20130721DCZQ】找不到 EntityType“Jufine.Backend.Security.DataContracts.UVAuditWorkFlow”的映射和元数据信息。</title>
+    <detail>System.InvalidOperationException: 找不到 EntityType“Jufine.Backend.Security.DataContracts.UVAuditWorkFlow”的映射和元数据信息。
+   在 System.Data.Objects.ObjectContext.GetTypeUsage(Type entityCLRType)
+   在 System.Data.Objects.ObjectContext.GetEntitySetFromContainer(EntityContainer container, Type entityCLRType, String exceptionParameterName)
+   在 System.Data.Objects.ObjectContext.GetEntitySetForType(Type entityCLRType, String exceptionParameterName)
+   在 System.Data.Objects.ObjectContext.CreateObjectSet[TEntity]()
+   在 Com.BaseLibrary.Service.DataBase`2.GetSelectLinq(EF entities, QueryConditionInfo`1 queryCondition) 位置 f:\MyProjectInServer\TestCore\BaseLibrary\Com.BaseLibrary.Service\DataBase.cs:行号 131
+   在 Com.BaseLibrary.Service.DataBase`2.Query(QueryConditionInfo`1 queryCondition) 位置 f:\MyProjectInServer\TestCore\BaseLibrary\Com.BaseLibrary.Service\DataBase.cs:行号 95
+   在 Jufine.Backend.Security.Business.UVAuditWorkFlowBL.Query(QueryConditionInfo`1 queryCondition) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\Business\UVAuditWorkFlowBL.cs:行号 96</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-5-130317584654850487" machine="PC-20130721DCZQ" module="UnExceptedException" logType="UnExceptedException" logTime="2013/12/17 20:59:14">
+    <title>【PC-20130721DCZQ】找不到 EntityType“Jufine.Backend.Security.DataContracts.UVAuditWorkFlow”的映射和元数据信息。</title>
+    <detail>System.InvalidOperationException: 找不到 EntityType“Jufine.Backend.Security.DataContracts.UVAuditWorkFlow”的映射和元数据信息。
+   在 System.Data.Objects.ObjectContext.GetTypeUsage(Type entityCLRType)
+   在 System.Data.Objects.ObjectContext.GetEntitySetFromContainer(EntityContainer container, Type entityCLRType, String exceptionParameterName)
+   在 System.Data.Objects.ObjectContext.GetEntitySetForType(Type entityCLRType, String exceptionParameterName)
+   在 System.Data.Objects.ObjectContext.CreateObjectSet[TEntity]()
+   在 Com.BaseLibrary.Service.DataBase`2.GetSelectLinq(EF entities, QueryConditionInfo`1 queryCondition) 位置 f:\MyProjectInServer\TestCore\BaseLibrary\Com.BaseLibrary.Service\DataBase.cs:行号 131
+   在 Com.BaseLibrary.Service.DataBase`2.Query(QueryConditionInfo`1 queryCondition) 位置 f:\MyProjectInServer\TestCore\BaseLibrary\Com.BaseLibrary.Service\DataBase.cs:行号 95
+   在 Jufine.Backend.Security.Business.UVAuditWorkFlowBL.Query(QueryConditionInfo`1 queryCondition) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\Business\UVAuditWorkFlowBL.cs:行号 96</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-5-130317584654850487" machine="PC-20130721DCZQ" module="UnExceptedException" logType="UnExceptedException" logTime="2013/12/17 21:01:24">
+    <title>【PC-20130721DCZQ】找不到 EntityType“Jufine.Backend.Security.DataContracts.UVAuditWorkFlow”的映射和元数据信息。</title>
+    <detail>System.InvalidOperationException: 找不到 EntityType“Jufine.Backend.Security.DataContracts.UVAuditWorkFlow”的映射和元数据信息。
+   在 System.Data.Objects.ObjectContext.GetTypeUsage(Type entityCLRType)
+   在 System.Data.Objects.ObjectContext.GetEntitySetFromContainer(EntityContainer container, Type entityCLRType, String exceptionParameterName)
+   在 System.Data.Objects.ObjectContext.GetEntitySetForType(Type entityCLRType, String exceptionParameterName)
+   在 System.Data.Objects.ObjectContext.CreateObjectSet[TEntity]()
+   在 Com.BaseLibrary.Service.DataBase`2.GetSelectLinq(EF entities, QueryConditionInfo`1 queryCondition) 位置 f:\MyProjectInServer\TestCore\BaseLibrary\Com.BaseLibrary.Service\DataBase.cs:行号 131
+   在 Com.BaseLibrary.Service.DataBase`2.Query(QueryConditionInfo`1 queryCondition) 位置 f:\MyProjectInServer\TestCore\BaseLibrary\Com.BaseLibrary.Service\DataBase.cs:行号 95
+   在 Jufine.Backend.Security.Business.UVAuditWorkFlowBL.Query(QueryConditionInfo`1 queryCondition) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\Business\UVAuditWorkFlowBL.cs:行号 96</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-5-130317584654850487" machine="PC-20130721DCZQ" module="UnExceptedException" logType="UnExceptedException" logTime="2013/12/17 21:01:27">
+    <title>【PC-20130721DCZQ】找不到 EntityType“Jufine.Backend.Security.DataContracts.UVAuditWorkFlow”的映射和元数据信息。</title>
+    <detail>System.InvalidOperationException: 找不到 EntityType“Jufine.Backend.Security.DataContracts.UVAuditWorkFlow”的映射和元数据信息。
+   在 System.Data.Objects.ObjectContext.GetTypeUsage(Type entityCLRType)
+   在 System.Data.Objects.ObjectContext.GetEntitySetFromContainer(EntityContainer container, Type entityCLRType, String exceptionParameterName)
+   在 System.Data.Objects.ObjectContext.GetEntitySetForType(Type entityCLRType, String exceptionParameterName)
+   在 System.Data.Objects.ObjectContext.CreateObjectSet[TEntity]()
+   在 Com.BaseLibrary.Service.DataBase`2.GetSelectLinq(EF entities, QueryConditionInfo`1 queryCondition) 位置 f:\MyProjectInServer\TestCore\BaseLibrary\Com.BaseLibrary.Service\DataBase.cs:行号 131
+   在 Com.BaseLibrary.Service.DataBase`2.Query(QueryConditionInfo`1 queryCondition) 位置 f:\MyProjectInServer\TestCore\BaseLibrary\Com.BaseLibrary.Service\DataBase.cs:行号 95
+   在 Jufine.Backend.Security.Business.UVAuditWorkFlowBL.Query(QueryConditionInfo`1 queryCondition) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\Business\UVAuditWorkFlowBL.cs:行号 96</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-6-130317588977257715" machine="PC-20130721DCZQ" module="UnExceptedException" logType="UnExceptedException" logTime="2013/12/17 21:01:55">
+    <title>【PC-20130721DCZQ】在容器“SecurityEntities”中找不到 FunctionImport“UP_GetAuditWorkFlowResourceByResourceID”。</title>
+    <detail>System.InvalidOperationException: 在容器“SecurityEntities”中找不到 FunctionImport“UP_GetAuditWorkFlowResourceByResourceID”。
+   在 System.Data.Common.Utils.CommandHelper.FindFunctionImport(MetadataWorkspace workspace, String containerName, String functionImportName)
+   在 System.Data.Objects.ObjectContext.CreateEntityCommandForFunctionImport(String functionName, EdmFunction&amp; functionImport, ObjectParameter[] parameters)
+   在 System.Data.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, MergeOption mergeOption, ObjectParameter[] parameters)
+   在 Jufine.Backend.Security.DataAccess.AuditWorkFlowResourceDA.GetTAuditWorkFlowResources(Int32 resourceID) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\DataAccess\AuditWorkFlowResourceDA.cs:行号 259
+   在 Jufine.Backend.Security.Business.AuditWorkFlowResourceBL.GetTAuditWorkFlowResources(Int32 resourceID) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\Business\AuditWorkFlowResourceBL.cs:行号 109</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-6-130317588977257715" machine="PC-20130721DCZQ" module="UnExceptedException" logType="UnExceptedException" logTime="2013/12/17 21:01:59">
+    <title>【PC-20130721DCZQ】在容器“SecurityEntities”中找不到 FunctionImport“UP_GetAuditWorkFlowResourceByResourceID”。</title>
+    <detail>System.InvalidOperationException: 在容器“SecurityEntities”中找不到 FunctionImport“UP_GetAuditWorkFlowResourceByResourceID”。
+   在 System.Data.Common.Utils.CommandHelper.FindFunctionImport(MetadataWorkspace workspace, String containerName, String functionImportName)
+   在 System.Data.Objects.ObjectContext.CreateEntityCommandForFunctionImport(String functionName, EdmFunction&amp; functionImport, ObjectParameter[] parameters)
+   在 System.Data.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, MergeOption mergeOption, ObjectParameter[] parameters)
+   在 Jufine.Backend.Security.DataAccess.AuditWorkFlowResourceDA.GetTAuditWorkFlowResources(Int32 resourceID) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\DataAccess\AuditWorkFlowResourceDA.cs:行号 259
+   在 Jufine.Backend.Security.Business.AuditWorkFlowResourceBL.GetTAuditWorkFlowResources(Int32 resourceID) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\Business\AuditWorkFlowResourceBL.cs:行号 109</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-6-130317588977257715" machine="PC-20130721DCZQ" module="UnExceptedException" logType="UnExceptedException" logTime="2013/12/17 21:02:01">
+    <title>【PC-20130721DCZQ】在容器“SecurityEntities”中找不到 FunctionImport“UP_GetAuditWorkFlowResourceByResourceID”。</title>
+    <detail>System.InvalidOperationException: 在容器“SecurityEntities”中找不到 FunctionImport“UP_GetAuditWorkFlowResourceByResourceID”。
+   在 System.Data.Common.Utils.CommandHelper.FindFunctionImport(MetadataWorkspace workspace, String containerName, String functionImportName)
+   在 System.Data.Objects.ObjectContext.CreateEntityCommandForFunctionImport(String functionName, EdmFunction&amp; functionImport, ObjectParameter[] parameters)
+   在 System.Data.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, MergeOption mergeOption, ObjectParameter[] parameters)
+   在 Jufine.Backend.Security.DataAccess.AuditWorkFlowResourceDA.GetTAuditWorkFlowResources(Int32 resourceID) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\DataAccess\AuditWorkFlowResourceDA.cs:行号 259
+   在 Jufine.Backend.Security.Business.AuditWorkFlowResourceBL.GetTAuditWorkFlowResources(Int32 resourceID) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\Business\AuditWorkFlowResourceBL.cs:行号 109</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-6-130317588977257715" machine="PC-20130721DCZQ" module="UnExceptedException" logType="UnExceptedException" logTime="2013/12/17 21:02:03">
+    <title>【PC-20130721DCZQ】在容器“SecurityEntities”中找不到 FunctionImport“UP_GetAuditWorkFlowResourceByResourceID”。</title>
+    <detail>System.InvalidOperationException: 在容器“SecurityEntities”中找不到 FunctionImport“UP_GetAuditWorkFlowResourceByResourceID”。
+   在 System.Data.Common.Utils.CommandHelper.FindFunctionImport(MetadataWorkspace workspace, String containerName, String functionImportName)
+   在 System.Data.Objects.ObjectContext.CreateEntityCommandForFunctionImport(String functionName, EdmFunction&amp; functionImport, ObjectParameter[] parameters)
+   在 System.Data.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, MergeOption mergeOption, ObjectParameter[] parameters)
+   在 Jufine.Backend.Security.DataAccess.AuditWorkFlowResourceDA.GetTAuditWorkFlowResources(Int32 resourceID) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\DataAccess\AuditWorkFlowResourceDA.cs:行号 259
+   在 Jufine.Backend.Security.Business.AuditWorkFlowResourceBL.GetTAuditWorkFlowResources(Int32 resourceID) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\Business\AuditWorkFlowResourceBL.cs:行号 109</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-7-130317589346138814" machine="PC-20130721DCZQ" module="UnExceptedException" logType="UnExceptedException" logTime="2013/12/17 21:05:56">
+    <title>【PC-20130721DCZQ】在容器“SecurityEntities”中找不到 FunctionImport“UP_GetAuditWorkFlowResourceByResourceID”。</title>
+    <detail>System.InvalidOperationException: 在容器“SecurityEntities”中找不到 FunctionImport“UP_GetAuditWorkFlowResourceByResourceID”。
+   在 System.Data.Common.Utils.CommandHelper.FindFunctionImport(MetadataWorkspace workspace, String containerName, String functionImportName)
+   在 System.Data.Objects.ObjectContext.CreateEntityCommandForFunctionImport(String functionName, EdmFunction&amp; functionImport, ObjectParameter[] parameters)
+   在 System.Data.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, MergeOption mergeOption, ObjectParameter[] parameters)
+   在 Jufine.Backend.Security.DataAccess.AuditWorkFlowResourceDA.GetTAuditWorkFlowResources(Int32 resourceID) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\DataAccess\AuditWorkFlowResourceDA.cs:行号 259
+   在 Jufine.Backend.Security.Business.AuditWorkFlowResourceBL.GetTAuditWorkFlowResources(Int32 resourceID) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\Business\AuditWorkFlowResourceBL.cs:行号 109</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-1-130318420335814585" machine="PC-20130721DCZQ" module="UnExceptedException" logType="UnExceptedException" logTime="2013/12/18 20:13:30">
+    <title>【PC-20130721DCZQ】在容器“SecurityEntities”中找不到 FunctionImport“UP_DeleteMerchantInfo”。</title>
+    <detail>System.InvalidOperationException: 在容器“SecurityEntities”中找不到 FunctionImport“UP_DeleteMerchantInfo”。
+   在 System.Data.Common.Utils.CommandHelper.FindFunctionImport(MetadataWorkspace workspace, String containerName, String functionImportName)
+   在 System.Data.Objects.ObjectContext.CreateEntityCommandForFunctionImport(String functionName, EdmFunction&amp; functionImport, ObjectParameter[] parameters)
+   在 System.Data.Objects.ObjectContext.ExecuteFunction(String functionName, ObjectParameter[] parameters)
+   在 Jufine.Backend.Security.DataAccess.MerchantDA.BatchDeleteMerchant(List`1 keyList, String editUser) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\DataAccess\MerchantDA.cs:行号 684
+   在 Jufine.Backend.Security.Business.MerchantBL.BatchDeleteMerchant(List`1 keyList, String editUser) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\Business\MerchantBL.cs:行号 445</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-2-130318426719269698" machine="PC-20130721DCZQ" module="UnExceptedException" logType="UnExceptedException" logTime="2013/12/18 20:18:24">
+    <title>【PC-20130721DCZQ】执行命令定义时出错。有关详细信息，请参阅内部异常。</title>
+    <detail>System.Data.EntityCommandExecutionException: 执行命令定义时出错。有关详细信息，请参阅内部异常。 ---&gt; System.Data.SqlClient.SqlException: 过程或函数 'UP_UpdateMerchantInfoAuditStatus' 需要参数 '@AuditUser'，但未提供该参数。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean&amp; dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task&amp; task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task&amp; task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.EntityClient.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.EntityClient.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   在 System.Data.EntityClient.EntityCommandDefinition.Execute(EntityCommand entityCommand, CommandBehavior behavior)
+   在 System.Data.EntityClient.EntityCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.EntityClient.EntityCommand.ExecuteScalar[T_Result](Func`2 resultSelector)
+   在 System.Data.Objects.ObjectContext.ExecuteFunction(String functionName, ObjectParameter[] parameters)
+   在 Jufine.Backend.Security.DataAccess.MerchantDA.ChangeStatusMerchant(Int32 id, Int32 status, String editUser, Int32 fromHistory) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\DataAccess\MerchantDA.cs:行号 671
+   在 Jufine.Backend.Security.Business.MerchantBL.ChangeStatusMerchant(Int32 id, Int32 status, String editUser, Int32 fromHistory) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\Business\MerchantBL.cs:行号 433</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-2-130318426719269698" machine="PC-20130721DCZQ" module="UnExceptedException" logType="UnExceptedException" logTime="2013/12/18 20:18:38">
+    <title>【PC-20130721DCZQ】执行命令定义时出错。有关详细信息，请参阅内部异常。</title>
+    <detail>System.Data.EntityCommandExecutionException: 执行命令定义时出错。有关详细信息，请参阅内部异常。 ---&gt; System.Data.SqlClient.SqlException: 过程或函数 'UP_UpdateMerchantInfoAuditStatus' 需要参数 '@AuditUser'，但未提供该参数。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean&amp; dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task&amp; task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task&amp; task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.EntityClient.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.EntityClient.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   在 System.Data.EntityClient.EntityCommandDefinition.Execute(EntityCommand entityCommand, CommandBehavior behavior)
+   在 System.Data.EntityClient.EntityCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.EntityClient.EntityCommand.ExecuteScalar[T_Result](Func`2 resultSelector)
+   在 System.Data.Objects.ObjectContext.ExecuteFunction(String functionName, ObjectParameter[] parameters)
+   在 Jufine.Backend.Security.DataAccess.MerchantDA.ChangeStatusMerchant(Int32 id, Int32 status, String editUser, Int32 fromHistory) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\DataAccess\MerchantDA.cs:行号 671
+   在 Jufine.Backend.Security.Business.MerchantBL.ChangeStatusMerchant(Int32 id, Int32 status, String editUser, Int32 fromHistory) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\Business\MerchantBL.cs:行号 433</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-2-130318426719269698" machine="PC-20130721DCZQ" module="UnExceptedException" logType="UnExceptedException" logTime="2013/12/18 20:23:43">
+    <title>【PC-20130721DCZQ】执行命令定义时出错。有关详细信息，请参阅内部异常。</title>
+    <detail>System.Data.EntityCommandExecutionException: 执行命令定义时出错。有关详细信息，请参阅内部异常。 ---&gt; System.Data.SqlClient.SqlException: 过程或函数 'UP_UpdateMerchantInfoAuditStatus' 需要参数 '@AuditUser'，但未提供该参数。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean&amp; dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task&amp; task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task&amp; task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.EntityClient.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.EntityClient.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   在 System.Data.EntityClient.EntityCommandDefinition.Execute(EntityCommand entityCommand, CommandBehavior behavior)
+   在 System.Data.EntityClient.EntityCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.EntityClient.EntityCommand.ExecuteScalar[T_Result](Func`2 resultSelector)
+   在 System.Data.Objects.ObjectContext.ExecuteFunction(String functionName, ObjectParameter[] parameters)
+   在 Jufine.Backend.Security.DataAccess.MerchantDA.ChangeStatusMerchant(Int32 id, Int32 status, String editUser, Int32 fromHistory) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\DataAccess\MerchantDA.cs:行号 671
+   在 Jufine.Backend.Security.Business.MerchantBL.ChangeStatusMerchant(Int32 id, Int32 status, String editUser, Int32 fromHistory) 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.ServiceImplement\Business\MerchantBL.cs:行号 433</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-2-130318426719269698" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/18 20:28:07">
+    <title>【PC-20130721DCZQ】在位置 0 处没有任何行。</title>
+    <detail>System.IndexOutOfRangeException: 在位置 0 处没有任何行。
+   在 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   在 System.Data.DataRowCollection.get_Item(Int32 index)
+   在 Jufine.Backend.Security.Authentication.User..ctor() 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.Authentication\UserFactory.cs:行号 67
+   在 Jufine.Backend.Security.Authentication.UserFactory.CreateUser() 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.Authentication\UserFactory.cs:行号 20
+   在 Jufine.Backend.WebModel.PageBase.OnPreInit(EventArgs e) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\PageBase.cs:行号 59
+   在 System.Web.UI.Page.PerformPreInit()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+  <log application="/LM/W3SVC/1/ROOT/Security-2-130318426719269698" machine="PC-20130721DCZQ" module="BackendUI" logType="Error" logTime="2013/12/18 20:28:24">
+    <title>【PC-20130721DCZQ】在位置 0 处没有任何行。</title>
+    <detail>System.IndexOutOfRangeException: 在位置 0 处没有任何行。
+   在 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   在 System.Data.DataRowCollection.get_Item(Int32 index)
+   在 Jufine.Backend.Security.Authentication.User..ctor() 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.Authentication\UserFactory.cs:行号 67
+   在 Jufine.Backend.Security.Authentication.UserFactory.CreateUser() 位置 f:\MyProjectInServer\TestCore\Projects\Security\Jufine.Backend.Security.Authentication\UserFactory.cs:行号 20
+   在 Jufine.Backend.WebModel.PageBase.OnPreInit(EventArgs e) 位置 f:\MyProjectInServer\TestCore\Jufine.Backend.WebModel\PageBase.cs:行号 59
+   在 System.Web.UI.Page.PerformPreInit()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)</detail>
+  </log>
+</logs>

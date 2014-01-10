@@ -1,0 +1,2056 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SecurityModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="SecurityModelStoreContainer">
+          <EntitySet Name="AuditWorkFlowResource" EntityType="SecurityModel.Store.AuditWorkFlowResource" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LogCenter" EntityType="SecurityModel.Store.LogCenter" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MerchantAdditionalCertificate" EntityType="SecurityModel.Store.MerchantAdditionalCertificate" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MerchantInfo" EntityType="SecurityModel.Store.MerchantInfo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MerchantInfoHistoryDetail" EntityType="SecurityModel.Store.MerchantInfoHistoryDetail" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MerchantInfoHisttory" EntityType="SecurityModel.Store.MerchantInfoHisttory" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MerchantProduct" EntityType="SecurityModel.Store.MerchantProduct" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="NoticeOfAuditInfo" EntityType="SecurityModel.Store.NoticeOfAuditInfo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="QueryLog" EntityType="SecurityModel.Store.QueryLog" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Resource" EntityType="SecurityModel.Store.Resource" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="RoleInfo" EntityType="SecurityModel.Store.RoleInfo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="RoleResource" EntityType="SecurityModel.Store.RoleResource" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserInfo" EntityType="SecurityModel.Store.UserInfo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserMerchant" EntityType="SecurityModel.Store.UserMerchant" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserResource" EntityType="SecurityModel.Store.UserResource" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserRole" EntityType="SecurityModel.Store.UserRole" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserWithSameRoleInMerchant" EntityType="SecurityModel.Store.UserWithSameRoleInMerchant" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UV_AuditWorkFlow" EntityType="SecurityModel.Store.UV_AuditWorkFlow" store:Type="Views" store:Schema="dbo" store:Name="UV_AuditWorkFlow">
+            <DefiningQuery>SELECT 
+      [UV_AuditWorkFlow].[ID] AS [ID], 
+      [UV_AuditWorkFlow].[DisplayName] AS [DisplayName], 
+      [UV_AuditWorkFlow].[ResourceID] AS [ResourceID], 
+      [UV_AuditWorkFlow].[TotalLevel] AS [TotalLevel], 
+      [UV_AuditWorkFlow].[ResourceDisplayName] AS [ResourceDisplayName], 
+      [UV_AuditWorkFlow].[ResourceName] AS [ResourceName]
+      FROM [dbo].[UV_AuditWorkFlow] AS [UV_AuditWorkFlow]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="UV_MerchantInfo" EntityType="SecurityModel.Store.UV_MerchantInfo" store:Type="Views" store:Schema="dbo" store:Name="UV_MerchantInfo">
+            <DefiningQuery>SELECT 
+      [UV_MerchantInfo].[ID] AS [ID], 
+      [UV_MerchantInfo].[MerchantID] AS [MerchantID], 
+      [UV_MerchantInfo].[MerchantName] AS [MerchantName], 
+      [UV_MerchantInfo].[MerchantDescription] AS [MerchantDescription], 
+      [UV_MerchantInfo].[Status] AS [Status], 
+      [UV_MerchantInfo].[Logo] AS [Logo], 
+      [UV_MerchantInfo].[ServicePhone] AS [ServicePhone], 
+      [UV_MerchantInfo].[LegalRepresentative] AS [LegalRepresentative], 
+      [UV_MerchantInfo].[TaxNO] AS [TaxNO], 
+      [UV_MerchantInfo].[TaxRegistrationCertificateURL] AS [TaxRegistrationCertificateURL], 
+      [UV_MerchantInfo].[Address] AS [Address], 
+      [UV_MerchantInfo].[PostalCode] AS [PostalCode], 
+      [UV_MerchantInfo].[OrganizationCode] AS [OrganizationCode], 
+      [UV_MerchantInfo].[BusinessLicenseURL] AS [BusinessLicenseURL], 
+      [UV_MerchantInfo].[Telephone] AS [Telephone], 
+      [UV_MerchantInfo].[Fax] AS [Fax], 
+      [UV_MerchantInfo].[Fax2] AS [Fax2], 
+      [UV_MerchantInfo].[Website] AS [Website], 
+      [UV_MerchantInfo].[Email] AS [Email], 
+      [UV_MerchantInfo].[ContactPerson1] AS [ContactPerson1], 
+      [UV_MerchantInfo].[Post1] AS [Post1], 
+      [UV_MerchantInfo].[Dept1] AS [Dept1], 
+      [UV_MerchantInfo].[Mobile1] AS [Mobile1], 
+      [UV_MerchantInfo].[Telephone1] AS [Telephone1], 
+      [UV_MerchantInfo].[Email1] AS [Email1], 
+      [UV_MerchantInfo].[ContactPerson2] AS [ContactPerson2], 
+      [UV_MerchantInfo].[Post2] AS [Post2], 
+      [UV_MerchantInfo].[Dept2] AS [Dept2], 
+      [UV_MerchantInfo].[Mobile2] AS [Mobile2], 
+      [UV_MerchantInfo].[Telephone2] AS [Telephone2], 
+      [UV_MerchantInfo].[Email2] AS [Email2], 
+      [UV_MerchantInfo].[OpeningBank] AS [OpeningBank], 
+      [UV_MerchantInfo].[BankCardNO] AS [BankCardNO], 
+      [UV_MerchantInfo].[CreateUser] AS [CreateUser], 
+      [UV_MerchantInfo].[CreateDate] AS [CreateDate], 
+      [UV_MerchantInfo].[EditUser] AS [EditUser], 
+      [UV_MerchantInfo].[EditDate] AS [EditDate], 
+      [UV_MerchantInfo].[CooperationMode] AS [CooperationMode], 
+      [UV_MerchantInfo].[DisplayName] AS [DisplayName], 
+      [UV_MerchantInfo].[GuarantyFunds] AS [GuarantyFunds], 
+      [UV_MerchantInfo].[ContractStart] AS [ContractStart], 
+      [UV_MerchantInfo].[ContractEnd] AS [ContractEnd], 
+      [UV_MerchantInfo].[UsageCharges] AS [UsageCharges], 
+      [UV_MerchantInfo].[PaymentCycle] AS [PaymentCycle], 
+      [UV_MerchantInfo].[ContactPerson3] AS [ContactPerson3], 
+      [UV_MerchantInfo].[Post3] AS [Post3], 
+      [UV_MerchantInfo].[Dept3] AS [Dept3], 
+      [UV_MerchantInfo].[Mobile3] AS [Mobile3], 
+      [UV_MerchantInfo].[Telephone3] AS [Telephone3], 
+      [UV_MerchantInfo].[Email3] AS [Email3], 
+      [UV_MerchantInfo].[CommissionRatio] AS [CommissionRatio], 
+      [UV_MerchantInfo].[ReturnMerchantRatio] AS [ReturnMerchantRatio], 
+      [UV_MerchantInfo].[ReturnMallRatio] AS [ReturnMallRatio], 
+      [UV_MerchantInfo].[InvoiceBy] AS [InvoiceBy], 
+      [UV_MerchantInfo].[ProductManager] AS [ProductManager], 
+      [UV_MerchantInfo].[TransitCostBy] AS [TransitCostBy], 
+      [UV_MerchantInfo].[FreeTransitAmount] AS [FreeTransitAmount], 
+      [UV_MerchantInfo].[BankProvinceID] AS [BankProvinceID], 
+      [UV_MerchantInfo].[BankProvince] AS [BankProvince], 
+      [UV_MerchantInfo].[BankCityID] AS [BankCityID], 
+      [UV_MerchantInfo].[BankCity] AS [BankCity], 
+      [UV_MerchantInfo].[AuditUser] AS [AuditUser], 
+      [UV_MerchantInfo].[AuditDate] AS [AuditDate], 
+      [UV_MerchantInfo].[FromHistory] AS [FromHistory], 
+      [UV_MerchantInfo].[MI_ID] AS [MI_ID], 
+      [UV_MerchantInfo].[MI_MerchantName] AS [MI_MerchantName], 
+      [UV_MerchantInfo].[MI_MerchantDescription] AS [MI_MerchantDescription], 
+      [UV_MerchantInfo].[MI_Status] AS [MI_Status], 
+      [UV_MerchantInfo].[MI_Logo] AS [MI_Logo], 
+      [UV_MerchantInfo].[MI_ServicePhone] AS [MI_ServicePhone], 
+      [UV_MerchantInfo].[MI_LegalRepresentative] AS [MI_LegalRepresentative], 
+      [UV_MerchantInfo].[MI_TaxNO] AS [MI_TaxNO], 
+      [UV_MerchantInfo].[MI_TaxRegistrationCertificateURL] AS [MI_TaxRegistrationCertificateURL], 
+      [UV_MerchantInfo].[MI_Address] AS [MI_Address], 
+      [UV_MerchantInfo].[MI_PostalCode] AS [MI_PostalCode], 
+      [UV_MerchantInfo].[MI_OrganizationCode] AS [MI_OrganizationCode], 
+      [UV_MerchantInfo].[MI_BusinessLicenseURL] AS [MI_BusinessLicenseURL], 
+      [UV_MerchantInfo].[MI_Telephone] AS [MI_Telephone], 
+      [UV_MerchantInfo].[MI_Fax] AS [MI_Fax], 
+      [UV_MerchantInfo].[MI_Fax2] AS [MI_Fax2], 
+      [UV_MerchantInfo].[MI_Website] AS [MI_Website], 
+      [UV_MerchantInfo].[MI_Email] AS [MI_Email], 
+      [UV_MerchantInfo].[MI_ContactPerson1] AS [MI_ContactPerson1], 
+      [UV_MerchantInfo].[MI_Post1] AS [MI_Post1], 
+      [UV_MerchantInfo].[MI_Dept1] AS [MI_Dept1], 
+      [UV_MerchantInfo].[MI_Mobile1] AS [MI_Mobile1], 
+      [UV_MerchantInfo].[MI_Telephone1] AS [MI_Telephone1], 
+      [UV_MerchantInfo].[MI_Email1] AS [MI_Email1], 
+      [UV_MerchantInfo].[MI_ContactPerson2] AS [MI_ContactPerson2], 
+      [UV_MerchantInfo].[MI_Post2] AS [MI_Post2], 
+      [UV_MerchantInfo].[MI_Dept2] AS [MI_Dept2], 
+      [UV_MerchantInfo].[MI_Mobile2] AS [MI_Mobile2], 
+      [UV_MerchantInfo].[MI_Telephone2] AS [MI_Telephone2], 
+      [UV_MerchantInfo].[MI_Email2] AS [MI_Email2], 
+      [UV_MerchantInfo].[MI_OpeningBank] AS [MI_OpeningBank], 
+      [UV_MerchantInfo].[MI_BankCardNO] AS [MI_BankCardNO], 
+      [UV_MerchantInfo].[MI_CreateUser] AS [MI_CreateUser], 
+      [UV_MerchantInfo].[MI_CreateDate] AS [MI_CreateDate], 
+      [UV_MerchantInfo].[MI_EditUser] AS [MI_EditUser], 
+      [UV_MerchantInfo].[MI_EditDate] AS [MI_EditDate], 
+      [UV_MerchantInfo].[MI_CooperationMode] AS [MI_CooperationMode], 
+      [UV_MerchantInfo].[MI_DisplayName] AS [MI_DisplayName], 
+      [UV_MerchantInfo].[MI_GuarantyFunds] AS [MI_GuarantyFunds], 
+      [UV_MerchantInfo].[MI_ContractStart] AS [MI_ContractStart], 
+      [UV_MerchantInfo].[MI_ContractEnd] AS [MI_ContractEnd], 
+      [UV_MerchantInfo].[MI_UsageCharges] AS [MI_UsageCharges], 
+      [UV_MerchantInfo].[MI_PaymentCycle] AS [MI_PaymentCycle], 
+      [UV_MerchantInfo].[MI_ContactPerson3] AS [MI_ContactPerson3], 
+      [UV_MerchantInfo].[MI_Post3] AS [MI_Post3], 
+      [UV_MerchantInfo].[MI_Dept3] AS [MI_Dept3], 
+      [UV_MerchantInfo].[MI_Mobile3] AS [MI_Mobile3], 
+      [UV_MerchantInfo].[MI_Telephone3] AS [MI_Telephone3], 
+      [UV_MerchantInfo].[MI_Email3] AS [MI_Email3], 
+      [UV_MerchantInfo].[MI_CommissionRatio] AS [MI_CommissionRatio], 
+      [UV_MerchantInfo].[MI_ReturnMerchantRatio] AS [MI_ReturnMerchantRatio], 
+      [UV_MerchantInfo].[MI_ReturnMallRatio] AS [MI_ReturnMallRatio], 
+      [UV_MerchantInfo].[MI_InvoiceBy] AS [MI_InvoiceBy], 
+      [UV_MerchantInfo].[MI_ProductManager] AS [MI_ProductManager], 
+      [UV_MerchantInfo].[MI_TransitCostBy] AS [MI_TransitCostBy], 
+      [UV_MerchantInfo].[MI_FreeTransitAmount] AS [MI_FreeTransitAmount], 
+      [UV_MerchantInfo].[MI_BankProvinceID] AS [MI_BankProvinceID], 
+      [UV_MerchantInfo].[MI_BankProvince] AS [MI_BankProvince], 
+      [UV_MerchantInfo].[MI_BankCityID] AS [MI_BankCityID], 
+      [UV_MerchantInfo].[MI_BankCity] AS [MI_BankCity], 
+      [UV_MerchantInfo].[MI_AuditUser] AS [MI_AuditUser], 
+      [UV_MerchantInfo].[MI_AuditDate] AS [MI_AuditDate], 
+      [UV_MerchantInfo].[MI_Reason] AS [MI_Reason]
+      FROM [dbo].[UV_MerchantInfo] AS [UV_MerchantInfo]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="UV_UserMerchant" EntityType="SecurityModel.Store.UV_UserMerchant" store:Type="Views" store:Schema="dbo" store:Name="UV_UserMerchant">
+            <DefiningQuery>SELECT 
+      [UV_UserMerchant].[ID] AS [ID], 
+      [UV_UserMerchant].[UserID] AS [UserID], 
+      [UV_UserMerchant].[MerchantID] AS [MerchantID], 
+      [UV_UserMerchant].[MerchantName] AS [MerchantName], 
+      [UV_UserMerchant].[Status] AS [Status]
+      FROM [dbo].[UV_UserMerchant] AS [UV_UserMerchant]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <EntityType Name="AuditWorkFlowResource">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DisplayName" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="ResourceID" Type="int" Nullable="false" />
+          <Property Name="RoleID" Type="int" />
+          <Property Name="UserID" Type="int" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="CreateUser" Type="varchar" MaxLength="50" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="EditUser" Type="varchar" MaxLength="50" />
+          <Property Name="EditDate" Type="datetime" />
+          <Property Name="GroupID" Type="int" />
+          <Property Name="ParentGroupID" Type="int" />
+        </EntityType>
+        <EntityType Name="LogCenter">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ApplicationName" Type="nvarchar" MaxLength="500" />
+          <Property Name="Module" Type="nvarchar" MaxLength="500" />
+          <Property Name="LogType" Type="varchar" MaxLength="50" />
+          <Property Name="Title" Type="nvarchar" MaxLength="500" />
+          <Property Name="Detail" Type="ntext" />
+          <Property Name="LogTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="MerchantAdditionalCertificate">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MerchantID" Type="int" Nullable="false" />
+          <Property Name="ImangeName" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="Title" Type="nvarchar" MaxLength="200" />
+          <Property Name="DisplayOrder" Type="int" />
+          <Property Name="Status" Type="int" />
+          <Property Name="CreateUser" Type="varchar" MaxLength="50" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="EditUser" Type="varchar" MaxLength="50" />
+          <Property Name="EditDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="MerchantInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MerchantName" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="MerchantDescription" Type="ntext" />
+          <Property Name="Status" Type="int" />
+          <Property Name="Logo" Type="varchar" MaxLength="200" />
+          <Property Name="ServicePhone" Type="varchar" MaxLength="50" />
+          <Property Name="LegalRepresentative" Type="nvarchar" MaxLength="50" />
+          <Property Name="TaxNO" Type="varchar" MaxLength="50" />
+          <Property Name="TaxRegistrationCertificateURL" Type="varchar" MaxLength="200" />
+          <Property Name="Address" Type="nvarchar" MaxLength="500" />
+          <Property Name="PostalCode" Type="varchar" MaxLength="200" />
+          <Property Name="OrganizationCode" Type="varchar" MaxLength="200" />
+          <Property Name="BusinessLicenseURL" Type="varchar" MaxLength="200" />
+          <Property Name="Telephone" Type="nvarchar" MaxLength="200" />
+          <Property Name="Fax" Type="nvarchar" MaxLength="200" />
+          <Property Name="Fax2" Type="nvarchar" MaxLength="200" />
+          <Property Name="Website" Type="nvarchar" MaxLength="200" />
+          <Property Name="Email" Type="nvarchar" MaxLength="64" />
+          <Property Name="ContactPerson1" Type="nvarchar" MaxLength="200" />
+          <Property Name="Post1" Type="nvarchar" MaxLength="200" />
+          <Property Name="Dept1" Type="nvarchar" MaxLength="200" />
+          <Property Name="Mobile1" Type="nvarchar" MaxLength="200" />
+          <Property Name="Telephone1" Type="nvarchar" MaxLength="200" />
+          <Property Name="Email1" Type="nvarchar" MaxLength="64" />
+          <Property Name="ContactPerson2" Type="nvarchar" MaxLength="200" />
+          <Property Name="Post2" Type="nvarchar" MaxLength="200" />
+          <Property Name="Dept2" Type="nvarchar" MaxLength="200" />
+          <Property Name="Mobile2" Type="nvarchar" MaxLength="200" />
+          <Property Name="Telephone2" Type="nvarchar" MaxLength="200" />
+          <Property Name="Email2" Type="nvarchar" MaxLength="64" />
+          <Property Name="OpeningBank" Type="nvarchar" MaxLength="200" />
+          <Property Name="BankCardNO" Type="nvarchar" MaxLength="100" />
+          <Property Name="CreateUser" Type="varchar" MaxLength="50" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="EditUser" Type="varchar" MaxLength="50" />
+          <Property Name="EditDate" Type="datetime" />
+          <Property Name="CooperationMode" Type="varchar" MaxLength="50" />
+          <Property Name="DisplayName" Type="nvarchar" MaxLength="200" />
+          <Property Name="GuarantyFunds" Type="decimal" Scale="2" />
+          <Property Name="ContractStart" Type="datetime" />
+          <Property Name="ContractEnd" Type="datetime" />
+          <Property Name="UsageCharges" Type="decimal" Scale="2" />
+          <Property Name="PaymentCycle" Type="int" />
+          <Property Name="ContactPerson3" Type="nvarchar" MaxLength="200" />
+          <Property Name="Post3" Type="nvarchar" MaxLength="200" />
+          <Property Name="Dept3" Type="nvarchar" MaxLength="200" />
+          <Property Name="Mobile3" Type="nvarchar" MaxLength="200" />
+          <Property Name="Telephone3" Type="nvarchar" MaxLength="200" />
+          <Property Name="Email3" Type="nvarchar" MaxLength="64" />
+          <Property Name="CommissionRatio" Type="decimal" Scale="2" />
+          <Property Name="ReturnMerchantRatio" Type="decimal" Scale="2" />
+          <Property Name="ReturnMallRatio" Type="decimal" Scale="2" />
+          <Property Name="InvoiceBy" Type="varchar" MaxLength="50" />
+          <Property Name="ProductManager" Type="nvarchar" MaxLength="500" />
+          <Property Name="TransitCostBy" Type="varchar" MaxLength="50" />
+          <Property Name="FreeTransitAmount" Type="decimal" Scale="2" />
+          <Property Name="BankProvinceID" Type="int" />
+          <Property Name="BankProvince" Type="nvarchar" MaxLength="100" />
+          <Property Name="BankCityID" Type="int" />
+          <Property Name="BankCity" Type="nvarchar" MaxLength="100" />
+          <Property Name="AuditUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="AuditDate" Type="datetime" />
+          <Property Name="Reason" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="MerchantInfoHistoryDetail">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MerchantID" Type="int" Nullable="false" />
+          <Property Name="MerchantName" Type="nvarchar" MaxLength="200" />
+          <Property Name="MerchantDescription" Type="ntext" />
+          <Property Name="Status" Type="int" />
+          <Property Name="Logo" Type="varchar" MaxLength="200" />
+          <Property Name="ServicePhone" Type="varchar" MaxLength="50" />
+          <Property Name="LegalRepresentative" Type="nvarchar" MaxLength="50" />
+          <Property Name="TaxNO" Type="varchar" MaxLength="50" />
+          <Property Name="TaxRegistrationCertificateURL" Type="varchar" MaxLength="200" />
+          <Property Name="Address" Type="nvarchar" MaxLength="500" />
+          <Property Name="PostalCode" Type="varchar" MaxLength="200" />
+          <Property Name="OrganizationCode" Type="varchar" MaxLength="200" />
+          <Property Name="BusinessLicenseURL" Type="varchar" MaxLength="200" />
+          <Property Name="Telephone" Type="nvarchar" MaxLength="200" />
+          <Property Name="Fax" Type="nvarchar" MaxLength="200" />
+          <Property Name="Fax2" Type="nvarchar" MaxLength="200" />
+          <Property Name="Website" Type="nvarchar" MaxLength="200" />
+          <Property Name="Email" Type="nvarchar" MaxLength="64" />
+          <Property Name="ContactPerson1" Type="nvarchar" MaxLength="200" />
+          <Property Name="Post1" Type="nvarchar" MaxLength="200" />
+          <Property Name="Dept1" Type="nvarchar" MaxLength="200" />
+          <Property Name="Mobile1" Type="nvarchar" MaxLength="200" />
+          <Property Name="Telephone1" Type="nvarchar" MaxLength="200" />
+          <Property Name="Email1" Type="nvarchar" MaxLength="64" />
+          <Property Name="ContactPerson2" Type="nvarchar" MaxLength="200" />
+          <Property Name="Post2" Type="nvarchar" MaxLength="200" />
+          <Property Name="Dept2" Type="nvarchar" MaxLength="200" />
+          <Property Name="Mobile2" Type="nvarchar" MaxLength="200" />
+          <Property Name="Telephone2" Type="nvarchar" MaxLength="200" />
+          <Property Name="Email2" Type="nvarchar" MaxLength="64" />
+          <Property Name="OpeningBank" Type="nvarchar" MaxLength="200" />
+          <Property Name="BankCardNO" Type="nvarchar" MaxLength="100" />
+          <Property Name="CreateUser" Type="varchar" MaxLength="50" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="EditUser" Type="varchar" MaxLength="50" />
+          <Property Name="EditDate" Type="datetime" />
+          <Property Name="CooperationMode" Type="varchar" MaxLength="50" />
+          <Property Name="DisplayName" Type="nvarchar" MaxLength="200" />
+          <Property Name="GuarantyFunds" Type="decimal" Scale="2" />
+          <Property Name="ContractStart" Type="datetime" />
+          <Property Name="ContractEnd" Type="datetime" />
+          <Property Name="UsageCharges" Type="decimal" Scale="2" />
+          <Property Name="PaymentCycle" Type="int" />
+          <Property Name="ContactPerson3" Type="nvarchar" MaxLength="200" />
+          <Property Name="Post3" Type="nvarchar" MaxLength="200" />
+          <Property Name="Dept3" Type="nvarchar" MaxLength="200" />
+          <Property Name="Mobile3" Type="nvarchar" MaxLength="200" />
+          <Property Name="Telephone3" Type="nvarchar" MaxLength="200" />
+          <Property Name="Email3" Type="nvarchar" MaxLength="64" />
+          <Property Name="CommissionRatio" Type="decimal" Scale="2" />
+          <Property Name="ReturnMerchantRatio" Type="decimal" Scale="2" />
+          <Property Name="ReturnMallRatio" Type="decimal" Scale="2" />
+          <Property Name="InvoiceBy" Type="varchar" MaxLength="50" />
+          <Property Name="ProductManager" Type="nvarchar" MaxLength="500" />
+          <Property Name="TransitCostBy" Type="varchar" MaxLength="50" />
+          <Property Name="FreeTransitAmount" Type="decimal" Scale="2" />
+          <Property Name="BankProvinceID" Type="int" />
+          <Property Name="BankProvince" Type="nvarchar" MaxLength="100" />
+          <Property Name="BankCityID" Type="int" />
+          <Property Name="BankCity" Type="nvarchar" MaxLength="100" />
+          <Property Name="AuditUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="AuditDate" Type="datetime" />
+          <Property Name="Reason" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="MerchantInfoHisttory">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MerchantID" Type="int" Nullable="false" />
+          <Property Name="Fromstatus" Type="int" Nullable="false" />
+          <Property Name="Tostatus" Type="int" Nullable="false" />
+          <Property Name="CreateUser" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MerchantProduct">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MerchantID" Type="int" />
+          <Property Name="CommonNO" Type="varchar" MaxLength="10" />
+          <Property Name="Type" Type="int" />
+          <Property Name="Status" Type="int" />
+          <Property Name="Memo" Type="nvarchar" />
+          <Property Name="CreateUser" Type="varchar" MaxLength="50" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="EditUser" Type="varchar" MaxLength="50" />
+          <Property Name="EditDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="NoticeOfAuditInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PageName" Type="nvarchar" Nullable="false" MaxLength="500" />
+          <Property Name="PageUrl" Type="nvarchar" Nullable="false" MaxLength="500" />
+          <Property Name="TableName" Type="nvarchar" Nullable="false" MaxLength="500" />
+          <Property Name="Auths" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="IsMerchantRelated" Type="int" Nullable="false" />
+          <Property Name="EqualAdminAuths" Type="nvarchar(max)" />
+          <Property Name="CheckStatus" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="CreateUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="EditUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="EditDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="QueryLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="SqlText" Type="nvarchar" Nullable="false" />
+          <Property Name="CreateUser" Type="varchar" MaxLength="50" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="EditUser" Type="varchar" MaxLength="50" />
+          <Property Name="EditDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Resource">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ParentID" Type="int" Nullable="false" />
+          <Property Name="ResourceName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="DisplayName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="DisplayOrder" Type="int" />
+          <Property Name="ResourceAddress" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="ShowInMenu" Type="int" Nullable="false" />
+          <Property Name="ResourceType" Type="int" Nullable="false" />
+          <Property Name="Path" Type="nvarchar" MaxLength="2000" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="CreateUser" Type="varchar" MaxLength="50" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="EditUser" Type="varchar" MaxLength="50" />
+          <Property Name="EditDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="RoleInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RoleName" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="DisplayName" Type="nvarchar" MaxLength="500" />
+          <Property Name="DisplayOrder" Type="int" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="CreateUser" Type="varchar" MaxLength="50" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="EditUser" Type="varchar" MaxLength="50" />
+          <Property Name="EditDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="RoleResource">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RoleID" Type="int" Nullable="false" />
+          <Property Name="ResourceID" Type="int" Nullable="false" />
+          <Property Name="CreateUser" Type="varchar" MaxLength="50" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="EditUser" Type="varchar" MaxLength="50" />
+          <Property Name="EditDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="UserInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MerchantID" Type="int" Nullable="false" />
+          <Property Name="UserName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Password" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sex" Type="int" />
+          <Property Name="IDCard" Type="varchar" MaxLength="200" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="200" />
+          <Property Name="IsAdmin" Type="int" Nullable="false" />
+          <Property Name="CreateUser" Type="varchar" MaxLength="50" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="EditUser" Type="varchar" MaxLength="50" />
+          <Property Name="EditDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="UserMerchant">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="MerchantID" Type="int" Nullable="false" />
+          <Property Name="CreateUser" Type="varchar" MaxLength="50" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="EditUser" Type="varchar" MaxLength="50" />
+          <Property Name="EditDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="UserResource">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="ResourceID" Type="int" Nullable="false" />
+          <Property Name="MerchantID" Type="int" />
+          <Property Name="CreateUser" Type="varchar" MaxLength="50" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="EditUser" Type="varchar" MaxLength="50" />
+          <Property Name="EditDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="UserRole">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="RoleID" Type="int" Nullable="false" />
+          <Property Name="MerchantID" Type="int" Nullable="false" />
+          <Property Name="CreateUser" Type="varchar" MaxLength="50" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="EditUser" Type="varchar" MaxLength="50" />
+          <Property Name="EditDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="UserWithSameRoleInMerchant">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="int" />
+          <Property Name="UserName" Type="varchar" MaxLength="50" />
+          <Property Name="RoleID" Type="int" />
+          <Property Name="RoleName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--生成过程中发现错误:
+      警告 6002: 表/视图“Security.dbo.UV_AuditWorkFlow”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+        <EntityType Name="UV_AuditWorkFlow">
+          <Key>
+            <PropertyRef Name="DisplayName" />
+            <PropertyRef Name="ResourceID" />
+            <PropertyRef Name="ResourceDisplayName" />
+            <PropertyRef Name="ResourceName" />
+          </Key>
+          <Property Name="ID" Type="int" />
+          <Property Name="DisplayName" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="ResourceID" Type="int" Nullable="false" />
+          <Property Name="TotalLevel" Type="int" />
+          <Property Name="ResourceDisplayName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ResourceName" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <!--生成过程中发现错误:
+      警告 6002: 表/视图“Security.dbo.UV_MerchantInfo”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+        <EntityType Name="UV_MerchantInfo">
+          <Key>
+            <PropertyRef Name="FromHistory" />
+            <PropertyRef Name="MI_ID" />
+            <PropertyRef Name="MI_MerchantName" />
+          </Key>
+          <Property Name="ID" Type="int" />
+          <Property Name="MerchantID" Type="int" />
+          <Property Name="MerchantName" Type="nvarchar" MaxLength="200" />
+          <Property Name="MerchantDescription" Type="ntext" />
+          <Property Name="Status" Type="int" />
+          <Property Name="Logo" Type="varchar" MaxLength="200" />
+          <Property Name="ServicePhone" Type="varchar" MaxLength="50" />
+          <Property Name="LegalRepresentative" Type="nvarchar" MaxLength="50" />
+          <Property Name="TaxNO" Type="varchar" MaxLength="50" />
+          <Property Name="TaxRegistrationCertificateURL" Type="varchar" MaxLength="200" />
+          <Property Name="Address" Type="nvarchar" MaxLength="500" />
+          <Property Name="PostalCode" Type="varchar" MaxLength="200" />
+          <Property Name="OrganizationCode" Type="varchar" MaxLength="200" />
+          <Property Name="BusinessLicenseURL" Type="varchar" MaxLength="200" />
+          <Property Name="Telephone" Type="nvarchar" MaxLength="200" />
+          <Property Name="Fax" Type="nvarchar" MaxLength="200" />
+          <Property Name="Fax2" Type="nvarchar" MaxLength="200" />
+          <Property Name="Website" Type="nvarchar" MaxLength="200" />
+          <Property Name="Email" Type="nvarchar" MaxLength="64" />
+          <Property Name="ContactPerson1" Type="nvarchar" MaxLength="200" />
+          <Property Name="Post1" Type="nvarchar" MaxLength="200" />
+          <Property Name="Dept1" Type="nvarchar" MaxLength="200" />
+          <Property Name="Mobile1" Type="nvarchar" MaxLength="200" />
+          <Property Name="Telephone1" Type="nvarchar" MaxLength="200" />
+          <Property Name="Email1" Type="nvarchar" MaxLength="64" />
+          <Property Name="ContactPerson2" Type="nvarchar" MaxLength="200" />
+          <Property Name="Post2" Type="nvarchar" MaxLength="200" />
+          <Property Name="Dept2" Type="nvarchar" MaxLength="200" />
+          <Property Name="Mobile2" Type="nvarchar" MaxLength="200" />
+          <Property Name="Telephone2" Type="nvarchar" MaxLength="200" />
+          <Property Name="Email2" Type="nvarchar" MaxLength="64" />
+          <Property Name="OpeningBank" Type="nvarchar" MaxLength="200" />
+          <Property Name="BankCardNO" Type="nvarchar" MaxLength="100" />
+          <Property Name="CreateUser" Type="varchar" MaxLength="50" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="EditUser" Type="varchar" MaxLength="50" />
+          <Property Name="EditDate" Type="datetime" />
+          <Property Name="CooperationMode" Type="varchar" MaxLength="50" />
+          <Property Name="DisplayName" Type="nvarchar" MaxLength="200" />
+          <Property Name="GuarantyFunds" Type="decimal" Scale="2" />
+          <Property Name="ContractStart" Type="datetime" />
+          <Property Name="ContractEnd" Type="datetime" />
+          <Property Name="UsageCharges" Type="decimal" Scale="2" />
+          <Property Name="PaymentCycle" Type="int" />
+          <Property Name="ContactPerson3" Type="nvarchar" MaxLength="200" />
+          <Property Name="Post3" Type="nvarchar" MaxLength="200" />
+          <Property Name="Dept3" Type="nvarchar" MaxLength="200" />
+          <Property Name="Mobile3" Type="nvarchar" MaxLength="200" />
+          <Property Name="Telephone3" Type="nvarchar" MaxLength="200" />
+          <Property Name="Email3" Type="nvarchar" MaxLength="64" />
+          <Property Name="CommissionRatio" Type="decimal" Scale="2" />
+          <Property Name="ReturnMerchantRatio" Type="decimal" Scale="2" />
+          <Property Name="ReturnMallRatio" Type="decimal" Scale="2" />
+          <Property Name="InvoiceBy" Type="varchar" MaxLength="50" />
+          <Property Name="ProductManager" Type="nvarchar" MaxLength="500" />
+          <Property Name="TransitCostBy" Type="varchar" MaxLength="50" />
+          <Property Name="FreeTransitAmount" Type="decimal" Scale="2" />
+          <Property Name="BankProvinceID" Type="int" />
+          <Property Name="BankProvince" Type="nvarchar" MaxLength="100" />
+          <Property Name="BankCityID" Type="int" />
+          <Property Name="BankCity" Type="nvarchar" MaxLength="100" />
+          <Property Name="AuditUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="AuditDate" Type="datetime" />
+          <Property Name="FromHistory" Type="int" Nullable="false" />
+          <Property Name="MI_ID" Type="int" Nullable="false" />
+          <Property Name="MI_MerchantName" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="MI_MerchantDescription" Type="ntext" />
+          <Property Name="MI_Status" Type="int" />
+          <Property Name="MI_Logo" Type="varchar" MaxLength="200" />
+          <Property Name="MI_ServicePhone" Type="varchar" MaxLength="50" />
+          <Property Name="MI_LegalRepresentative" Type="nvarchar" MaxLength="50" />
+          <Property Name="MI_TaxNO" Type="varchar" MaxLength="50" />
+          <Property Name="MI_TaxRegistrationCertificateURL" Type="varchar" MaxLength="200" />
+          <Property Name="MI_Address" Type="nvarchar" MaxLength="500" />
+          <Property Name="MI_PostalCode" Type="varchar" MaxLength="200" />
+          <Property Name="MI_OrganizationCode" Type="varchar" MaxLength="200" />
+          <Property Name="MI_BusinessLicenseURL" Type="varchar" MaxLength="200" />
+          <Property Name="MI_Telephone" Type="nvarchar" MaxLength="200" />
+          <Property Name="MI_Fax" Type="nvarchar" MaxLength="200" />
+          <Property Name="MI_Fax2" Type="nvarchar" MaxLength="200" />
+          <Property Name="MI_Website" Type="nvarchar" MaxLength="200" />
+          <Property Name="MI_Email" Type="nvarchar" MaxLength="64" />
+          <Property Name="MI_ContactPerson1" Type="nvarchar" MaxLength="200" />
+          <Property Name="MI_Post1" Type="nvarchar" MaxLength="200" />
+          <Property Name="MI_Dept1" Type="nvarchar" MaxLength="200" />
+          <Property Name="MI_Mobile1" Type="nvarchar" MaxLength="200" />
+          <Property Name="MI_Telephone1" Type="nvarchar" MaxLength="200" />
+          <Property Name="MI_Email1" Type="nvarchar" MaxLength="64" />
+          <Property Name="MI_ContactPerson2" Type="nvarchar" MaxLength="200" />
+          <Property Name="MI_Post2" Type="nvarchar" MaxLength="200" />
+          <Property Name="MI_Dept2" Type="nvarchar" MaxLength="200" />
+          <Property Name="MI_Mobile2" Type="nvarchar" MaxLength="200" />
+          <Property Name="MI_Telephone2" Type="nvarchar" MaxLength="200" />
+          <Property Name="MI_Email2" Type="nvarchar" MaxLength="64" />
+          <Property Name="MI_OpeningBank" Type="nvarchar" MaxLength="200" />
+          <Property Name="MI_BankCardNO" Type="nvarchar" MaxLength="100" />
+          <Property Name="MI_CreateUser" Type="varchar" MaxLength="50" />
+          <Property Name="MI_CreateDate" Type="datetime" />
+          <Property Name="MI_EditUser" Type="varchar" MaxLength="50" />
+          <Property Name="MI_EditDate" Type="datetime" />
+          <Property Name="MI_CooperationMode" Type="varchar" MaxLength="50" />
+          <Property Name="MI_DisplayName" Type="nvarchar" MaxLength="200" />
+          <Property Name="MI_GuarantyFunds" Type="decimal" Scale="2" />
+          <Property Name="MI_ContractStart" Type="datetime" />
+          <Property Name="MI_ContractEnd" Type="datetime" />
+          <Property Name="MI_UsageCharges" Type="decimal" Scale="2" />
+          <Property Name="MI_PaymentCycle" Type="int" />
+          <Property Name="MI_ContactPerson3" Type="nvarchar" MaxLength="200" />
+          <Property Name="MI_Post3" Type="nvarchar" MaxLength="200" />
+          <Property Name="MI_Dept3" Type="nvarchar" MaxLength="200" />
+          <Property Name="MI_Mobile3" Type="nvarchar" MaxLength="200" />
+          <Property Name="MI_Telephone3" Type="nvarchar" MaxLength="200" />
+          <Property Name="MI_Email3" Type="nvarchar" MaxLength="64" />
+          <Property Name="MI_CommissionRatio" Type="decimal" Scale="2" />
+          <Property Name="MI_ReturnMerchantRatio" Type="decimal" Scale="2" />
+          <Property Name="MI_ReturnMallRatio" Type="decimal" Scale="2" />
+          <Property Name="MI_InvoiceBy" Type="varchar" MaxLength="50" />
+          <Property Name="MI_ProductManager" Type="nvarchar" MaxLength="500" />
+          <Property Name="MI_TransitCostBy" Type="varchar" MaxLength="50" />
+          <Property Name="MI_FreeTransitAmount" Type="decimal" Scale="2" />
+          <Property Name="MI_BankProvinceID" Type="int" />
+          <Property Name="MI_BankProvince" Type="nvarchar" MaxLength="100" />
+          <Property Name="MI_BankCityID" Type="int" />
+          <Property Name="MI_BankCity" Type="nvarchar" MaxLength="100" />
+          <Property Name="MI_AuditUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="MI_AuditDate" Type="datetime" />
+          <Property Name="MI_Reason" Type="nvarchar(max)" />
+        </EntityType>
+        <!--生成过程中发现错误:
+      警告 6002: 表/视图“Security.dbo.UV_UserMerchant”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+        <EntityType Name="UV_UserMerchant">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="MerchantID" />
+            <PropertyRef Name="MerchantName" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="MerchantID" Type="int" Nullable="false" />
+          <Property Name="MerchantName" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="Status" Type="int" />
+        </EntityType>
+        <Function Name="GetUserResourceList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="UP_AddAuditUserForAuditWorkFlow" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ResourceName" Type="varchar" Mode="In" />
+          <Parameter Name="ResourceID" Type="int" Mode="In" />
+          <Parameter Name="UserName" Type="varchar" Mode="In" />
+          <Parameter Name="AuditLevel" Type="int" Mode="In" />
+          <Parameter Name="CreateUser" Type="varchar" Mode="In" />
+          <Parameter Name="Msg" Type="nvarchar" Mode="InOut" />
+          <Parameter Name="MsgNumber" Type="int" Mode="InOut" />
+        </Function>
+        <Function Name="UP_CopyUserMerchant" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="FromUserName" Type="varchar" Mode="In" />
+          <Parameter Name="ToUserName" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="UP_CopyUserMerchantAndRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="FromUserName" Type="varchar" Mode="In" />
+          <Parameter Name="ToUserName" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="UP_CopyUserRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="FromUserName" Type="varchar" Mode="In" />
+          <Parameter Name="ToUserName" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="UP_DeleteAuditUserForAuditWorkFlow" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ResourceName" Type="varchar" Mode="In" />
+          <Parameter Name="ResourceID" Type="int" Mode="In" />
+          <Parameter Name="UserName" Type="varchar" Mode="In" />
+          <Parameter Name="EditUser" Type="varchar" Mode="In" />
+          <Parameter Name="Msg" Type="nvarchar" Mode="InOut" />
+          <Parameter Name="MsgNumber" Type="int" Mode="InOut" />
+        </Function>
+        <Function Name="UP_DeleteMerchantInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MerchantId" Type="int" Mode="In" />
+          <Parameter Name="EditUser" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="UP_GeneralPagedQuery" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TableName" Type="varchar" Mode="In" />
+          <Parameter Name="WhereField" Type="nvarchar" Mode="In" />
+          <Parameter Name="SelectField" Type="nvarchar" Mode="In" />
+          <Parameter Name="OrderField" Type="nvarchar" Mode="In" />
+          <Parameter Name="PageSize" Type="int" Mode="In" />
+          <Parameter Name="PageIndex" Type="int" Mode="In" />
+          <Parameter Name="IsGetSqlOnly" Type="int" Mode="In" />
+          <Parameter Name="ExeSql" Type="nvarchar(max)" Mode="InOut" />
+          <Parameter Name="TotalCount" Type="int" Mode="InOut" />
+        </Function>
+        <Function Name="UP_GeneralPagedQuery_v1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TableName" Type="varchar" Mode="In" />
+          <Parameter Name="WhereField" Type="nvarchar" Mode="In" />
+          <Parameter Name="SelectField" Type="nvarchar" Mode="In" />
+          <Parameter Name="OrderField" Type="nvarchar" Mode="In" />
+          <Parameter Name="PageSize" Type="int" Mode="In" />
+          <Parameter Name="PageIndex" Type="int" Mode="In" />
+          <Parameter Name="TotalCount" Type="int" Mode="InOut" />
+        </Function>
+        <Function Name="UP_GetAuditWorkFlowResourceByResourceID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ResourceID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="UP_GetAuditWorkFlowResourceList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="UP_GiveUserAllMerchantWithSameRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="UP_SetUserWithSameRoleInUserMerchant" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserName" Type="varchar" Mode="In" />
+          <Parameter Name="RoleID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="UP_UpdateMerchantInfoAuditStatus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID" Type="int" Mode="In" />
+          <Parameter Name="AuditUser" Type="varchar" Mode="In" />
+          <Parameter Name="Reason" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Status" Type="int" Mode="In" />
+          <Parameter Name="AuditDate" Type="datetime" Mode="InOut" />
+        </Function>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Jufine.Backend.Security.DataAccess" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="SecurityEntities" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="GetUserResourceList">
+          <Parameter Name="UserID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="UP_UpdateMerchantInfoStatus">
+            <Parameter Name="ID" Mode="In" Type="Int32" />
+            <Parameter Name="AuditUser" Mode="In" Type="String" />
+            <Parameter Name="Reason" Mode="In" Type="String" />
+            <Parameter Name="Status" Mode="In" Type="Int32" />
+            <Parameter Name="AuditDate" Mode="InOut" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="UP_UpdateMerchantInfoAuditStatus">
+            <Parameter Name="ID" Mode="In" Type="Int32" />
+            <Parameter Name="AuditUser" Mode="In" Type="String" />
+            <Parameter Name="Reason" Mode="In" Type="String" />
+            <Parameter Name="Status" Mode="In" Type="Int32" />
+            <Parameter Name="AuditDate" Mode="InOut" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="UP_AddAuditUserForAuditWorkFlow" ReturnType="Collection(String)">
+            <Parameter Name="ResourceName" Mode="In" Type="String" />
+            <Parameter Name="ResourceID" Mode="In" Type="Int32" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="AuditLevel" Mode="In" Type="Int32" />
+            <Parameter Name="CreateUser" Mode="In" Type="String" />
+            <Parameter Name="Msg" Mode="InOut" Type="String" />
+            <Parameter Name="MsgNumber" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="AuditWorkFlowResource" EntityType="Jufine.Backend.Security.DataAccess.AuditWorkFlowResource" />
+          <EntitySet Name="LogCenter" EntityType="Jufine.Backend.Security.DataAccess.LogCenter" />
+          <EntitySet Name="MerchantAdditionalCertificate" EntityType="Jufine.Backend.Security.DataAccess.MerchantAdditionalCertificate" />
+          <EntitySet Name="MerchantInfo" EntityType="Jufine.Backend.Security.DataAccess.MerchantInfo" />
+          <EntitySet Name="MerchantInfoHistoryDetail" EntityType="Jufine.Backend.Security.DataAccess.MerchantInfoHistoryDetail" />
+          <EntitySet Name="MerchantInfoHisttory" EntityType="Jufine.Backend.Security.DataAccess.MerchantInfoHisttory" />
+          <EntitySet Name="MerchantProduct" EntityType="Jufine.Backend.Security.DataAccess.MerchantProduct" />
+          <EntitySet Name="NoticeOfAuditInfo" EntityType="Jufine.Backend.Security.DataAccess.NoticeOfAuditInfo" />
+          <EntitySet Name="QueryLog" EntityType="Jufine.Backend.Security.DataAccess.QueryLog" />
+          <EntitySet Name="Resource" EntityType="Jufine.Backend.Security.DataAccess.Resource" />
+          <EntitySet Name="RoleInfo" EntityType="Jufine.Backend.Security.DataAccess.RoleInfo" />
+          <EntitySet Name="RoleResource" EntityType="Jufine.Backend.Security.DataAccess.RoleResource" />
+          <EntitySet Name="UserInfo" EntityType="Jufine.Backend.Security.DataAccess.UserInfo" />
+          <EntitySet Name="UserMerchant" EntityType="Jufine.Backend.Security.DataAccess.UserMerchant" />
+          <EntitySet Name="UserResource" EntityType="Jufine.Backend.Security.DataAccess.UserResource" />
+          <EntitySet Name="UserRole" EntityType="Jufine.Backend.Security.DataAccess.UserRole" />
+          <EntitySet Name="UserWithSameRoleInMerchant" EntityType="Jufine.Backend.Security.DataAccess.UserWithSameRoleInMerchant" />
+          <EntitySet Name="UVAuditWorkFlow" EntityType="Jufine.Backend.Security.DataAccess.UVAuditWorkFlow" />
+          <EntitySet Name="UV_UserMerchant" EntityType="Jufine.Backend.Security.DataAccess.UV_UserMerchant" />
+          <FunctionImport Name="UP_CopyUserMerchant" ReturnType="Collection(Jufine.Backend.Security.DataAccess.UP_CopyUserMerchant_Result)">
+            <Parameter Name="FromUserName" Mode="In" Type="String" />
+            <Parameter Name="ToUserName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="UP_CopyUserMerchantAndRole" ReturnType="Collection(Jufine.Backend.Security.DataAccess.UP_CopyUserMerchantAndRole_Result)">
+            <Parameter Name="FromUserName" Mode="In" Type="String" />
+            <Parameter Name="ToUserName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="UP_CopyUserRole">
+            <Parameter Name="FromUserName" Mode="In" Type="String" />
+            <Parameter Name="ToUserName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="UP_GeneralPagedQuery">
+            <Parameter Name="TableName" Mode="In" Type="String" />
+            <Parameter Name="WhereField" Mode="In" Type="String" />
+            <Parameter Name="SelectField" Mode="In" Type="String" />
+            <Parameter Name="OrderField" Mode="In" Type="String" />
+            <Parameter Name="PageSize" Mode="In" Type="Int32" />
+            <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+            <Parameter Name="IsGetSqlOnly" Mode="In" Type="Int32" />
+            <Parameter Name="ExeSql" Mode="InOut" Type="String" />
+            <Parameter Name="TotalCount" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="UP_GeneralPagedQuery_v1">
+            <Parameter Name="TableName" Mode="In" Type="String" />
+            <Parameter Name="WhereField" Mode="In" Type="String" />
+            <Parameter Name="SelectField" Mode="In" Type="String" />
+            <Parameter Name="OrderField" Mode="In" Type="String" />
+            <Parameter Name="PageSize" Mode="In" Type="Int32" />
+            <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+            <Parameter Name="TotalCount" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="UP_GetAuditWorkFlowResourceList" ReturnType="Collection(Jufine.Backend.Security.DataAccess.UP_GetAuditWorkFlowResourceList_Result)" />
+          <FunctionImport Name="UP_GiveUserAllMerchantWithSameRole" />
+          <FunctionImport Name="UP_SetUserWithSameRoleInUserMerchant" ReturnType="Collection(Jufine.Backend.Security.DataAccess.UP_SetUserWithSameRoleInUserMerchant_Result)">
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="RoleID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="UVMerchantInfo" EntityType="Jufine.Backend.Security.DataAccess.UVMerchantInfo" />
+          <FunctionImport Name="UP_DeleteAuditUserForAuditWorkFlow">
+            <Parameter Name="ResourceName" Mode="In" Type="String" />
+            <Parameter Name="ResourceID" Mode="In" Type="Int32" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="EditUser" Mode="In" Type="String" />
+            <Parameter Name="Msg" Mode="InOut" Type="String" />
+            <Parameter Name="MsgNumber" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="UP_DeleteMerchantInfo">
+            <Parameter Name="MerchantId" Mode="In" Type="Int32" />
+            <Parameter Name="EditUser" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="UP_GetAuditWorkFlowResourceByResourceID" ReturnType="Collection(Jufine.Backend.Security.DataAccess.TAuditWorkFlowResource)">
+            <Parameter Name="ResourceID" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="TAuditWorkFlowResource" >
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="Int32" Name="ResourceID" Nullable="false" />
+          <Property Type="Int32" Name="UserID" Nullable="false" />
+          <Property Type="String" Name="DisplayName" Nullable="false" />
+          <Property Type="String" Name="UserName" Nullable="false" />
+          <Property Type="String" Name="ResourceName" Nullable="false" />
+          <Property Type="String" Name="ResourceDisplayName" Nullable="false" />
+          <Property Type="Int64" Name="AuditLevel" Nullable="false" />
+        </ComplexType>
+        <EntityType Name="AuditWorkFlowResource">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="DisplayName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ResourceID" Nullable="false" />
+          <Property Type="Int32" Name="RoleID" />
+          <Property Type="Int32" Name="UserID" />
+          <Property Type="Int32" Name="Status" Nullable="false" />
+          <Property Type="String" Name="CreateUser" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreateDate" Precision="3" />
+          <Property Type="String" Name="EditUser" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="EditDate" Precision="3" />
+          <Property Type="Int32" Name="GroupID" />
+          <Property Type="Int32" Name="ParentGroupID" />
+        </EntityType>
+        <EntityType Name="LogCenter">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int64" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ApplicationName" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Module" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LogType" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Title" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Detail" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="LogTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="MerchantAdditionalCertificate">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="MerchantID" Nullable="false" />
+          <Property Type="String" Name="ImangeName" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Title" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="DisplayOrder" />
+          <Property Type="Int32" Name="Status" />
+          <Property Type="String" Name="CreateUser" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreateDate" Precision="3" />
+          <Property Type="String" Name="EditUser" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="EditDate" Precision="3" />
+        </EntityType>
+        <EntityType Name="MerchantInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="MerchantName" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MerchantDescription" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Status" />
+          <Property Type="String" Name="Logo" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ServicePhone" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LegalRepresentative" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TaxNO" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TaxRegistrationCertificateURL" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Address" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PostalCode" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OrganizationCode" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BusinessLicenseURL" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Telephone" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Fax" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Fax2" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Website" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ContactPerson1" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Post1" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Dept1" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Mobile1" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Telephone1" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email1" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ContactPerson2" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Post2" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Dept2" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Mobile2" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Telephone2" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email2" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="OpeningBank" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BankCardNO" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CreateUser" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreateDate" Precision="3" />
+          <Property Type="String" Name="EditUser" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="EditDate" Precision="3" />
+          <Property Type="String" Name="CooperationMode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DisplayName" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="GuarantyFunds" Precision="18" Scale="2" />
+          <Property Type="DateTime" Name="ContractStart" Precision="3" />
+          <Property Type="DateTime" Name="ContractEnd" Precision="3" />
+          <Property Type="Decimal" Name="UsageCharges" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="PaymentCycle" />
+          <Property Type="String" Name="ContactPerson3" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Post3" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Dept3" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Mobile3" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Telephone3" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email3" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="CommissionRatio" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="ReturnMerchantRatio" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="ReturnMallRatio" Precision="18" Scale="2" />
+          <Property Type="String" Name="InvoiceBy" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ProductManager" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TransitCostBy" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="FreeTransitAmount" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="BankProvinceID" />
+          <Property Type="String" Name="BankProvince" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="BankCityID" />
+          <Property Type="String" Name="BankCity" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AuditUser" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="AuditDate" Precision="3" />
+          <Property Type="String" Name="Reason" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="MerchantInfoHistoryDetail">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="MerchantID" Nullable="false" />
+          <Property Type="String" Name="MerchantName" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MerchantDescription" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Status" />
+          <Property Type="String" Name="Logo" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ServicePhone" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LegalRepresentative" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TaxNO" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TaxRegistrationCertificateURL" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Address" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PostalCode" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OrganizationCode" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BusinessLicenseURL" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Telephone" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Fax" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Fax2" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Website" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ContactPerson1" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Post1" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Dept1" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Mobile1" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Telephone1" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email1" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ContactPerson2" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Post2" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Dept2" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Mobile2" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Telephone2" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email2" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="OpeningBank" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BankCardNO" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CreateUser" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreateDate" Precision="3" />
+          <Property Type="String" Name="EditUser" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="EditDate" Precision="3" />
+          <Property Type="String" Name="CooperationMode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DisplayName" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="GuarantyFunds" Precision="18" Scale="2" />
+          <Property Type="DateTime" Name="ContractStart" Precision="3" />
+          <Property Type="DateTime" Name="ContractEnd" Precision="3" />
+          <Property Type="Decimal" Name="UsageCharges" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="PaymentCycle" />
+          <Property Type="String" Name="ContactPerson3" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Post3" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Dept3" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Mobile3" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Telephone3" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email3" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="CommissionRatio" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="ReturnMerchantRatio" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="ReturnMallRatio" Precision="18" Scale="2" />
+          <Property Type="String" Name="InvoiceBy" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ProductManager" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TransitCostBy" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="FreeTransitAmount" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="BankProvinceID" />
+          <Property Type="String" Name="BankProvince" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="BankCityID" />
+          <Property Type="String" Name="BankCity" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AuditUser" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="AuditDate" Precision="3" />
+          <Property Type="String" Name="Reason" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="MerchantInfoHisttory">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="MerchantID" Nullable="false" />
+          <Property Type="Int32" Name="Fromstatus" Nullable="false" />
+          <Property Type="Int32" Name="Tostatus" Nullable="false" />
+          <Property Type="String" Name="CreateUser" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="MerchantProduct">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="MerchantID" />
+          <Property Type="String" Name="CommonNO" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Type" />
+          <Property Type="Int32" Name="Status" />
+          <Property Type="String" Name="Memo" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CreateUser" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreateDate" Precision="3" />
+          <Property Type="String" Name="EditUser" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="EditDate" Precision="3" />
+        </EntityType>
+        <EntityType Name="NoticeOfAuditInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="PageName" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PageUrl" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TableName" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Auths" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="IsMerchantRelated" Nullable="false" />
+          <Property Type="String" Name="EqualAdminAuths" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CheckStatus" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Status" Nullable="false" />
+          <Property Type="String" Name="CreateUser" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreateDate" Precision="3" />
+          <Property Type="String" Name="EditUser" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="EditDate" Precision="3" />
+        </EntityType>
+        <EntityType Name="QueryLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="UserID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SqlText" Nullable="false" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CreateUser" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreateDate" Precision="3" />
+          <Property Type="String" Name="EditUser" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="EditDate" Precision="3" />
+        </EntityType>
+        <EntityType Name="Resource">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="ParentID" Nullable="false" />
+          <Property Type="String" Name="ResourceName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DisplayName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="DisplayOrder" />
+          <Property Type="String" Name="ResourceAddress" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ShowInMenu" Nullable="false" />
+          <Property Type="Int32" Name="ResourceType" Nullable="false" />
+          <Property Type="String" Name="Path" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Status" Nullable="false" />
+          <Property Type="String" Name="CreateUser" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreateDate" Precision="3" />
+          <Property Type="String" Name="EditUser" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="EditDate" Precision="3" />
+        </EntityType>
+        <EntityType Name="RoleInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="RoleName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DisplayName" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="DisplayOrder" />
+          <Property Type="Int32" Name="Status" Nullable="false" />
+          <Property Type="String" Name="CreateUser" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreateDate" Precision="3" />
+          <Property Type="String" Name="EditUser" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="EditDate" Precision="3" />
+        </EntityType>
+        <EntityType Name="RoleResource">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="RoleID" Nullable="false" />
+          <Property Type="Int32" Name="ResourceID" Nullable="false" />
+          <Property Type="String" Name="CreateUser" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreateDate" Precision="3" />
+          <Property Type="String" Name="EditUser" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="EditDate" Precision="3" />
+        </EntityType>
+        <EntityType Name="UserInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="MerchantID" Nullable="false" />
+          <Property Type="String" Name="UserName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FullName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Sex" />
+          <Property Type="String" Name="IDCard" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Status" Nullable="false" />
+          <Property Type="String" Name="Email" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="IsAdmin" Nullable="false" />
+          <Property Type="String" Name="CreateUser" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreateDate" Precision="3" />
+          <Property Type="String" Name="EditUser" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="EditDate" Precision="3" />
+        </EntityType>
+        <EntityType Name="UserMerchant">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="UserID" Nullable="false" />
+          <Property Type="Int32" Name="MerchantID" Nullable="false" />
+          <Property Type="String" Name="CreateUser" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreateDate" Precision="3" />
+          <Property Type="String" Name="EditUser" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="EditDate" Precision="3" />
+        </EntityType>
+        <EntityType Name="UserResource">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="UserID" Nullable="false" />
+          <Property Type="Int32" Name="ResourceID" Nullable="false" />
+          <Property Type="Int32" Name="MerchantID" />
+          <Property Type="String" Name="CreateUser" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreateDate" Precision="3" />
+          <Property Type="String" Name="EditUser" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="EditDate" Precision="3" />
+        </EntityType>
+        <EntityType Name="UserRole">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="UserID" Nullable="false" />
+          <Property Type="Int32" Name="RoleID" Nullable="false" />
+          <Property Type="Int32" Name="MerchantID" Nullable="false" />
+          <Property Type="String" Name="CreateUser" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreateDate" Precision="3" />
+          <Property Type="String" Name="EditUser" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="EditDate" Precision="3" />
+        </EntityType>
+        <EntityType Name="UserWithSameRoleInMerchant">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="UserID" />
+          <Property Type="String" Name="UserName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="RoleID" />
+          <Property Type="String" Name="RoleName" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="UVAuditWorkFlow">
+          <Key>
+            <PropertyRef Name="DisplayName" />
+            <PropertyRef Name="ResourceID" />
+            <PropertyRef Name="ResourceDisplayName" />
+            <PropertyRef Name="ResourceName" />
+          </Key>
+          <Property Type="Int32" Name="ID" />
+          <Property Type="String" Name="DisplayName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ResourceID" Nullable="false" />
+          <Property Type="Int32" Name="TotalLevel" />
+          <Property Type="String" Name="ResourceDisplayName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ResourceName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="UV_UserMerchant">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="MerchantID" />
+            <PropertyRef Name="MerchantName" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="Int32" Name="UserID" Nullable="false" />
+          <Property Type="Int32" Name="MerchantID" Nullable="false" />
+          <Property Type="String" Name="MerchantName" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Status" />
+        </EntityType>
+        <ComplexType Name="UP_CopyUserMerchant_Result">
+          <Property Type="Int32" Name="Column1" Nullable="true" />
+          <Property Type="Int32" Name="MerchantID" Nullable="false" />
+          <Property Type="String" Name="Column2" Nullable="false" MaxLength="6" />
+          <Property Type="DateTime" Name="Column3" Nullable="false" Precision="23" />
+          <Property Type="String" Name="Column4" Nullable="false" MaxLength="6" />
+          <Property Type="DateTime" Name="Column5" Nullable="false" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="UP_CopyUserMerchantAndRole_Result">
+          <Property Type="Int32" Name="Column1" Nullable="true" />
+          <Property Type="Int32" Name="MerchantID" Nullable="false" />
+          <Property Type="String" Name="Column2" Nullable="false" MaxLength="6" />
+          <Property Type="DateTime" Name="Column3" Nullable="false" Precision="23" />
+          <Property Type="String" Name="Column4" Nullable="false" MaxLength="6" />
+          <Property Type="DateTime" Name="Column5" Nullable="false" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="UP_GetAuditWorkFlowResourceList_Result">
+          <Property Type="Int32" Name="UserID" Nullable="false" />
+          <Property Type="Int32" Name="RoleID" Nullable="false" />
+          <Property Type="Int32" Name="MerchantID" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="UP_SetUserWithSameRoleInUserMerchant_Result">
+          <Property Type="String" Name="RoleName" Nullable="false" MaxLength="100" />
+          <Property Type="Int32" Name="MerchantID" Nullable="false" />
+        </ComplexType>
+        <EntityType Name="UVMerchantInfo">
+          <Key>
+            <PropertyRef Name="FromHistory" />
+            <PropertyRef Name="MI_ID" />
+            <PropertyRef Name="MI_MerchantName" />
+          </Key>
+          <Property Type="Int32" Name="ID" />
+          <Property Type="Int32" Name="MerchantID" />
+          <Property Type="String" Name="MerchantName" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MerchantDescription" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Status" />
+          <Property Type="String" Name="Logo" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ServicePhone" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LegalRepresentative" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TaxNO" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TaxRegistrationCertificateURL" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Address" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PostalCode" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OrganizationCode" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BusinessLicenseURL" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Telephone" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Fax" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Fax2" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Website" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ContactPerson1" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Post1" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Dept1" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Mobile1" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Telephone1" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email1" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ContactPerson2" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Post2" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Dept2" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Mobile2" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Telephone2" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email2" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="OpeningBank" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BankCardNO" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CreateUser" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreateDate" Precision="3" />
+          <Property Type="String" Name="EditUser" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="EditDate" Precision="3" />
+          <Property Type="String" Name="CooperationMode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DisplayName" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="GuarantyFunds" Precision="18" Scale="2" />
+          <Property Type="DateTime" Name="ContractStart" Precision="3" />
+          <Property Type="DateTime" Name="ContractEnd" Precision="3" />
+          <Property Type="Decimal" Name="UsageCharges" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="PaymentCycle" />
+          <Property Type="String" Name="ContactPerson3" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Post3" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Dept3" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Mobile3" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Telephone3" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email3" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="CommissionRatio" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="ReturnMerchantRatio" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="ReturnMallRatio" Precision="18" Scale="2" />
+          <Property Type="String" Name="InvoiceBy" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ProductManager" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TransitCostBy" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="FreeTransitAmount" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="BankProvinceID" />
+          <Property Type="String" Name="BankProvince" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="BankCityID" />
+          <Property Type="String" Name="BankCity" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AuditUser" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="AuditDate" Precision="3" />
+          <Property Type="Int32" Name="FromHistory" Nullable="false" />
+          <Property Type="Int32" Name="MI_ID" Nullable="false" />
+          <Property Type="String" Name="MI_MerchantName" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MI_MerchantDescription" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="MI_Status" />
+          <Property Type="String" Name="MI_Logo" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MI_ServicePhone" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MI_LegalRepresentative" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MI_TaxNO" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MI_TaxRegistrationCertificateURL" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MI_Address" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MI_PostalCode" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MI_OrganizationCode" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MI_BusinessLicenseURL" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MI_Telephone" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MI_Fax" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MI_Fax2" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MI_Website" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MI_Email" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MI_ContactPerson1" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MI_Post1" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MI_Dept1" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MI_Mobile1" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MI_Telephone1" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MI_Email1" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MI_ContactPerson2" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MI_Post2" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MI_Dept2" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MI_Mobile2" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MI_Telephone2" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MI_Email2" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MI_OpeningBank" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MI_BankCardNO" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MI_CreateUser" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="MI_CreateDate" Precision="3" />
+          <Property Type="String" Name="MI_EditUser" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="MI_EditDate" Precision="3" />
+          <Property Type="String" Name="MI_CooperationMode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MI_DisplayName" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="MI_GuarantyFunds" Precision="18" Scale="2" />
+          <Property Type="DateTime" Name="MI_ContractStart" Precision="3" />
+          <Property Type="DateTime" Name="MI_ContractEnd" Precision="3" />
+          <Property Type="Decimal" Name="MI_UsageCharges" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="MI_PaymentCycle" />
+          <Property Type="String" Name="MI_ContactPerson3" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MI_Post3" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MI_Dept3" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MI_Mobile3" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MI_Telephone3" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MI_Email3" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="MI_CommissionRatio" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="MI_ReturnMerchantRatio" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="MI_ReturnMallRatio" Precision="18" Scale="2" />
+          <Property Type="String" Name="MI_InvoiceBy" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MI_ProductManager" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MI_TransitCostBy" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="MI_FreeTransitAmount" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="MI_BankProvinceID" />
+          <Property Type="String" Name="MI_BankProvince" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="MI_BankCityID" />
+          <Property Type="String" Name="MI_BankCity" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MI_AuditUser" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="MI_AuditDate" Precision="3" />
+          <Property Type="String" Name="MI_Reason" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SecurityModelStoreContainer" CdmEntityContainer="SecurityEntities">
+          <FunctionImportMapping FunctionImportName="GetUserResourceList" FunctionName="SecurityModel.Store.GetUserResourceList" />
+          <FunctionImportMapping FunctionImportName="UP_UpdateMerchantInfoAuditStatus" FunctionName="SecurityModel.Store.UP_UpdateMerchantInfoAuditStatus" />
+          <FunctionImportMapping FunctionImportName="UP_AddAuditUserForAuditWorkFlow" FunctionName="SecurityModel.Store.UP_AddAuditUserForAuditWorkFlow" />
+          <EntitySetMapping Name="AuditWorkFlowResource">
+            <EntityTypeMapping TypeName="Jufine.Backend.Security.DataAccess.AuditWorkFlowResource">
+              <MappingFragment StoreEntitySet="AuditWorkFlowResource">
+                <ScalarProperty Name="ParentGroupID" ColumnName="ParentGroupID" />
+                <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="ResourceID" ColumnName="ResourceID" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LogCenter">
+            <EntityTypeMapping TypeName="Jufine.Backend.Security.DataAccess.LogCenter">
+              <MappingFragment StoreEntitySet="LogCenter">
+                <ScalarProperty Name="LogTime" ColumnName="LogTime" />
+                <ScalarProperty Name="Detail" ColumnName="Detail" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="LogType" ColumnName="LogType" />
+                <ScalarProperty Name="Module" ColumnName="Module" />
+                <ScalarProperty Name="ApplicationName" ColumnName="ApplicationName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MerchantAdditionalCertificate">
+            <EntityTypeMapping TypeName="Jufine.Backend.Security.DataAccess.MerchantAdditionalCertificate">
+              <MappingFragment StoreEntitySet="MerchantAdditionalCertificate">
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ImangeName" ColumnName="ImangeName" />
+                <ScalarProperty Name="MerchantID" ColumnName="MerchantID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MerchantInfo">
+            <EntityTypeMapping TypeName="Jufine.Backend.Security.DataAccess.MerchantInfo">
+              <MappingFragment StoreEntitySet="MerchantInfo">
+                <ScalarProperty Name="Reason" ColumnName="Reason" />
+                <ScalarProperty Name="AuditDate" ColumnName="AuditDate" />
+                <ScalarProperty Name="AuditUser" ColumnName="AuditUser" />
+                <ScalarProperty Name="BankCity" ColumnName="BankCity" />
+                <ScalarProperty Name="BankCityID" ColumnName="BankCityID" />
+                <ScalarProperty Name="BankProvince" ColumnName="BankProvince" />
+                <ScalarProperty Name="BankProvinceID" ColumnName="BankProvinceID" />
+                <ScalarProperty Name="FreeTransitAmount" ColumnName="FreeTransitAmount" />
+                <ScalarProperty Name="TransitCostBy" ColumnName="TransitCostBy" />
+                <ScalarProperty Name="ProductManager" ColumnName="ProductManager" />
+                <ScalarProperty Name="InvoiceBy" ColumnName="InvoiceBy" />
+                <ScalarProperty Name="ReturnMallRatio" ColumnName="ReturnMallRatio" />
+                <ScalarProperty Name="ReturnMerchantRatio" ColumnName="ReturnMerchantRatio" />
+                <ScalarProperty Name="CommissionRatio" ColumnName="CommissionRatio" />
+                <ScalarProperty Name="Email3" ColumnName="Email3" />
+                <ScalarProperty Name="Telephone3" ColumnName="Telephone3" />
+                <ScalarProperty Name="Mobile3" ColumnName="Mobile3" />
+                <ScalarProperty Name="Dept3" ColumnName="Dept3" />
+                <ScalarProperty Name="Post3" ColumnName="Post3" />
+                <ScalarProperty Name="ContactPerson3" ColumnName="ContactPerson3" />
+                <ScalarProperty Name="PaymentCycle" ColumnName="PaymentCycle" />
+                <ScalarProperty Name="UsageCharges" ColumnName="UsageCharges" />
+                <ScalarProperty Name="ContractEnd" ColumnName="ContractEnd" />
+                <ScalarProperty Name="ContractStart" ColumnName="ContractStart" />
+                <ScalarProperty Name="GuarantyFunds" ColumnName="GuarantyFunds" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="CooperationMode" ColumnName="CooperationMode" />
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="BankCardNO" ColumnName="BankCardNO" />
+                <ScalarProperty Name="OpeningBank" ColumnName="OpeningBank" />
+                <ScalarProperty Name="Email2" ColumnName="Email2" />
+                <ScalarProperty Name="Telephone2" ColumnName="Telephone2" />
+                <ScalarProperty Name="Mobile2" ColumnName="Mobile2" />
+                <ScalarProperty Name="Dept2" ColumnName="Dept2" />
+                <ScalarProperty Name="Post2" ColumnName="Post2" />
+                <ScalarProperty Name="ContactPerson2" ColumnName="ContactPerson2" />
+                <ScalarProperty Name="Email1" ColumnName="Email1" />
+                <ScalarProperty Name="Telephone1" ColumnName="Telephone1" />
+                <ScalarProperty Name="Mobile1" ColumnName="Mobile1" />
+                <ScalarProperty Name="Dept1" ColumnName="Dept1" />
+                <ScalarProperty Name="Post1" ColumnName="Post1" />
+                <ScalarProperty Name="ContactPerson1" ColumnName="ContactPerson1" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Website" ColumnName="Website" />
+                <ScalarProperty Name="Fax2" ColumnName="Fax2" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+                <ScalarProperty Name="BusinessLicenseURL" ColumnName="BusinessLicenseURL" />
+                <ScalarProperty Name="OrganizationCode" ColumnName="OrganizationCode" />
+                <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="TaxRegistrationCertificateURL" ColumnName="TaxRegistrationCertificateURL" />
+                <ScalarProperty Name="TaxNO" ColumnName="TaxNO" />
+                <ScalarProperty Name="LegalRepresentative" ColumnName="LegalRepresentative" />
+                <ScalarProperty Name="ServicePhone" ColumnName="ServicePhone" />
+                <ScalarProperty Name="Logo" ColumnName="Logo" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="MerchantDescription" ColumnName="MerchantDescription" />
+                <ScalarProperty Name="MerchantName" ColumnName="MerchantName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MerchantInfoHistoryDetail">
+            <EntityTypeMapping TypeName="Jufine.Backend.Security.DataAccess.MerchantInfoHistoryDetail">
+              <MappingFragment StoreEntitySet="MerchantInfoHistoryDetail">
+                <ScalarProperty Name="Reason" ColumnName="Reason" />
+                <ScalarProperty Name="AuditDate" ColumnName="AuditDate" />
+                <ScalarProperty Name="AuditUser" ColumnName="AuditUser" />
+                <ScalarProperty Name="BankCity" ColumnName="BankCity" />
+                <ScalarProperty Name="BankCityID" ColumnName="BankCityID" />
+                <ScalarProperty Name="BankProvince" ColumnName="BankProvince" />
+                <ScalarProperty Name="BankProvinceID" ColumnName="BankProvinceID" />
+                <ScalarProperty Name="FreeTransitAmount" ColumnName="FreeTransitAmount" />
+                <ScalarProperty Name="TransitCostBy" ColumnName="TransitCostBy" />
+                <ScalarProperty Name="ProductManager" ColumnName="ProductManager" />
+                <ScalarProperty Name="InvoiceBy" ColumnName="InvoiceBy" />
+                <ScalarProperty Name="ReturnMallRatio" ColumnName="ReturnMallRatio" />
+                <ScalarProperty Name="ReturnMerchantRatio" ColumnName="ReturnMerchantRatio" />
+                <ScalarProperty Name="CommissionRatio" ColumnName="CommissionRatio" />
+                <ScalarProperty Name="Email3" ColumnName="Email3" />
+                <ScalarProperty Name="Telephone3" ColumnName="Telephone3" />
+                <ScalarProperty Name="Mobile3" ColumnName="Mobile3" />
+                <ScalarProperty Name="Dept3" ColumnName="Dept3" />
+                <ScalarProperty Name="Post3" ColumnName="Post3" />
+                <ScalarProperty Name="ContactPerson3" ColumnName="ContactPerson3" />
+                <ScalarProperty Name="PaymentCycle" ColumnName="PaymentCycle" />
+                <ScalarProperty Name="UsageCharges" ColumnName="UsageCharges" />
+                <ScalarProperty Name="ContractEnd" ColumnName="ContractEnd" />
+                <ScalarProperty Name="ContractStart" ColumnName="ContractStart" />
+                <ScalarProperty Name="GuarantyFunds" ColumnName="GuarantyFunds" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="CooperationMode" ColumnName="CooperationMode" />
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="BankCardNO" ColumnName="BankCardNO" />
+                <ScalarProperty Name="OpeningBank" ColumnName="OpeningBank" />
+                <ScalarProperty Name="Email2" ColumnName="Email2" />
+                <ScalarProperty Name="Telephone2" ColumnName="Telephone2" />
+                <ScalarProperty Name="Mobile2" ColumnName="Mobile2" />
+                <ScalarProperty Name="Dept2" ColumnName="Dept2" />
+                <ScalarProperty Name="Post2" ColumnName="Post2" />
+                <ScalarProperty Name="ContactPerson2" ColumnName="ContactPerson2" />
+                <ScalarProperty Name="Email1" ColumnName="Email1" />
+                <ScalarProperty Name="Telephone1" ColumnName="Telephone1" />
+                <ScalarProperty Name="Mobile1" ColumnName="Mobile1" />
+                <ScalarProperty Name="Dept1" ColumnName="Dept1" />
+                <ScalarProperty Name="Post1" ColumnName="Post1" />
+                <ScalarProperty Name="ContactPerson1" ColumnName="ContactPerson1" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Website" ColumnName="Website" />
+                <ScalarProperty Name="Fax2" ColumnName="Fax2" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+                <ScalarProperty Name="BusinessLicenseURL" ColumnName="BusinessLicenseURL" />
+                <ScalarProperty Name="OrganizationCode" ColumnName="OrganizationCode" />
+                <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="TaxRegistrationCertificateURL" ColumnName="TaxRegistrationCertificateURL" />
+                <ScalarProperty Name="TaxNO" ColumnName="TaxNO" />
+                <ScalarProperty Name="LegalRepresentative" ColumnName="LegalRepresentative" />
+                <ScalarProperty Name="ServicePhone" ColumnName="ServicePhone" />
+                <ScalarProperty Name="Logo" ColumnName="Logo" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="MerchantDescription" ColumnName="MerchantDescription" />
+                <ScalarProperty Name="MerchantName" ColumnName="MerchantName" />
+                <ScalarProperty Name="MerchantID" ColumnName="MerchantID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MerchantInfoHisttory">
+            <EntityTypeMapping TypeName="Jufine.Backend.Security.DataAccess.MerchantInfoHisttory">
+              <MappingFragment StoreEntitySet="MerchantInfoHisttory">
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="Tostatus" ColumnName="Tostatus" />
+                <ScalarProperty Name="Fromstatus" ColumnName="Fromstatus" />
+                <ScalarProperty Name="MerchantID" ColumnName="MerchantID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MerchantProduct">
+            <EntityTypeMapping TypeName="Jufine.Backend.Security.DataAccess.MerchantProduct">
+              <MappingFragment StoreEntitySet="MerchantProduct">
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="Memo" ColumnName="Memo" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="CommonNO" ColumnName="CommonNO" />
+                <ScalarProperty Name="MerchantID" ColumnName="MerchantID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NoticeOfAuditInfo">
+            <EntityTypeMapping TypeName="Jufine.Backend.Security.DataAccess.NoticeOfAuditInfo">
+              <MappingFragment StoreEntitySet="NoticeOfAuditInfo">
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CheckStatus" ColumnName="CheckStatus" />
+                <ScalarProperty Name="EqualAdminAuths" ColumnName="EqualAdminAuths" />
+                <ScalarProperty Name="IsMerchantRelated" ColumnName="IsMerchantRelated" />
+                <ScalarProperty Name="Auths" ColumnName="Auths" />
+                <ScalarProperty Name="TableName" ColumnName="TableName" />
+                <ScalarProperty Name="PageUrl" ColumnName="PageUrl" />
+                <ScalarProperty Name="PageName" ColumnName="PageName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="QueryLog">
+            <EntityTypeMapping TypeName="Jufine.Backend.Security.DataAccess.QueryLog">
+              <MappingFragment StoreEntitySet="QueryLog">
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="SqlText" ColumnName="SqlText" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Resource">
+            <EntityTypeMapping TypeName="Jufine.Backend.Security.DataAccess.Resource">
+              <MappingFragment StoreEntitySet="Resource">
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Path" ColumnName="Path" />
+                <ScalarProperty Name="ResourceType" ColumnName="ResourceType" />
+                <ScalarProperty Name="ShowInMenu" ColumnName="ShowInMenu" />
+                <ScalarProperty Name="ResourceAddress" ColumnName="ResourceAddress" />
+                <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="ResourceName" ColumnName="ResourceName" />
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RoleInfo">
+            <EntityTypeMapping TypeName="Jufine.Backend.Security.DataAccess.RoleInfo">
+              <MappingFragment StoreEntitySet="RoleInfo">
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RoleResource">
+            <EntityTypeMapping TypeName="Jufine.Backend.Security.DataAccess.RoleResource">
+              <MappingFragment StoreEntitySet="RoleResource">
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="ResourceID" ColumnName="ResourceID" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserInfo">
+            <EntityTypeMapping TypeName="Jufine.Backend.Security.DataAccess.UserInfo">
+              <MappingFragment StoreEntitySet="UserInfo">
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="IDCard" ColumnName="IDCard" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="MerchantID" ColumnName="MerchantID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserMerchant">
+            <EntityTypeMapping TypeName="Jufine.Backend.Security.DataAccess.UserMerchant">
+              <MappingFragment StoreEntitySet="UserMerchant">
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="MerchantID" ColumnName="MerchantID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserResource">
+            <EntityTypeMapping TypeName="Jufine.Backend.Security.DataAccess.UserResource">
+              <MappingFragment StoreEntitySet="UserResource">
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="MerchantID" ColumnName="MerchantID" />
+                <ScalarProperty Name="ResourceID" ColumnName="ResourceID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserRole">
+            <EntityTypeMapping TypeName="Jufine.Backend.Security.DataAccess.UserRole">
+              <MappingFragment StoreEntitySet="UserRole">
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="MerchantID" ColumnName="MerchantID" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserWithSameRoleInMerchant">
+            <EntityTypeMapping TypeName="Jufine.Backend.Security.DataAccess.UserWithSameRoleInMerchant">
+              <MappingFragment StoreEntitySet="UserWithSameRoleInMerchant">
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UVAuditWorkFlow">
+            <EntityTypeMapping TypeName="Jufine.Backend.Security.DataAccess.UVAuditWorkFlow">
+              <MappingFragment StoreEntitySet="UV_AuditWorkFlow">
+                <ScalarProperty Name="ResourceName" ColumnName="ResourceName" />
+                <ScalarProperty Name="ResourceDisplayName" ColumnName="ResourceDisplayName" />
+                <ScalarProperty Name="TotalLevel" ColumnName="TotalLevel" />
+                <ScalarProperty Name="ResourceID" ColumnName="ResourceID" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UV_UserMerchant">
+            <EntityTypeMapping TypeName="Jufine.Backend.Security.DataAccess.UV_UserMerchant">
+              <MappingFragment StoreEntitySet="UV_UserMerchant">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="MerchantName" ColumnName="MerchantName" />
+                <ScalarProperty Name="MerchantID" ColumnName="MerchantID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="UP_CopyUserMerchant" FunctionName="SecurityModel.Store.UP_CopyUserMerchant">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Jufine.Backend.Security.DataAccess.UP_CopyUserMerchant_Result">
+                <ScalarProperty Name="Column1" ColumnName="Column1" />
+                <ScalarProperty Name="MerchantID" ColumnName="MerchantID" />
+                <ScalarProperty Name="Column2" ColumnName="Column2" />
+                <ScalarProperty Name="Column3" ColumnName="Column3" />
+                <ScalarProperty Name="Column4" ColumnName="Column4" />
+                <ScalarProperty Name="Column5" ColumnName="Column5" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="UP_CopyUserMerchantAndRole" FunctionName="SecurityModel.Store.UP_CopyUserMerchantAndRole">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Jufine.Backend.Security.DataAccess.UP_CopyUserMerchantAndRole_Result">
+                <ScalarProperty Name="Column1" ColumnName="Column1" />
+                <ScalarProperty Name="MerchantID" ColumnName="MerchantID" />
+                <ScalarProperty Name="Column2" ColumnName="Column2" />
+                <ScalarProperty Name="Column3" ColumnName="Column3" />
+                <ScalarProperty Name="Column4" ColumnName="Column4" />
+                <ScalarProperty Name="Column5" ColumnName="Column5" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="UP_CopyUserRole" FunctionName="SecurityModel.Store.UP_CopyUserRole" />
+          <FunctionImportMapping FunctionImportName="UP_GeneralPagedQuery" FunctionName="SecurityModel.Store.UP_GeneralPagedQuery" />
+          <FunctionImportMapping FunctionImportName="UP_GeneralPagedQuery_v1" FunctionName="SecurityModel.Store.UP_GeneralPagedQuery_v1" />
+          <FunctionImportMapping FunctionImportName="UP_GetAuditWorkFlowResourceList" FunctionName="SecurityModel.Store.UP_GetAuditWorkFlowResourceList">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Jufine.Backend.Security.DataAccess.UP_GetAuditWorkFlowResourceList_Result">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="MerchantID" ColumnName="MerchantID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="UP_GiveUserAllMerchantWithSameRole" FunctionName="SecurityModel.Store.UP_GiveUserAllMerchantWithSameRole" />
+          <FunctionImportMapping FunctionImportName="UP_SetUserWithSameRoleInUserMerchant" FunctionName="SecurityModel.Store.UP_SetUserWithSameRoleInUserMerchant">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Jufine.Backend.Security.DataAccess.UP_SetUserWithSameRoleInUserMerchant_Result">
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="MerchantID" ColumnName="MerchantID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="UP_UpdateMerchantInfoStatus" FunctionName="SecurityModel.Store.UP_UpdateMerchantInfoAuditStatus" />
+          <EntitySetMapping Name="UVMerchantInfo">
+            <EntityTypeMapping TypeName="Jufine.Backend.Security.DataAccess.UVMerchantInfo">
+              <MappingFragment StoreEntitySet="UV_MerchantInfo">
+                <ScalarProperty Name="MI_Reason" ColumnName="MI_Reason" />
+                <ScalarProperty Name="MI_AuditDate" ColumnName="MI_AuditDate" />
+                <ScalarProperty Name="MI_AuditUser" ColumnName="MI_AuditUser" />
+                <ScalarProperty Name="MI_BankCity" ColumnName="MI_BankCity" />
+                <ScalarProperty Name="MI_BankCityID" ColumnName="MI_BankCityID" />
+                <ScalarProperty Name="MI_BankProvince" ColumnName="MI_BankProvince" />
+                <ScalarProperty Name="MI_BankProvinceID" ColumnName="MI_BankProvinceID" />
+                <ScalarProperty Name="MI_FreeTransitAmount" ColumnName="MI_FreeTransitAmount" />
+                <ScalarProperty Name="MI_TransitCostBy" ColumnName="MI_TransitCostBy" />
+                <ScalarProperty Name="MI_ProductManager" ColumnName="MI_ProductManager" />
+                <ScalarProperty Name="MI_InvoiceBy" ColumnName="MI_InvoiceBy" />
+                <ScalarProperty Name="MI_ReturnMallRatio" ColumnName="MI_ReturnMallRatio" />
+                <ScalarProperty Name="MI_ReturnMerchantRatio" ColumnName="MI_ReturnMerchantRatio" />
+                <ScalarProperty Name="MI_CommissionRatio" ColumnName="MI_CommissionRatio" />
+                <ScalarProperty Name="MI_Email3" ColumnName="MI_Email3" />
+                <ScalarProperty Name="MI_Telephone3" ColumnName="MI_Telephone3" />
+                <ScalarProperty Name="MI_Mobile3" ColumnName="MI_Mobile3" />
+                <ScalarProperty Name="MI_Dept3" ColumnName="MI_Dept3" />
+                <ScalarProperty Name="MI_Post3" ColumnName="MI_Post3" />
+                <ScalarProperty Name="MI_ContactPerson3" ColumnName="MI_ContactPerson3" />
+                <ScalarProperty Name="MI_PaymentCycle" ColumnName="MI_PaymentCycle" />
+                <ScalarProperty Name="MI_UsageCharges" ColumnName="MI_UsageCharges" />
+                <ScalarProperty Name="MI_ContractEnd" ColumnName="MI_ContractEnd" />
+                <ScalarProperty Name="MI_ContractStart" ColumnName="MI_ContractStart" />
+                <ScalarProperty Name="MI_GuarantyFunds" ColumnName="MI_GuarantyFunds" />
+                <ScalarProperty Name="MI_DisplayName" ColumnName="MI_DisplayName" />
+                <ScalarProperty Name="MI_CooperationMode" ColumnName="MI_CooperationMode" />
+                <ScalarProperty Name="MI_EditDate" ColumnName="MI_EditDate" />
+                <ScalarProperty Name="MI_EditUser" ColumnName="MI_EditUser" />
+                <ScalarProperty Name="MI_CreateDate" ColumnName="MI_CreateDate" />
+                <ScalarProperty Name="MI_CreateUser" ColumnName="MI_CreateUser" />
+                <ScalarProperty Name="MI_BankCardNO" ColumnName="MI_BankCardNO" />
+                <ScalarProperty Name="MI_OpeningBank" ColumnName="MI_OpeningBank" />
+                <ScalarProperty Name="MI_Email2" ColumnName="MI_Email2" />
+                <ScalarProperty Name="MI_Telephone2" ColumnName="MI_Telephone2" />
+                <ScalarProperty Name="MI_Mobile2" ColumnName="MI_Mobile2" />
+                <ScalarProperty Name="MI_Dept2" ColumnName="MI_Dept2" />
+                <ScalarProperty Name="MI_Post2" ColumnName="MI_Post2" />
+                <ScalarProperty Name="MI_ContactPerson2" ColumnName="MI_ContactPerson2" />
+                <ScalarProperty Name="MI_Email1" ColumnName="MI_Email1" />
+                <ScalarProperty Name="MI_Telephone1" ColumnName="MI_Telephone1" />
+                <ScalarProperty Name="MI_Mobile1" ColumnName="MI_Mobile1" />
+                <ScalarProperty Name="MI_Dept1" ColumnName="MI_Dept1" />
+                <ScalarProperty Name="MI_Post1" ColumnName="MI_Post1" />
+                <ScalarProperty Name="MI_ContactPerson1" ColumnName="MI_ContactPerson1" />
+                <ScalarProperty Name="MI_Email" ColumnName="MI_Email" />
+                <ScalarProperty Name="MI_Website" ColumnName="MI_Website" />
+                <ScalarProperty Name="MI_Fax2" ColumnName="MI_Fax2" />
+                <ScalarProperty Name="MI_Fax" ColumnName="MI_Fax" />
+                <ScalarProperty Name="MI_Telephone" ColumnName="MI_Telephone" />
+                <ScalarProperty Name="MI_BusinessLicenseURL" ColumnName="MI_BusinessLicenseURL" />
+                <ScalarProperty Name="MI_OrganizationCode" ColumnName="MI_OrganizationCode" />
+                <ScalarProperty Name="MI_PostalCode" ColumnName="MI_PostalCode" />
+                <ScalarProperty Name="MI_Address" ColumnName="MI_Address" />
+                <ScalarProperty Name="MI_TaxRegistrationCertificateURL" ColumnName="MI_TaxRegistrationCertificateURL" />
+                <ScalarProperty Name="MI_TaxNO" ColumnName="MI_TaxNO" />
+                <ScalarProperty Name="MI_LegalRepresentative" ColumnName="MI_LegalRepresentative" />
+                <ScalarProperty Name="MI_ServicePhone" ColumnName="MI_ServicePhone" />
+                <ScalarProperty Name="MI_Logo" ColumnName="MI_Logo" />
+                <ScalarProperty Name="MI_Status" ColumnName="MI_Status" />
+                <ScalarProperty Name="MI_MerchantDescription" ColumnName="MI_MerchantDescription" />
+                <ScalarProperty Name="MI_MerchantName" ColumnName="MI_MerchantName" />
+                <ScalarProperty Name="MI_ID" ColumnName="MI_ID" />
+                <ScalarProperty Name="FromHistory" ColumnName="FromHistory" />
+                <ScalarProperty Name="AuditDate" ColumnName="AuditDate" />
+                <ScalarProperty Name="AuditUser" ColumnName="AuditUser" />
+                <ScalarProperty Name="BankCity" ColumnName="BankCity" />
+                <ScalarProperty Name="BankCityID" ColumnName="BankCityID" />
+                <ScalarProperty Name="BankProvince" ColumnName="BankProvince" />
+                <ScalarProperty Name="BankProvinceID" ColumnName="BankProvinceID" />
+                <ScalarProperty Name="FreeTransitAmount" ColumnName="FreeTransitAmount" />
+                <ScalarProperty Name="TransitCostBy" ColumnName="TransitCostBy" />
+                <ScalarProperty Name="ProductManager" ColumnName="ProductManager" />
+                <ScalarProperty Name="InvoiceBy" ColumnName="InvoiceBy" />
+                <ScalarProperty Name="ReturnMallRatio" ColumnName="ReturnMallRatio" />
+                <ScalarProperty Name="ReturnMerchantRatio" ColumnName="ReturnMerchantRatio" />
+                <ScalarProperty Name="CommissionRatio" ColumnName="CommissionRatio" />
+                <ScalarProperty Name="Email3" ColumnName="Email3" />
+                <ScalarProperty Name="Telephone3" ColumnName="Telephone3" />
+                <ScalarProperty Name="Mobile3" ColumnName="Mobile3" />
+                <ScalarProperty Name="Dept3" ColumnName="Dept3" />
+                <ScalarProperty Name="Post3" ColumnName="Post3" />
+                <ScalarProperty Name="ContactPerson3" ColumnName="ContactPerson3" />
+                <ScalarProperty Name="PaymentCycle" ColumnName="PaymentCycle" />
+                <ScalarProperty Name="UsageCharges" ColumnName="UsageCharges" />
+                <ScalarProperty Name="ContractEnd" ColumnName="ContractEnd" />
+                <ScalarProperty Name="ContractStart" ColumnName="ContractStart" />
+                <ScalarProperty Name="GuarantyFunds" ColumnName="GuarantyFunds" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="CooperationMode" ColumnName="CooperationMode" />
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="BankCardNO" ColumnName="BankCardNO" />
+                <ScalarProperty Name="OpeningBank" ColumnName="OpeningBank" />
+                <ScalarProperty Name="Email2" ColumnName="Email2" />
+                <ScalarProperty Name="Telephone2" ColumnName="Telephone2" />
+                <ScalarProperty Name="Mobile2" ColumnName="Mobile2" />
+                <ScalarProperty Name="Dept2" ColumnName="Dept2" />
+                <ScalarProperty Name="Post2" ColumnName="Post2" />
+                <ScalarProperty Name="ContactPerson2" ColumnName="ContactPerson2" />
+                <ScalarProperty Name="Email1" ColumnName="Email1" />
+                <ScalarProperty Name="Telephone1" ColumnName="Telephone1" />
+                <ScalarProperty Name="Mobile1" ColumnName="Mobile1" />
+                <ScalarProperty Name="Dept1" ColumnName="Dept1" />
+                <ScalarProperty Name="Post1" ColumnName="Post1" />
+                <ScalarProperty Name="ContactPerson1" ColumnName="ContactPerson1" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Website" ColumnName="Website" />
+                <ScalarProperty Name="Fax2" ColumnName="Fax2" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+                <ScalarProperty Name="BusinessLicenseURL" ColumnName="BusinessLicenseURL" />
+                <ScalarProperty Name="OrganizationCode" ColumnName="OrganizationCode" />
+                <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="TaxRegistrationCertificateURL" ColumnName="TaxRegistrationCertificateURL" />
+                <ScalarProperty Name="TaxNO" ColumnName="TaxNO" />
+                <ScalarProperty Name="LegalRepresentative" ColumnName="LegalRepresentative" />
+                <ScalarProperty Name="ServicePhone" ColumnName="ServicePhone" />
+                <ScalarProperty Name="Logo" ColumnName="Logo" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="MerchantDescription" ColumnName="MerchantDescription" />
+                <ScalarProperty Name="MerchantName" ColumnName="MerchantName" />
+                <ScalarProperty Name="MerchantID" ColumnName="MerchantID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="UP_DeleteAuditUserForAuditWorkFlow" FunctionName="SecurityModel.Store.UP_DeleteAuditUserForAuditWorkFlow" />
+          <FunctionImportMapping FunctionImportName="UP_DeleteMerchantInfo" FunctionName="SecurityModel.Store.UP_DeleteMerchantInfo" />
+          <FunctionImportMapping FunctionImportName="UP_GetAuditWorkFlowResourceByResourceID" FunctionName="SecurityModel.Store.UP_GetAuditWorkFlowResourceByResourceID" >
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Jufine.Backend.Security.DataAccess.TAuditWorkFlowResource">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ResourceID" ColumnName="ResourceID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="ResourceName" ColumnName="ResourceName" />
+                <ScalarProperty Name="ResourceDisplayName" ColumnName="ResourceDisplayName" />
+                <ScalarProperty Name="AuditLevel" ColumnName="AuditLevel" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Security" ZoomLevel="23">
+        <EntityTypeShape EntityType="Jufine.Backend.Security.DataAccess.AuditWorkFlowResource" Width="1.5" PointX="3.4333294143124151" PointY="19.463016921404293" />
+        <EntityTypeShape EntityType="Jufine.Backend.Security.DataAccess.LogCenter" Width="1.5" PointX="4.3404139691686323" PointY="2.034200326555502" />
+        <EntityTypeShape EntityType="Jufine.Backend.Security.DataAccess.MerchantAdditionalCertificate" Width="1.5" PointX="3.4320532695539541" PointY="6.4944140792332652" />
+        <EntityTypeShape EntityType="Jufine.Backend.Security.DataAccess.MerchantInfo" Width="1.5" PointX="10.634916940068322" PointY="5.36109838139317" />
+        <EntityTypeShape EntityType="Jufine.Backend.Security.DataAccess.MerchantInfoHistoryDetail" Width="1.5" PointX="5.2825423503678959" PointY="14.993951104112878" />
+        <EntityTypeShape EntityType="Jufine.Backend.Security.DataAccess.MerchantInfoHisttory" Width="1.5" PointX="5.726481682493576" PointY="29.383823021028107" />
+        <EntityTypeShape EntityType="Jufine.Backend.Security.DataAccess.MerchantProduct" Width="1.5" PointX="11.084801930508018" PointY="28.902587993490783" />
+        <EntityTypeShape EntityType="Jufine.Backend.Security.DataAccess.NoticeOfAuditInfo" Width="1.5" PointX="7.9327367767378387" PointY="4.3012657036545061" />
+        <EntityTypeShape EntityType="Jufine.Backend.Security.DataAccess.QueryLog" Width="1.5" PointX="6.99313414236211" PointY="23.0461066770582" />
+        <EntityTypeShape EntityType="Jufine.Backend.Security.DataAccess.Resource" Width="1.5" PointX="1.8141346209748344" PointY="2.1132342229193237" />
+        <EntityTypeShape EntityType="Jufine.Backend.Security.DataAccess.RoleInfo" Width="1.5" PointX="0.40772815253945449" PointY="2.9086176766588436" />
+        <EntityTypeShape EntityType="Jufine.Backend.Security.DataAccess.RoleResource" Width="1.5" PointX="6.9828806719663" PointY="0.91837082846014328" />
+        <EntityTypeShape EntityType="Jufine.Backend.Security.DataAccess.UserInfo" Width="1.5" PointX="11.190767375375502" PointY="21.461346323351073" />
+        <EntityTypeShape EntityType="Jufine.Backend.Security.DataAccess.UserMerchant" Width="1.5" PointX="2.311319551575612" PointY="5.6393172320161558" />
+        <EntityTypeShape EntityType="Jufine.Backend.Security.DataAccess.UserResource" Width="1.5" PointX="9.8292857230777315" PointY="8.41070247088126" />
+        <EntityTypeShape EntityType="Jufine.Backend.Security.DataAccess.UserRole" Width="1.5" PointX="6.2360278359782084" PointY="26.429296863465243" />
+        <EntityTypeShape EntityType="Jufine.Backend.Security.DataAccess.UserWithSameRoleInMerchant" Width="1.5" PointX="5.3900810337579257" PointY="0.803751901166398" />
+        <EntityTypeShape EntityType="Jufine.Backend.Security.DataAccess.UVAuditWorkFlow" Width="1.5" PointX="1.7286479257646241" PointY="17.61464155540552" />
+        <EntityTypeShape EntityType="Jufine.Backend.Security.DataAccess.UV_UserMerchant" Width="1.5" PointX="10.893830520517113" PointY="4.50487414212193" />
+        <EntityTypeShape EntityType="Jufine.Backend.Security.DataAccess.UVMerchantInfo" Width="1.5" PointX="5.967606238074417" PointY="22.494347478493278" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

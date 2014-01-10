@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{268AD959-A9FC-4BB7-9021-EDCCE77FB97C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Jufine.Backend.Security.Contract</RootNamespace>
+    <AssemblyName>Jufine.Backend.Security.Contract</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\ReffDll\Projects\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataContracts\AuditWorkFlowResource.cs" />
+    <Compile Include="DataContracts\Generated\MerchantInfoHistory_gen.cs" />
+    <Compile Include="DataContracts\Generated\MerchantInfoHistoryDetail_gen.cs" />
+    <Compile Include="DataContracts\Generated\UVAuditWorkFlow_gen.cs" />
+    <Compile Include="DataContracts\Generated\TAuditWorkFlowResource_gen.cs" />
+    <Compile Include="DataContracts\MerchantInfoHistoryDetail.cs" />
+    <Compile Include="DataContracts\UVAuditWorkFlow.cs" />
+    <Compile Include="DataContracts\UVMerchantInfo.cs" />
+    <Compile Include="DataContracts\Generated\AuditWorkFlowResource_gen.cs" />
+    <Compile Include="DataContracts\Generated\UVMerchantInfo_gen.cs" />
+    <Compile Include="DataContracts\Generated\LogCenter_gen.cs" />
+    <Compile Include="DataContracts\Generated\MerchantAdditionalCertificate_gen.cs" />
+    <Compile Include="DataContracts\Generated\MerchantInfo_gen.cs" />
+    <Compile Include="DataContracts\Generated\MerchantProduct_gen.cs" />
+    <Compile Include="DataContracts\Generated\QueryLog_gen.cs" />
+    <Compile Include="DataContracts\Generated\Resource_gen.cs" />
+    <Compile Include="DataContracts\Generated\RoleInfo_gen.cs" />
+    <Compile Include="DataContracts\Generated\RoleResource_gen.cs" />
+    <Compile Include="DataContracts\Generated\UserInfo_gen.cs" />
+    <Compile Include="DataContracts\Generated\UserMerchant_gen.cs" />
+    <Compile Include="DataContracts\Generated\UserResource_gen.cs" />
+    <Compile Include="DataContracts\Generated\UserRole_gen.cs" />
+    <Compile Include="DataContracts\Generated\UVUserMerchant_gen.cs" />
+    <Compile Include="DataContracts\LogCenter.cs" />
+    <Compile Include="DataContracts\MerchantAdditionalCertificate.cs" />
+    <Compile Include="DataContracts\MerchantInfo.cs" />
+    <Compile Include="DataContracts\MerchantProduct.cs" />
+    <Compile Include="DataContracts\QueryLog.cs" />
+    <Compile Include="DataContracts\Resource.cs" />
+    <Compile Include="DataContracts\RoleInfo.cs" />
+    <Compile Include="DataContracts\RoleResource.cs" />
+    <Compile Include="DataContracts\UserInfo.cs" />
+    <Compile Include="DataContracts\UserMerchant.cs" />
+    <Compile Include="DataContracts\UserResource.cs" />
+    <Compile Include="DataContracts\UserRole.cs" />
+    <Compile Include="DataContracts\UVUserMerchant.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceContracts\IAuditWorkFlowResourceService.cs" />
+    <Compile Include="ServiceContracts\ILogCenterService.cs" />
+    <Compile Include="ServiceContracts\IMerchantAdditionalCertificateService.cs" />
+    <Compile Include="ServiceContracts\IMerchantInfoHistoryDetailService.cs" />
+    <Compile Include="ServiceContracts\IMerchantProductService.cs" />
+    <Compile Include="ServiceContracts\IMerchantService.cs" />
+    <Compile Include="ServiceContracts\IQueryLogService.cs" />
+    <Compile Include="ServiceContracts\IResourceService.cs" />
+    <Compile Include="ServiceContracts\IRoleResourceService.cs" />
+    <Compile Include="ServiceContracts\IRoleService.cs" />
+    <Compile Include="ServiceContracts\IUserMerchantService.cs" />
+    <Compile Include="ServiceContracts\IUserResourceService.cs" />
+    <Compile Include="ServiceContracts\IUserRoleService.cs" />
+    <Compile Include="ServiceContracts\IUserService.cs" />
+    <Compile Include="ServiceContracts\IUVAuditWorkFlowService.cs" />
+    <Compile Include="ServiceContracts\IUVMerchantInfoService.cs" />
+    <Compile Include="ServiceContracts\IUVUserMerchantService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\BaseLibrary\Com.BaseLibrary.Common\Com.BaseLibrary.Common.csproj">
+      <Project>{F91D3D96-58F0-4CE6-9D7D-AD65805E3B97}</Project>
+      <Name>Com.BaseLibrary.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Configuration\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

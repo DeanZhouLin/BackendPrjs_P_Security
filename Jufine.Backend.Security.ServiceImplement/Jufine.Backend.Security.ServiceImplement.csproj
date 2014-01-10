@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{99023D2E-1974-4D15-A665-728634003B78}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Jufine.Backend.Security.ServiceImplement</RootNamespace>
+    <AssemblyName>Jufine.Backend.Security.ServiceImplement</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\ReffDll\Projects\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\..\ReffDll\EntityFramework\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Jufine.Backend.IM.Contract">
+      <HintPath>..\..\..\ReffDll\Jufine\Backend\Jufine.Backend.IM.Contract.dll</HintPath>
+    </Reference>
+    <Reference Include="Jufine.Backend.TM.Contract">
+      <HintPath>..\..\..\ReffDll\Jufine\Backend\Jufine.Backend.TM.Contract.dll</HintPath>
+    </Reference>
+    <Reference Include="Jufine.Backend.TM.ServiceImplement">
+      <HintPath>..\..\..\ReffDll\Jufine\Backend\Jufine.Backend.TM.ServiceImplement.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business\AuditWorkFlowResourceBL.cs" />
+    <Compile Include="Business\LogCenterBL.cs" />
+    <Compile Include="Business\MerchantAdditionalCertificateBL.cs" />
+    <Compile Include="Business\MerchantBL.cs" />
+    <Compile Include="Business\MerchantInfoHistoryDetailBL.cs" />
+    <Compile Include="Business\MerchantProductBL.cs" />
+    <Compile Include="Business\QueryLogBL.cs" />
+    <Compile Include="Business\ResourceBL.cs" />
+    <Compile Include="Business\RoleBL.cs" />
+    <Compile Include="Business\RoleResourceBL.cs" />
+    <Compile Include="Business\UserBL.cs" />
+    <Compile Include="Business\UserMerchantBL.cs" />
+    <Compile Include="Business\UserResourceBL.cs" />
+    <Compile Include="Business\UserRoleBL.cs" />
+    <Compile Include="Business\UVAuditWorkFlowBL.cs" />
+    <Compile Include="Business\UVMerchantInfoBL.cs" />
+    <Compile Include="Business\UVUserMerchantBL.cs" />
+    <Compile Include="DataAccess\AuditWorkFlowResourceDA.cs" />
+    <Compile Include="DataAccess\LogCenterDA.cs" />
+    <Compile Include="DataAccess\MerchantAdditionalCertificateDA.cs" />
+    <Compile Include="DataAccess\MerchantDA.cs" />
+    <Compile Include="DataAccess\MerchantInfoHistoryDetailDA.cs" />
+    <Compile Include="DataAccess\MerchantProductDA.cs" />
+    <Compile Include="DataAccess\QueryLogDA.cs" />
+    <Compile Include="DataAccess\ResourceDA.cs" />
+    <Compile Include="DataAccess\RoleDA.cs" />
+    <Compile Include="DataAccess\RoleResourceDA.cs" />
+    <Compile Include="DataAccess\Security.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Security.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\SecurityEntity.cs" />
+    <Compile Include="DataAccess\UserDA.cs" />
+    <Compile Include="DataAccess\UserMerchantDA.cs" />
+    <Compile Include="DataAccess\UserResourceDA.cs" />
+    <Compile Include="DataAccess\UserRoleDA.cs" />
+    <Compile Include="DataAccess\UVAuditWorkFlowDA.cs" />
+    <Compile Include="DataAccess\UVUserMerchantDA.cs" />
+    <Compile Include="DataAccess\UVMerchantDA.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\BaseLibrary\Com.BaseLibrary.Common\Com.BaseLibrary.Common.csproj">
+      <Project>{F91D3D96-58F0-4CE6-9D7D-AD65805E3B97}</Project>
+      <Name>Com.BaseLibrary.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\BaseLibrary\Com.BaseLibrary.Service\Com.BaseLibrary.Service.csproj">
+      <Project>{D5AE48B5-DEDE-4916-9642-9E3533C877AE}</Project>
+      <Name>Com.BaseLibrary.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Jufine.Backend.Security.Contract\Jufine.Backend.Security.Contract.csproj">
+      <Project>{268AD959-A9FC-4BB7-9021-EDCCE77FB97C}</Project>
+      <Name>Jufine.Backend.Security.Contract</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="DataAccess\Security.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Security.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

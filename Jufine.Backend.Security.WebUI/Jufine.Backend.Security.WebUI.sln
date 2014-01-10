@@ -1,0 +1,168 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jufine.Backend.Security.WebUI", "Jufine.Backend.Security.WebUI.csproj", "{CAB8205A-7F61-4A77-9A0E-AB1E73130214}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BaseLib", "BaseLib", "{D1B20D7D-59A1-4BAF-B0FB-9D7604FC5BC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Com.BaseLibrary.Caching", "..\..\..\BaseLibrary\Com.BaseLibrary.Caching\Com.BaseLibrary.Caching.csproj", "{56D0C66C-5BB8-48F8-AA51-61B09F1AAFF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Com.BaseLibrary.Common", "..\..\..\BaseLibrary\Com.BaseLibrary.Common\Com.BaseLibrary.Common.csproj", "{F91D3D96-58F0-4CE6-9D7D-AD65805E3B97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Com.BaseLibrary.DataAccess", "..\..\..\BaseLibrary\Com.BaseLibrary.Data\Com.BaseLibrary.DataAccess.csproj", "{C0605531-E304-43AB-820C-C282A1748A27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Com.BaseLibrary.Payment", "..\..\..\BaseLibrary\Com.BaseLibrary.Payment\Com.BaseLibrary.Payment.csproj", "{FA2987F5-0C9E-4369-8F06-2E9A36ADBC81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Com.BaseLibrary.Service", "..\..\..\BaseLibrary\Com.BaseLibrary.Service\Com.BaseLibrary.Service.csproj", "{D5AE48B5-DEDE-4916-9642-9E3533C877AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Com.BaseLibrary.Session", "..\..\..\BaseLibrary\Com.BaseLibrary.Session\Com.BaseLibrary.Session.csproj", "{9FD6D6CA-63FD-4B71-A288-96BAF620A791}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Com.BaseLibrary.Web", "..\..\..\BaseLibrary\Com.BaseLibrary.Web\Com.BaseLibrary.Web.csproj", "{F20620BD-CD1F-4A7C-99A9-6D3D4B0A1A53}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Security", "Security", "{DFA0AFC8-2E2F-4925-A943-B33BD111928C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jufine.Backend.Security.Authentication", "..\Jufine.Backend.Security.Authentication\Jufine.Backend.Security.Authentication.csproj", "{8CEE82C9-1DD6-49DA-841F-AFE3A87D6396}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jufine.Backend.Security.Contract", "..\Jufine.Backend.Security.Contract\Jufine.Backend.Security.Contract.csproj", "{268AD959-A9FC-4BB7-9021-EDCCE77FB97C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jufine.Backend.Security.ServiceImplement", "..\Jufine.Backend.Security.ServiceImplement\Jufine.Backend.Security.ServiceImplement.csproj", "{99023D2E-1974-4D15-A665-728634003B78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jufine.Backend.WebModel", "..\..\..\Jufine.Backend.WebModel\Jufine.Backend.WebModel.csproj", "{4A972F3B-9381-4ADF-9008-C0D0D62D4DFA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{213D902B-E4C1-48DA-B55A-F181A0C70879}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFramework.Extended.net40", "..\..\..\Framework\EntityFramework.Extended\EntityFramework.Extended.net40.csproj", "{D390C235-242C-4E92-9E0B-D2463E87B0F0}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 14
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://deanzhou.visualstudio.com/defaultcollection
+		SccProjectUniqueName0 = Jufine.Backend.Security.WebUI.csproj
+		SccProjectTopLevelParentUniqueName0 = Jufine.Backend.Security.WebUI.sln
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ..\\..\\..\\BaseLibrary\\Com.BaseLibrary.Caching\\Com.BaseLibrary.Caching.csproj
+		SccProjectTopLevelParentUniqueName1 = Jufine.Backend.Security.WebUI.sln
+		SccProjectName1 = ../../../BaseLibrary/Com.BaseLibrary.Caching
+		SccLocalPath1 = ..\\..\\..\\BaseLibrary\\Com.BaseLibrary.Caching
+		SccProjectUniqueName2 = ..\\..\\..\\BaseLibrary\\Com.BaseLibrary.Common\\Com.BaseLibrary.Common.csproj
+		SccProjectTopLevelParentUniqueName2 = Jufine.Backend.Security.WebUI.sln
+		SccProjectName2 = ../../../BaseLibrary/Com.BaseLibrary.Common
+		SccLocalPath2 = ..\\..\\..\\BaseLibrary\\Com.BaseLibrary.Common
+		SccProjectUniqueName3 = ..\\..\\..\\BaseLibrary\\Com.BaseLibrary.Data\\Com.BaseLibrary.DataAccess.csproj
+		SccProjectTopLevelParentUniqueName3 = Jufine.Backend.Security.WebUI.sln
+		SccProjectName3 = ../../../BaseLibrary/Com.BaseLibrary.Data
+		SccLocalPath3 = ..\\..\\..\\BaseLibrary\\Com.BaseLibrary.Data
+		SccProjectUniqueName4 = ..\\..\\..\\BaseLibrary\\Com.BaseLibrary.Payment\\Com.BaseLibrary.Payment.csproj
+		SccProjectTopLevelParentUniqueName4 = Jufine.Backend.Security.WebUI.sln
+		SccProjectName4 = ../../../BaseLibrary/Com.BaseLibrary.Payment
+		SccLocalPath4 = ..\\..\\..\\BaseLibrary\\Com.BaseLibrary.Payment
+		SccProjectUniqueName5 = ..\\..\\..\\BaseLibrary\\Com.BaseLibrary.Service\\Com.BaseLibrary.Service.csproj
+		SccProjectTopLevelParentUniqueName5 = Jufine.Backend.Security.WebUI.sln
+		SccProjectName5 = ../../../BaseLibrary/Com.BaseLibrary.Service
+		SccLocalPath5 = ..\\..\\..\\BaseLibrary\\Com.BaseLibrary.Service
+		SccProjectUniqueName6 = ..\\..\\..\\BaseLibrary\\Com.BaseLibrary.Session\\Com.BaseLibrary.Session.csproj
+		SccProjectTopLevelParentUniqueName6 = Jufine.Backend.Security.WebUI.sln
+		SccProjectName6 = ../../../BaseLibrary/Com.BaseLibrary.Session
+		SccLocalPath6 = ..\\..\\..\\BaseLibrary\\Com.BaseLibrary.Session
+		SccProjectUniqueName7 = ..\\..\\..\\BaseLibrary\\Com.BaseLibrary.Web\\Com.BaseLibrary.Web.csproj
+		SccProjectTopLevelParentUniqueName7 = Jufine.Backend.Security.WebUI.sln
+		SccProjectName7 = ../../../BaseLibrary/Com.BaseLibrary.Web
+		SccLocalPath7 = ..\\..\\..\\BaseLibrary\\Com.BaseLibrary.Web
+		SccProjectUniqueName8 = ..\\Jufine.Backend.Security.Authentication\\Jufine.Backend.Security.Authentication.csproj
+		SccProjectTopLevelParentUniqueName8 = Jufine.Backend.Security.WebUI.sln
+		SccProjectName8 = ../Jufine.Backend.Security.Authentication
+		SccLocalPath8 = ..\\Jufine.Backend.Security.Authentication
+		SccProjectUniqueName9 = ..\\Jufine.Backend.Security.Contract\\Jufine.Backend.Security.Contract.csproj
+		SccProjectTopLevelParentUniqueName9 = Jufine.Backend.Security.WebUI.sln
+		SccProjectName9 = ../Jufine.Backend.Security.Contract
+		SccLocalPath9 = ..\\Jufine.Backend.Security.Contract
+		SccProjectUniqueName10 = ..\\Jufine.Backend.Security.ServiceImplement\\Jufine.Backend.Security.ServiceImplement.csproj
+		SccProjectTopLevelParentUniqueName10 = Jufine.Backend.Security.WebUI.sln
+		SccProjectName10 = ../Jufine.Backend.Security.ServiceImplement
+		SccLocalPath10 = ..\\Jufine.Backend.Security.ServiceImplement
+		SccProjectUniqueName11 = ..\\..\\..\\Framework\\EntityFramework.Extended\\EntityFramework.Extended.net40.csproj
+		SccProjectTopLevelParentUniqueName11 = Jufine.Backend.Security.WebUI.sln
+		SccProjectName11 = ../../../Framework/EntityFramework.Extended
+		SccLocalPath11 = ..\\..\\..\\Framework\\EntityFramework.Extended
+		SccLocalPath12 = .
+		SccProjectUniqueName13 = ..\\..\\..\\Jufine.Backend.WebModel\\Jufine.Backend.WebModel.csproj
+		SccProjectName13 = ../../../Jufine.Backend.WebModel
+		SccLocalPath13 = ..\\..\\..\\Jufine.Backend.WebModel
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CAB8205A-7F61-4A77-9A0E-AB1E73130214}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAB8205A-7F61-4A77-9A0E-AB1E73130214}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAB8205A-7F61-4A77-9A0E-AB1E73130214}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAB8205A-7F61-4A77-9A0E-AB1E73130214}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56D0C66C-5BB8-48F8-AA51-61B09F1AAFF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56D0C66C-5BB8-48F8-AA51-61B09F1AAFF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56D0C66C-5BB8-48F8-AA51-61B09F1AAFF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56D0C66C-5BB8-48F8-AA51-61B09F1AAFF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F91D3D96-58F0-4CE6-9D7D-AD65805E3B97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F91D3D96-58F0-4CE6-9D7D-AD65805E3B97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F91D3D96-58F0-4CE6-9D7D-AD65805E3B97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F91D3D96-58F0-4CE6-9D7D-AD65805E3B97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0605531-E304-43AB-820C-C282A1748A27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0605531-E304-43AB-820C-C282A1748A27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0605531-E304-43AB-820C-C282A1748A27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0605531-E304-43AB-820C-C282A1748A27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA2987F5-0C9E-4369-8F06-2E9A36ADBC81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA2987F5-0C9E-4369-8F06-2E9A36ADBC81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA2987F5-0C9E-4369-8F06-2E9A36ADBC81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA2987F5-0C9E-4369-8F06-2E9A36ADBC81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5AE48B5-DEDE-4916-9642-9E3533C877AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5AE48B5-DEDE-4916-9642-9E3533C877AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5AE48B5-DEDE-4916-9642-9E3533C877AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5AE48B5-DEDE-4916-9642-9E3533C877AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FD6D6CA-63FD-4B71-A288-96BAF620A791}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FD6D6CA-63FD-4B71-A288-96BAF620A791}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FD6D6CA-63FD-4B71-A288-96BAF620A791}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FD6D6CA-63FD-4B71-A288-96BAF620A791}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F20620BD-CD1F-4A7C-99A9-6D3D4B0A1A53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F20620BD-CD1F-4A7C-99A9-6D3D4B0A1A53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F20620BD-CD1F-4A7C-99A9-6D3D4B0A1A53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F20620BD-CD1F-4A7C-99A9-6D3D4B0A1A53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CEE82C9-1DD6-49DA-841F-AFE3A87D6396}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CEE82C9-1DD6-49DA-841F-AFE3A87D6396}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CEE82C9-1DD6-49DA-841F-AFE3A87D6396}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CEE82C9-1DD6-49DA-841F-AFE3A87D6396}.Release|Any CPU.Build.0 = Release|Any CPU
+		{268AD959-A9FC-4BB7-9021-EDCCE77FB97C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{268AD959-A9FC-4BB7-9021-EDCCE77FB97C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{268AD959-A9FC-4BB7-9021-EDCCE77FB97C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{268AD959-A9FC-4BB7-9021-EDCCE77FB97C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99023D2E-1974-4D15-A665-728634003B78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99023D2E-1974-4D15-A665-728634003B78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99023D2E-1974-4D15-A665-728634003B78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99023D2E-1974-4D15-A665-728634003B78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A972F3B-9381-4ADF-9008-C0D0D62D4DFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A972F3B-9381-4ADF-9008-C0D0D62D4DFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A972F3B-9381-4ADF-9008-C0D0D62D4DFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A972F3B-9381-4ADF-9008-C0D0D62D4DFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D390C235-242C-4E92-9E0B-D2463E87B0F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D390C235-242C-4E92-9E0B-D2463E87B0F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D390C235-242C-4E92-9E0B-D2463E87B0F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D390C235-242C-4E92-9E0B-D2463E87B0F0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CAB8205A-7F61-4A77-9A0E-AB1E73130214} = {DFA0AFC8-2E2F-4925-A943-B33BD111928C}
+		{8CEE82C9-1DD6-49DA-841F-AFE3A87D6396} = {DFA0AFC8-2E2F-4925-A943-B33BD111928C}
+		{268AD959-A9FC-4BB7-9021-EDCCE77FB97C} = {DFA0AFC8-2E2F-4925-A943-B33BD111928C}
+		{99023D2E-1974-4D15-A665-728634003B78} = {DFA0AFC8-2E2F-4925-A943-B33BD111928C}
+		{56D0C66C-5BB8-48F8-AA51-61B09F1AAFF1} = {D1B20D7D-59A1-4BAF-B0FB-9D7604FC5BC6}
+		{F91D3D96-58F0-4CE6-9D7D-AD65805E3B97} = {D1B20D7D-59A1-4BAF-B0FB-9D7604FC5BC6}
+		{C0605531-E304-43AB-820C-C282A1748A27} = {D1B20D7D-59A1-4BAF-B0FB-9D7604FC5BC6}
+		{FA2987F5-0C9E-4369-8F06-2E9A36ADBC81} = {D1B20D7D-59A1-4BAF-B0FB-9D7604FC5BC6}
+		{D5AE48B5-DEDE-4916-9642-9E3533C877AE} = {D1B20D7D-59A1-4BAF-B0FB-9D7604FC5BC6}
+		{9FD6D6CA-63FD-4B71-A288-96BAF620A791} = {D1B20D7D-59A1-4BAF-B0FB-9D7604FC5BC6}
+		{F20620BD-CD1F-4A7C-99A9-6D3D4B0A1A53} = {D1B20D7D-59A1-4BAF-B0FB-9D7604FC5BC6}
+		{D390C235-242C-4E92-9E0B-D2463E87B0F0} = {213D902B-E4C1-48DA-B55A-F181A0C70879}
+	EndGlobalSection
+EndGlobal
