@@ -287,10 +287,9 @@ namespace Jufine.Backend.Security.WebUI
 
         private void BindResourceType()
         {
-            //ICodeValueService service = CreateService<ICodeValueService>();
+            ICodeValueService service = CreateService<ICodeValueService>();
             List<CodeValueInfo> codeValueList = new List<CodeValueInfo>();
-            //codeValueList = service.GetCodeListByGroupCode("Resource_ResourceType");
-            codeValueList.Add(new CodeValueInfo { CodeText = "页面", CodeValue = "1" });
+            codeValueList = service.GetCodeListByGroupCode("Resource_ResourceType");
             rblResourceType.DataSource = codeValueList;
             rblResourceType.DataBind();
             //rblResourceType.SelectedIndex = 0;
