@@ -130,7 +130,8 @@ namespace Jufine.Backend.Security.WebUI
                     return;
                 }
                 AuditWorkFlowResourceService.BatchDelete(keyList);
-            }, QueryData, "删除成功");
+                ShowMessageBox("删除成功");
+            }, QueryData);
         }
 
         //编辑
@@ -161,7 +162,8 @@ namespace Jufine.Backend.Security.WebUI
             {
                 int resourceID = GetValueByPropName(sender, "CommandArgument").ParseInt();
                 AuditWorkFlowResourceService.Delete(resourceID);
-            }, QueryData, "删除成功");
+                ShowMessageBox("删除成功");
+            }, QueryData);
         }
 
         //树SelectedChanged
